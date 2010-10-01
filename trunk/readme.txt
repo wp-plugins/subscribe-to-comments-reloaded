@@ -29,7 +29,7 @@ Subscribe to Comments Reloaded is a robust plugin that enables commenters to sig
 1. If you are using Subscribe To Comments by Mark Jaquith, disable it
 2. Upload the entire folder and all the subfolders to your Wordpress plugins' folder
 3. Activate it
-4. Create a new page whose content is the error message shown to the user is something goes wrong
+4. Create a new page whose content is the error message shown to the user if something goes wrong
 5. Write down the ID of this new page
 6. Go to Settings > Subscribe to Comments and enter the ID in the first field
 7. Customize all the messages to fit your needs
