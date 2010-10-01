@@ -26,13 +26,14 @@ Subscribe to Comments Reloaded is a robust plugin that enables commenters to sig
 
 == Installation ==
 
-0. If you are using Subscribe To Comments by Mark Jaquith, disable it
-1. Upload the entire folder and all the subfolders to your Wordpress plugins' folder
-2. Activate it
-3. Create a new page whose content is the error message shown to the user is something goes wrong
-4. Write down the ID of this new page
-5. Go to Settings > Subscribe to Comments and enter the ID in the first field
-6. Customize all the messages to fit your needs
+1. If you are using Subscribe To Comments by Mark Jaquith, disable it
+2. Upload the entire folder and all the subfolders to your Wordpress plugins' folder
+3. Activate it
+4. Create a new page whose content is the error message shown to the user is something goes wrong
+5. Write down the ID of this new page
+6. Go to Settings > Subscribe to Comments and enter the ID in the first field
+7. Customize all the messages to fit your needs
+8. If your template does not call the 'comment_form' action, you will have to manually edit it. To show the checkbox and its label, add: `<?php if (function_exists('subscribe_reloaded_show')) subscribe_reloaded_show(); ?>`
 
 
 == Changelog ==
