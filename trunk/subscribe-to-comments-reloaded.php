@@ -172,16 +172,16 @@ Please confirm your request by clicking on this link:
 		$subject = stripslashes(get_option('subscribe_reloaded_double_check_subject', 'Please confirm your subscribtion to [post_title]'));
 		$message = stripslashes(get_option('subscribe_reloaded_double_check_content', ''));
 		$manager_link = get_permalink(get_option('subscribe_reloaded_manager_page', ''));
-		$clean_email = urlencode($this->clean_email($_email));
+		$clean_email = $this->clean_email($_email);
 		$subscriber_salt = md5($this->salt.$clean_email);
 	
 		if (strpos($manager_link, '?') !== false){
-			$confirm_link = "$manager_link&sre=$clean_email&srk=$subscriber_salt&srp=$_post_ID&sra=c";
-			$manager_link = "$manager_link&sre=$clean_email&srk=$subscriber_salt";
+			$confirm_link = "$manager_link&sre=".urlencode($clean_email)."&srk=$subscriber_salt&srp=$_post_ID&sra=c";
+			$manager_link = "$manager_link&sre=".urlencode($clean_email)."&srk=$subscriber_salt";
 		}
 		else{
-			$confirm_link = "$manager_link?sre=$clean_email&srk=$subscriber_salt&srp=$_post_ID&sra=c";
-			$manager_link = "$manager_link?sre=$clean_email&srk=$subscriber_salt";
+			$confirm_link = "$manager_link?sre=".urlencode($clean_email)."&srk=$subscriber_salt&srp=$_post_ID&sra=c";
+			$manager_link = "$manager_link?sre=".urlencode($clean_email)."&srk=$subscriber_salt";
 		}
 		
 		$headers = "MIME-Version: 1.0\n";
@@ -198,6 +198,8 @@ Please confirm your request by clicking on this link:
 		$message = str_replace('[confirm_link]', $confirm_link, $message);
 		$message = str_replace('[manager_link]', $manager_link, $message);
 
+
+		echo $message; exit;
 		wp_mail($clean_email, $subject, $message, $headers);
 	}
 	// end confirmation_email
@@ -422,7 +424,7 @@ Please confirm your request by clicking on this link:
 		$subject = stripslashes(get_option('subscribe_reloaded_notification_subject', 'There is a new comment on the post [post_title]'));
 		$message = stripslashes(get_option('subscribe_reloaded_notification_content', ''));
 		$manager_link = get_permalink(get_option('subscribe_reloaded_manager_page', ''));
-		$clean_email = urlencode($this->clean_email($_email));
+		$clean_email = $this->clean_email($_email);
 		$subscriber_salt = md5($this->salt.$clean_email);
 		if (strpos($manager_link, '?') !== false){
 			$manager_link = "$manager_link&sre=".urlencode($clean_email)."&srk=$subscriber_salt";
