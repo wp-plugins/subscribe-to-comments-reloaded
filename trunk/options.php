@@ -99,6 +99,20 @@ $subscribe_reloaded_options['management_content'] = subscribe_reloaded_get_optio
 
 <div class="wrap">
 <h2><?php _e('Subscribe to Comments', 'subscribe-reloaded') ?></h2>
+<form action="<?php echo get_permalink(get_option('subscribe_reloaded_manager_page', '')) ?>" method="post" id="change_post_id">
+<fieldset>
+<p><?php _e('If you know the ID of a post you want to manage, enter it in the field here below to see a list of email addresses subscribed to it','subscribe-reloaded') ?> 
+<br/><input type="text" size="10" name="srp" value="" /> <input type="submit" class="subscribe-form-button" value="<?php _e('Search post ID','subscribe-reloaded') ?>" /></p>
+</fieldset>
+</form>
+<form action="<?php echo get_permalink(get_option('subscribe_reloaded_manager_page', '')) ?>" method="post" id="filter_email_address">
+<fieldset>
+<p><?php _e('If you know the email address you want to manage, enter it in the field here below to see a list of articles this reader is currently watching','subscribe-reloaded') ?> 
+<br/><input type="text" size="40" name="sre" value="" /> <input type="submit" class="subscribe-form-button" value="<?php _e('Search email','subscribe-reloaded') ?>" /></p>
+</fieldset>
+</form>
+<hr/>
+<h3><?php _e('Options', 'subscribe-reloaded') ?></h3>
 <form action="admin.php?page=subscribe-to-comments-reloaded/options.php" method="post">
 <table class="form-table <?php echo $wp_locale->text_direction ?>">
 <tbody>
