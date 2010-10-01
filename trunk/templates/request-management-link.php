@@ -9,7 +9,7 @@ if (strpos($_SERVER['SCRIPT_FILENAME'], basename(__FILE__))){
 load_plugin_textdomain('subscribe-reloaded', WP_PLUGIN_DIR .'/subscribe-to-comments-reloaded/langs', '/subscribe-to-comments-reloaded/langs');
 
 // Is the post_id passed in the query string valid?
-$post_ID = !empty($_GET['srp'])?intval($_GET['srp']):0;
+$post_ID = !empty($_POST['srp'])?intval($_POST['srp']):(!empty($_GET['srp'])?intval($_GET['srp']):0);
 $post = get_post($post_ID);
 if (($post_ID > 0) && !is_object($post)){
 	return '';
