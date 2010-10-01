@@ -43,6 +43,7 @@ else{
 	if (is_array($subscriptions) && !empty($subscriptions)){
 		$title = __('Title','subscribe-reloaded').': <strong>'.get_the_title($clean_post_id).'</strong>';
 		echo "<p>$title</p>";
+		echo '<p>'.__('Legend: Y: subscribed, N: suspended, C: awaiting confirmation','subscribe-reloaded').'</p>';
 		echo '<ul>';
 		foreach($subscriptions as $i => $a_subscription){
 			$subscriber_salt = md5($wp_subscribe_reloaded->salt.$a_subscription->email);
@@ -53,7 +54,7 @@ else{
 				$manager_link = "$manager_link?sre=".urlencode($a_subscription->email)."&srk=$subscriber_salt";
 			echo "<li><input type='checkbox' name='email_list[]' value='{$a_subscription->email}' id='e_$i'/> <label for='e_$i'><a href='$manager_link'>$a_subscription->email</a> - $a_subscription->dt</label> [$a_subscription->status]</li>\n";
 		}
-		echo '</ul><p>'.__('Legend: Y: subscribed, N: suspended, C: awaiting confirmation','subscribe-reloaded').'</p>';
+		echo '</ul>';
 		echo '<p>'.__('Action:','subscribe-reloaded').' <input type="radio" name="action_type" value="d" id="action_type_delete" /> <label for="action_type_delete">'.__('Delete','subscribe-reloaded').'</label> &nbsp;&nbsp;&nbsp;&nbsp; ';
 		echo '<input type="radio" name="action_type" value="s" id="action_type_suspend" checked="checked" /> <label for="action_type_suspend">'.__('Suspend','subscribe-reloaded').'</label> &nbsp;&nbsp;&nbsp;&nbsp; ';
 		echo '<input type="radio" name="action_type" value="a" id="action_type_activate" /> <label for="action_type_activate">'.__('Resume','subscribe-reloaded').'</label></p>';
