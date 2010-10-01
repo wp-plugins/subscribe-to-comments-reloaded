@@ -7,7 +7,7 @@ Tested up to: 3.0.1
 Stable tag: 1.0
 
 == Description ==
-Subscribe to Comments Reloaded is a robust plugin that enables commenters to sign up for e-mail notification of subsequent entries. The plugin includes a full-featured subscription manager that your commenters can use to unsubscribe to certain posts, block all notifications, or even change their notification e-mail address! It solves most of the issues present in Mark Jaquith's version, using the latest Wordpress features and functionality. Plus, it introduces a double check-in mechanism, that requires users to confirm their subscription clicking on a link they will receive via email.
+Subscribe to Comments Reloaded is a robust plugin that enables commenters to sign up for e-mail notification of subsequent entries. The plugin includes a full-featured subscription manager that your commenters can use to unsubscribe to certain posts, block all notifications, or even change their notification e-mail address! It solves most of the issues present in Mark Jaquith's version, using the latest Wordpress features and functionality. Plus, allows administrators to enable a double opt-in mechanism, requiring users to confirm their subscription clicking on a link they will receive via email.
 
 ## Requirements
 * Wordpress 2.9 or higher
