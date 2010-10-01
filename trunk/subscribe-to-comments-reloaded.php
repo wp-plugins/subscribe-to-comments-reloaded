@@ -198,8 +198,6 @@ Please confirm your request by clicking on this link:
 		$message = str_replace('[confirm_link]', $confirm_link, $message);
 		$message = str_replace('[manager_link]', $manager_link, $message);
 
-
-		echo $message; exit;
 		wp_mail($clean_email, $subject, $message, $headers);
 	}
 	// end confirmation_email
