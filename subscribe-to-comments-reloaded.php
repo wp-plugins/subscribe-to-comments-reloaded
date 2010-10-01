@@ -500,4 +500,4 @@ add_filter('the_content', array( &$wp_subscribe_reloaded, 'subscribe_reloaded_ma
 add_action('comment_form', 'subscribe_reloaded_show');
 
 // Create a hook to use with the daily cron job
-add_action('subscribe_reloaded_purge', array( &$wp_slimstat,'subscribe_reloaded_purge') );
+add_action('subscribe_reloaded_purge', array( &$wp_subscribe_reloaded,'subscribe_reloaded_purge') );
