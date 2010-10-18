@@ -2,8 +2,8 @@
 /*
 Plugin Name: Subscribe to Comments Reloaded
 Version: 1.0
-Plugin URI: http://www.duechiacchiere.it/
-Description: Subscribe to Comments with Double-Opt-In
+Plugin URI: http://lab.duechiacchiere.it/index.php?board=5.0
+Description: Let your users follow the discussion...
 Author: camu
 Author URI: http://www.duechiacchiere.it/
 */
@@ -203,27 +203,24 @@ Please confirm your request by clicking on this link:
 	// end confirmation_email
 	
 	// Function: new_comment_posted
-	// Description: Deletes a row in the subscriptions' table
+	// Description: Adds a new row in the subscriptions' table, when a new comment is posted
 	// Input: post_id, email 
 	// Output: none
 	public function new_comment_posted($_comment_ID = 0, $_comment_status = 0){
 	    global $wpdb;
 		
 		// Retrieve the information about the new comment
-		$info = $wpdb->get_row("SELECT `comment_post_ID`, `comment_author_email` FROM $wpdb->comments WHERE `comment_ID` = '$_comment_ID' AND `comment_approved` = 1 LIMIT 1", OBJECT);
+		$info = $wpdb->get_row("SELECT `comment_post_ID`, `comment_author_email` FROM $wpdb->comments WHERE `comment_ID` = '$_comment_ID' LIMIT 1", OBJECT);
 		$subscribed_emails = array();
 		
-		// Send a notification to all the users subscribed to this post
-		if (!empty($info)){
-			$subscribed_emails = $this->_get_subscriptions($info->comment_post_ID, 'Y');
-			foreach($subscribed_emails as $a_email){
-				// Skip the user who posted this new comment
-				if ($a_email != $info->comment_author_email) $this->_notify_user($a_email, $info->comment_post_ID, $_comment_ID);
-			}
-		}
-		
 		// Did this visitor request to be subscribed to the discussion? (and s/he is not subscribed)
-		if (!empty($_POST['subscribe-reloaded']) && $_POST['subscribe-reloaded'] == 'yes' && is_array($subscribed_emails)){
+		if (!empty($_POST['subscribe-reloaded']) && $_POST['subscribe-reloaded'] == 'yes'){
+		
+			// Comment has been held in the moderation queue
+			if ($_comment_status != 1){
+				$this->add_subscription($info->comment_author_email, 'C', $info->comment_post_ID);
+				return $_comment_ID;
+			}
 			
 			// Are we using double check-in?			
 			$enable_double_check = get_option('subscribe_reloaded_enable_double_check', 'no');
@@ -235,9 +232,45 @@ Please confirm your request by clicking on this link:
 				$this->add_subscription($info->comment_author_email, 'Y', $info->comment_post_ID);
 			}
 		}
+
+		// Send a notification to all the users subscribed to this post
+		if (!empty($info)){
+			$subscribed_emails = $this->_get_subscriptions($info->comment_post_ID, 'Y');
+			foreach($subscribed_emails as $a_email){
+				// Skip the user who posted this new comment
+				if ($a_email != $info->comment_author_email) $this->_notify_user($a_email, $info->comment_post_ID, $_comment_ID);
+			}
+		}
 		return $_comment_ID;
 	}
 	// end new_comment_posted
+	
+	// Function: new_comment_approved
+	// Description: Deletes a row in the subscriptions' table
+	// Input: post_id, email 
+	// Output: none
+	public function new_comment_approved($_comment_ID = 0, $_comment_status = 0){
+	    global $wpdb;
+		
+		echo 'aaa'; exit;
+		
+		if ($_comment_status != 1) return $_comment_ID;
+		
+		// Retrieve the information about the new comment
+		$info = $wpdb->get_row("SELECT `comment_post_ID`, `comment_author_email` FROM $wpdb->comments WHERE `comment_ID` = '$_comment_ID' AND `comment_approved` = 1 LIMIT 1", OBJECT);
+		if (empty($info) || !$this->is_user_subscribed($info->comment_post_ID, $info->comment_author_email, 'C')) return $_comment_ID;
+		
+		// Are we using double check-in?			
+		$enable_double_check = get_option('subscribe_reloaded_enable_double_check', 'no');
+		if ($enable_double_check == 'yes'){
+			$this->confirmation_email($info->comment_author_email, $info->comment_post_ID);
+		}
+		else{
+			$wpdb->query("UPDATE $this->table_subscriptions set `status` = 'Y' WHERE `email` = '$info->comment_author_email' AND `post_ID` = '$info->comment_post_ID'");
+		}
+		return $_comment_ID;
+	}
+	// end new_comment_approved
 	
 	// Function: subscribe_reloaded_manage
 	// Description: Displays the appropriate management page
@@ -488,7 +521,7 @@ add_action( 'admin_menu', array( &$wp_subscribe_reloaded, 'add_config_menu' ) );
 add_action('comment_post', array( &$wp_subscribe_reloaded, 'new_comment_posted' ) );
 
 // Add user's subscription after a pending comment is approved
-// add_action('wp_set_comment_status', create_function('$a', 'global $sg_subscribe; sg_subscribe_start(); return $sg_subscribe->send_notifications($a);'));
+add_action('wp_set_comment_status', array( &$wp_subscribe_reloaded, 'new_comment_approved' ) );
 
 // Remove subscriptions attached to a post that is being deleted
 add_action( 'delete_post', array( &$wp_subscribe_reloaded, 'delete_subscription' ) );
