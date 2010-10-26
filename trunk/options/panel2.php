@@ -15,17 +15,6 @@ if (isset($_POST['options'])){
 	if (isset($_POST['options']['checked_by_default']) && !subscribe_reloaded_update_option('subscribe_reloaded_checked_by_default', $_POST['options']['checked_by_default'], 'yesno')) $faulty_fields = __('Checked by default','subscribe-reloaded').', ';	
 	if (isset($_POST['options']['enable_double_check']) && !subscribe_reloaded_update_option('subscribe_reloaded_enable_double_check', $_POST['options']['enable_double_check'], 'yesno')) $faulty_fields = __('Enable double check','subscribe-reloaded').', ';
 	if (isset($_POST['options']['notify_authors']) && !subscribe_reloaded_update_option('subscribe_reloaded_notify_authors', $_POST['options']['notify_authors'], 'yesno')) $faulty_fields = __('Notify authors','subscribe-reloaded').', ';	
-	
-	if (isset($_POST['options']['notification_subject']) && !subscribe_reloaded_update_option('subscribe_reloaded_notification_subject', $_POST['options']['notification_subject'], 'text')) $faulty_fields = __('Notification subject','subscribe-reloaded').', ';
-	if (isset($_POST['options']['notification_content']) && !subscribe_reloaded_update_option('subscribe_reloaded_notification_content', $_POST['options']['notification_content'], 'text')) $faulty_fields = __('Notification message','subscribe-reloaded').', ';
-	if (isset($_POST['options']['checkbox_label']) && !subscribe_reloaded_update_option('subscribe_reloaded_checkbox_label', $_POST['options']['checkbox_label'], 'text')) $faulty_fields = __('Checkbox label','subscribe-reloaded').', ';
-	if (isset($_POST['options']['subscribed_label']) && !subscribe_reloaded_update_option('subscribe_reloaded_subscribed_label', $_POST['options']['subscribed_label'], 'text')) $faulty_fields = __('Subscribed label','subscribe-reloaded').', ';
-	if (isset($_POST['options']['subscribed_waiting_label']) && !subscribe_reloaded_update_option('subscribe_reloaded_subscribed_waiting_label', $_POST['options']['subscribed_waiting_label'], 'text')) $faulty_fields = __('Awaiting label','subscribe-reloaded').', ';
-	if (isset($_POST['options']['author_label']) && !subscribe_reloaded_update_option('subscribe_reloaded_author_label', $_POST['options']['author_label'], 'text')) $faulty_fields = __('Author label','subscribe-reloaded').', ';	
-	if (isset($_POST['options']['double_check_subject']) && !subscribe_reloaded_update_option('subscribe_reloaded_double_check_subject', $_POST['options']['double_check_subject'], 'text')) $faulty_fields = __('Double check subject','subscribe-reloaded').', ';
-	if (isset($_POST['options']['double_check_content']) && !subscribe_reloaded_update_option('subscribe_reloaded_double_check_content', $_POST['options']['double_check_content'], 'text')) $faulty_fields = __('Double check message','subscribe-reloaded').', ';
-	if (isset($_POST['options']['management_subject']) && !subscribe_reloaded_update_option('subscribe_reloaded_management_subject', $_POST['options']['management_subject'], 'text')) $faulty_fields = __('Management subject','subscribe-reloaded').', ';
-	if (isset($_POST['options']['management_content']) && !subscribe_reloaded_update_option('subscribe_reloaded_management_content', $_POST['options']['management_content'], 'text')) $faulty_fields = __('Management message','subscribe-reloaded').', ';
 
 	// Display an alert in the admin interface if something went wrong
 	echo '<div class="updated fade"><p>';
