@@ -52,7 +52,7 @@ if (!empty($_POST['subscribe_reloaded_email'])){
 
 <p><?php _e("To manage your subscriptions, please enter your email address here below. We will send you a message containing the link to access your personal management page.", 'subscribe-reloaded'); ?></p>
 <form action="<?php echo $_SERVER['REQUEST_URI'] ?>" method="post" onsubmit="if(this.subscribe_reloaded_email.value=='' || his.subscribe_reloaded_email.value.indexOf('@')==0) return false">
-<fieldset>
+<fieldset style="border:0">
 	<p><label for="subscribe_reloaded_email"><?php _e('Email','subscribe-reloaded') ?></label> <input type="text" class="subscribe-form-field" name="subscribe_reloaded_email" value="<?php echo isset($_COOKIE['comment_author_email_'.COOKIEHASH])?$_COOKIE['comment_author_email_'.COOKIEHASH]:'email'; ?>" size="22"/>
 	<input name="submit" type="submit" class="subscribe-form-button" value="<?php _e('Send','subscribe-reloaded') ?>" /></p>
 </fieldset>

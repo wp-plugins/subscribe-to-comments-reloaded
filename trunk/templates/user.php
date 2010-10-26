@@ -35,7 +35,7 @@ else{
 
 <form action="<?php echo htmlspecialchars($_SERVER['REQUEST_URI']) ?>" method="post" id="post_list_form"
 	onsubmit="return confirm('<?php _e('Please remember: this operation cannot be undone. Are you sure you want to proceed?', 'subscribe-reloaded') ?>')">
-<fieldset>
+<fieldset style="border:0">
 <?php
 	$clean_email = !empty($_POST['sre'])?$wp_subscribe_reloaded->clean_email($_POST['sre']):(!empty($_GET['sre'])?$wp_subscribe_reloaded->clean_email($_GET['sre']):'');
 	$subscriptions = $wpdb->get_results("SELECT `status`, `post_ID`, `dt` FROM $wp_subscribe_reloaded->table_subscriptions WHERE `email` = '$clean_email' ORDER BY `status` ASC, `post_ID` ASC", OBJECT);
@@ -48,12 +48,12 @@ else{
 			echo "<li><input type='checkbox' name='post_list[]' value='{$a_subscription->post_ID}' id='post_{$a_subscription->post_ID}'/> <label for='post_{$a_subscription->post_ID}'><a href='$permalink'>$title</a></label> [{$a_subscription->status}]</li>\n";
 		}
 		echo '</ul>';
+		echo '<p><a class="subscribe-small-text" href="#" onclick="t=document.getElementById(\'post_list_form\').elements;for(i in t) t[i].checked=1">'.__('Select all','subscribe-reloaded').'</a> - ';
+		echo '<a class="small-text" href="#" onclick="t=document.getElementById(\'post_list_form\').elements;for(i in t)if(t[i].checked==1){t[i].checked=0} else{t[i].checked=1}">'.__('Invert selection','subscribe-reloaded').'</a></p>';
 		echo '<p>'.__('Action:','subscribe-reloaded').' <input type="radio" name="action_type" value="d" id="action_type_delete" /> <label for="action_type_delete">'.__('Delete','subscribe-reloaded').'</label> &nbsp;&nbsp;&nbsp;&nbsp; ';
 		echo '<input type="radio" name="action_type" value="s" id="action_type_suspend" checked="checked" /> <label for="action_type_suspend">'.__('Suspend','subscribe-reloaded').'</label> &nbsp;&nbsp;&nbsp;&nbsp; ';
 		echo '<input type="radio" name="action_type" value="a" id="action_type_activate" /> <label for="action_type_activate">'.__('Resume','subscribe-reloaded').'</label></p>';
-		echo '<p><input type="button" class="subscribe-form-button" onclick="t=document.getElementById(\'post_list_form\').elements;for(i in t) t[i].checked=1" value="'.__('Select all','subscribe-reloaded').'" />';
-		echo '<input type="button" class="subscribe-form-button" onclick="t=document.getElementById(\'post_list_form\').elements;for(i in t)if(t[i].checked==1){t[i].checked=0} else{t[i].checked=1}" value="'.__('Invert selection','subscribe-reloaded').'" />';
-		echo '<input type="submit" class="subscribe-form-button" value="'.__('Update subscriptions','subscribe-reloaded').'" /></p>';
+		echo '<p><input type="submit" class="subscribe-form-button" value="'.__('Update subscriptions','subscribe-reloaded').'" /></p>';
 		
 	}
 	else{
