@@ -31,7 +31,7 @@ Subscribe to Comments Reloaded is a robust plugin that enables commenters to sig
 3. Activate it
 4. Customize all the messages (Settings > Subscribe to Comments > Messages)
 5. If your template does not call the 'comment_form' action, you will have to manually edit it. To show the checkbox and its label, add: `<?php if (function_exists('subscribe_reloaded_show')) subscribe_reloaded_show(); ?>`
-6. The plugin creates a new page, feel free to customize the 'error message' it contains to fit your needs. That copy will be shown to the user if an error occurs, i.e. the security key in the URL is not valid.
+6. StCR creates a new page in your blog, feel free to customize the 'error message' it contains to fit your needs. That copy will be shown to the user if an error occurs, i.e. the security key in the URL is not valid.
 
 
 == Changelog ==
