@@ -86,11 +86,9 @@ class wp_subscribe_reloaded {
 		if (is_array($result)){
 			$import_sql = "
 				INSERT INTO `$this->table_subscriptions` (`email`,`status`,`post_ID`,`dt`)
-					SELECT `comment_author_email`, `comment_subscribe`, `comment_post_ID`, `comment_date`
+					SELECT DISTINCT `comment_author_email`, `comment_subscribe`, `comment_post_ID`, `comment_date`
 					FROM $wpdb->comments
-					WHERE `comment_author_email` LIKE '%@%.%'
-					GROUP BY `comment_author_email`, `comment_post_ID`
-				";
+					WHERE `comment_author_email` LIKE '%@%.%'";
 			$wpdb->query($import_sql);
 
 			// Remove the old data
