@@ -7,6 +7,7 @@ $wpdb->query("DROP TABLE IF EXISTS `{$wpdb->prefix}subscribe_reloaded`");
 
 // Goodbye options...
 delete_option('subscribe_reloaded_manager_page');
+delete_option('subscribe_reloaded_manager_page_title');
 delete_option('subscribe_reloaded_purge_days');
 delete_option('subscribe_reloaded_from_name');
 delete_option('subscribe_reloaded_from_email');

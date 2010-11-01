@@ -4,11 +4,12 @@ if (strpos($_SERVER['SCRIPT_FILENAME'], basename(__FILE__))){
   header('Location: /');
   exit;
 }
+global $wpdb;
+ob_start();
 
 // Load localization files
 load_plugin_textdomain('subscribe-reloaded', WP_PLUGIN_DIR .'/subscribe-to-comments-reloaded/langs', '/subscribe-to-comments-reloaded/langs');
 $wp_subscribe_reloaded = new wp_subscribe_reloaded();
-global $wpdb;
 
 $clean_post_id = !empty($_POST['srp'])?intval($_POST['srp']):(!empty($_GET['srp'])?intval($_GET['srp']):0);
 
@@ -27,12 +28,10 @@ if (!empty($_POST['email_list']) && !empty($_POST['action_type'])){
 		default:
 			break;
 	}
-	echo '<p>'.__("Subscriptions have been successfully updated. In order to cancel or suspend more notifications, select the corresponding checkbox(es) and click on the button at the end of the list.", 'subscribe-reloaded').'</p>';
-}
-else{
-	echo '<p>'.__("You can manage the subscriptions to your articles on this page. In order to cancel or suspend one or more notifications, select the corresponding checkbox(es) and click on the button at the end of the list.", 'subscribe-reloaded').'</p>';
+	echo '<p><b>'.__('Subscriptions have been successfully updated.','subscribe-reloaded').'</b></p>';
 }
 
+echo '<p>'.stripslashes(get_option('subscribe_reloaded_author_text')).'</p>';
 ?>
 
 <form action="<?php echo htmlspecialchars($_SERVER['REQUEST_URI']) ?>" method="post" id="email_list_form"
@@ -47,7 +46,7 @@ else{
 		echo '<ul>';
 		foreach($subscriptions as $i => $a_subscription){
 			$subscriber_salt = md5($wp_subscribe_reloaded->salt.$a_subscription->email);
-			$manager_link = get_permalink(get_option('subscribe_reloaded_manager_page', ''));
+			$manager_link = get_option('subscribe_reloaded_manager_page', '');
 			if (strpos($manager_link, '?') !== false)
 				$manager_link = "$manager_link&sre=".urlencode($a_subscription->email)."&srk=$subscriber_salt";
 			else
@@ -69,3 +68,8 @@ else{
 ?>
 </fieldset>
 </form>
+<?php
+$output = ob_get_contents();
+ob_end_clean();
+return $output;
+?>

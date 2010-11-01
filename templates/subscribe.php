@@ -5,6 +5,8 @@ if (strpos($_SERVER['SCRIPT_FILENAME'], basename(__FILE__))){
   exit;
 }
 
+ob_start();
+
 // Load localization files
 load_plugin_textdomain('subscribe-reloaded', WP_PLUGIN_DIR .'/subscribe-to-comments-reloaded/langs', '/subscribe-to-comments-reloaded/langs');
 
@@ -35,22 +37,28 @@ if (!empty($_POST['subscribe_reloaded_email'])){
 	if ($enable_double_check == 'yes' && !$wp_subscribe_reloaded->is_user_subscribed($post_ID, $_POST['subscribe_reloaded_email'], 'C')){
 		$wp_subscribe_reloaded->add_subscription($_POST['subscribe_reloaded_email'], 'C', $post_ID);
 		$wp_subscribe_reloaded->confirmation_email($_POST['subscribe_reloaded_email'], $post_ID);
-		printf(__("Thank you for using our subscription service. In order to confirm your request, please check your email for the verification message and follow the instructions. In the meanwhile, you can go back to <a href='%s'>%s</a>.", 'subscribe-reloaded'), get_permalink($post_ID), $post->post_title);
+		echo stripslashes(get_option('subscribe_reloaded_subscription_confirmed_dci'));
 	}
 	elseif(!$wp_subscribe_reloaded->is_user_subscribed($post_ID, $_POST['subscribe_reloaded_email'], 'Y')){
 		$this->add_subscription($_POST['subscribe_reloaded_email'], 'Y', $post_ID);
-		printf(__("Thank you for using our subscription service. Your request has been completed, and you are now subscribed to <a href='%s'>%s</a>. You will receive a notification email every time a new comment to this article is approved and posted by the administrator.", 'subscribe-reloaded'), get_permalink($post_ID), $post->post_title);
+		echo stripslashes(get_option('subscribe_reloaded_subscription_confirmed'));
 	}
 	echo '</p>';
 	
 	return ''; 
-} 
+}
+
 ?>
 
-<p><?php printf(__("You can follow the discussion on <strong>%s</strong> without having to leave a comment. Cool, huh? Just enter your email address in the form here below and you're all set.", 'subscribe-reloaded'), $post->post_title); ?></p>
+<p><?php echo str_replace('[post_title]', $post->post_title, stripslashes(get_option('subscribe_reloaded_subscribe_without_commenting'))); ?></p>
 <form action="<?php echo $_SERVER['REQUEST_URI'] ?>" method="post" onsubmit="if(this.subscribe_reloaded_email.value=='' || his.subscribe_reloaded_email.value.indexOf('@')==0) return false">
 <fieldset style="border:0">
 	<p><label for="subscribe_reloaded_email"><?php _e('Email','subscribe-reloaded') ?></label> <input type="text" class="subscribe-form-field" name="subscribe_reloaded_email" value="<?php echo isset($_COOKIE['comment_author_email_'.COOKIEHASH])?$_COOKIE['comment_author_email_'.COOKIEHASH]:'email'; ?>" size="22"/>
 	<input name="submit" type="submit" class="subscribe-form-button" value="<?php _e('Send','subscribe-reloaded') ?>" /></p>
 </fieldset>
 </form>
+<?php
+$output = ob_get_contents();
+ob_end_clean();
+return $output;
+?>

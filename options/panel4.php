@@ -4,29 +4,64 @@ if (strpos($_SERVER['SCRIPT_FILENAME'], basename(__FILE__))){
 	header('Location: /');
 	exit;
 }
+
+// Update options
+if (isset($_POST['options'])){
+	$faulty_fields = '';
+	if (isset($_POST['options']['notification_subject']) && !subscribe_reloaded_update_option('notification_subject', $_POST['options']['notification_subject'], 'text')) $faulty_fields = __('Notification subject','subscribe-reloaded').', ';
+	if (isset($_POST['options']['notification_content']) && !subscribe_reloaded_update_option('notification_content', $_POST['options']['notification_content'], 'text')) $faulty_fields = __('Notification message','subscribe-reloaded').', ';
+	if (isset($_POST['options']['double_check_subject']) && !subscribe_reloaded_update_option('double_check_subject', $_POST['options']['double_check_subject'], 'text')) $faulty_fields = __('Double check subject','subscribe-reloaded').', ';
+	if (isset($_POST['options']['double_check_content']) && !subscribe_reloaded_update_option('double_check_content', $_POST['options']['double_check_content'], 'text')) $faulty_fields = __('Double check message','subscribe-reloaded').', ';
+	if (isset($_POST['options']['management_subject']) && !subscribe_reloaded_update_option('management_subject', $_POST['options']['management_subject'], 'text')) $faulty_fields = __('Management subject','subscribe-reloaded').', ';
+	if (isset($_POST['options']['management_content']) && !subscribe_reloaded_update_option('management_content', $_POST['options']['management_content'], 'text')) $faulty_fields = __('Management message','subscribe-reloaded').', ';
+
+	// Display an alert in the admin interface if something went wrong
+	echo '<div class="updated fade"><p>';
+	if (empty($faulty_fields)){
+			_e('Your settings have been successfully updated.','subscribe-reloaded');
+	}
+	else{
+		_e('There was an error updating the following fields:','subscribe-reloaded');
+		echo ' <strong>'.substr($faulty_fields,0,-2).'</strong>';
+	}
+	echo "</p></div>\n";
+}
+
 ?>
-
-<table class="form-table">
+<form action="admin.php?page=subscribe-to-comments-reloaded/options/index.php&subscribepanel=<?php echo $current_panel ?>" method="post">
+<table class="form-table <?php echo $wp_locale->text_direction ?>">
 <tbody>
-	<tr valign="top">
-		<th scope="row"><form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----">
-<input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
-</form>
-
-
-</th>
-		<td class='wrap'>
-			<?php _e('How valuable is the feature offered by this plugin to your visitors? Subscribe to Comments Reloaded is and will always be free, but consider supporting the author if this plugin made your web site better, especially if you are making money out of it. Any donation received will be reinvested in the development of Subscribe to Comments Reloaded, and to buy some food for my hungry family.','subscribe-reloaded') ?>
-		</td>
+	<tr>
+		<th scope="row"><label for="notification_subject"><?php _e('Notification subject','subscribe-reloaded') ?></label></th>
+		<td><input type="text" name="options[notification_subject]" id="notification_subject" value="<?php echo subscribe_reloaded_get_option('notification_subject'); ?>" size="70">
+			<div class="description"><?php _e('Subject of the notification email. Allowed tag: [post_title]','subscribe-reloaded'); ?></div></td>
+	</tr>
+	<tr>
+		<th scope="row"><label for="notification_content"><?php _e('Notification message','subscribe-reloaded') ?></label></th>
+		<td><textarea name="options[notification_content]" id="notification_content" cols="70" rows="5"><?php echo subscribe_reloaded_get_option('notification_content'); ?></textarea>
+			<div class="description" style="padding-top:0"><?php _e('Content of the notification email. Allowed tags: [post_title], [comment_permalink], [comment_author], [comment_content], [post_permalink], [manager_link]','subscribe-reloaded'); ?></div></td>
+	</tr>
+	<tr>
+		<th scope="row"><label for="double_check_subject"><?php _e('Double check subject','subscribe-reloaded') ?></label></th>
+		<td><input type="text" name="options[double_check_subject]" id="double_check_subject" value="<?php echo subscribe_reloaded_get_option('double_check_subject'); ?>" size="70">
+			<div class="description" style="padding-top:0"><?php _e('Subject of the confirmation email. Allowed tag: [post_title]','subscribe-reloaded'); ?></div></td>
+	</tr>
+	<tr>
+		<th scope="row"><label for="double_check_content"><?php _e('Double check message','subscribe-reloaded') ?></label></th>
+		<td><textarea name="options[double_check_content]" id="double_check_content" cols="70" rows="5"><?php echo subscribe_reloaded_get_option('double_check_content'); ?></textarea>
+			<div class="description" style="padding-top:0"><?php _e('Content of the confirmation email. Allowed tags: [post_permalink], [confirm_link], [post_title], [manager_link]','subscribe-reloaded'); ?></div></td>
+	</tr>
+	<tr>
+		<th scope="row"><label for="management_subject"><?php _e('Management subject','subscribe-reloaded') ?></label></th>
+		<td><input type="text" name="options[management_subject]" id="management_subject" value="<?php echo subscribe_reloaded_get_option('management_subject'); ?>" size="70">
+			<div class="description" style="padding-top:0"><?php _e('Subject of the mail sent to those who request to access their management page. Allowed tag: [blog_name]','subscribe-reloaded'); ?></div></td>
+	</tr>
+	<tr>
+		<th scope="row"><label for="management_content"><?php _e('Management message','subscribe-reloaded') ?></label></th>
+		<td><textarea name="options[management_content]" id="management_content" cols="70" rows="5"><?php echo subscribe_reloaded_get_option('management_content'); ?></textarea>
+			<div class="description" style="padding-top:0"><?php _e('Content of the management email. Allowed tags: [blog_name], [manager_link]','subscribe-reloaded'); ?></div></td>
 	</tr>
 </tbody>
 </table>
-
-<h3><?php _e("Don't want to donate? You can still help",'wp-slimstat-options') ?></h3>
-<p><?php _e("If you don't want to donate money, please consider blogging about my plugin with a link to the plugin's page. Please let your readers know what makes your blog better. You can also contribute donating your time: do not hesitate to send me bug reports, your localization files, ideas on how to improve Subscribe to Comments Reloaded and so on. Whatever you do, thanks for using my plugin!",'subscribe-reloaded') ?></p>
-
-<h3><?php _e("Vote and show your appreciation",'subscribe-reloaded') ?></h3>
-<p><?php _e('Tell other people if Subscribe to Comments Reloaded works for you and how good it is. <a href="http://wordpress.org/extend/plugins/subscribe-to-comments-reloaded/">Rate it</a> on its Plugin Directory page.','subscribe-reloaded') ?></p>
+<p class="submit"><input type="submit" value="<?php _e('Save Changes') ?>" class="button-primary" name="Submit"></p>
+</form>

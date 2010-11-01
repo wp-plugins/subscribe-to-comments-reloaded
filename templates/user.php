@@ -4,11 +4,12 @@ if (strpos($_SERVER['SCRIPT_FILENAME'], basename(__FILE__))){
   header('Location: /');
   exit;
 }
+global $wpdb;
+ob_start();
 
 // Load localization files
 load_plugin_textdomain('subscribe-reloaded', WP_PLUGIN_DIR .'/subscribe-to-comments-reloaded/langs', '/subscribe-to-comments-reloaded/langs');
 $wp_subscribe_reloaded = new wp_subscribe_reloaded();
-global $wpdb;
 
 if (!empty($_POST['post_list']) && !empty($_POST['action_type'])){
 	$post_list = implode("','", $_POST['post_list']);
@@ -25,12 +26,10 @@ if (!empty($_POST['post_list']) && !empty($_POST['action_type'])){
 		default:
 			break;
 	}
-	echo '<p>'.__("Your subscriptions have been successfully updated. In order to cancel or suspend more notifications, select the corresponding checkbox(es) and click on the button at the end of the list. You are currently subscribed to:", 'subscribe-reloaded').'</p>';
-}
-else{
-	echo '<p>'.__("You can manage your subscriptions to the article of this blog on this page. In order to cancel or suspend one or more notifications, select the corresponding checkbox(es) and click on the button at the end of the list. You are currently subscribed to:", 'subscribe-reloaded').'</p>';
+	echo '<p><b>'.__('Subscriptions have been successfully updated.','subscribe-reloaded').'</b></p>';
 }
 
+echo '<p>'.stripslashes(get_option('subscribe_reloaded_user_text')).'</p>';
 ?>
 
 <form action="<?php echo htmlspecialchars($_SERVER['REQUEST_URI']) ?>" method="post" id="post_list_form"
@@ -62,3 +61,8 @@ else{
 ?>
 </fieldset>
 </form>
+<?php
+$output = ob_get_contents();
+ob_end_clean();
+return $output;
+?>
