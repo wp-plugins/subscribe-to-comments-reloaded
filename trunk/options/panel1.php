@@ -62,7 +62,7 @@ if (!empty($_POST['mass_update']) && !empty($_POST['sre']) && !empty($_POST['act
 </form>
 
 <h3><?php _e('Remove or suspend email address','subscribe-reloaded') ?></h3>
-<p><?php _e('Change the status or permanently delete all the subscriptions for a given email address.','subscribe-reloaded') ?></p>
+<p><?php _e('Change the status of an email address or permanently delete all its subscriptions.','subscribe-reloaded') ?></p>
 <form action="admin.php?page=subscribe-to-comments-reloaded/options/index.php&subscribepanel=1" method="post">
 <p><input type="text" size="40" name="sre" value="" /> 
 <select name="action_type">

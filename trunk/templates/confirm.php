@@ -14,6 +14,6 @@ $clean_email = urldecode($wp_subscribe_reloaded->clean_email($_GET['sre']));
 $post = get_post($clean_post_id);
 
 $wpdb->query("UPDATE $wp_subscribe_reloaded->table_subscriptions SET `status` = 'Y' WHERE `email` = '$clean_email' AND `post_ID` = '$clean_post_id'");
-echo '<p>'.__("Your subscription has been successfully confirmed. Thank you for using our notification service. Now you will receive a message every time someone posts a new comment to", 'subscribe-reloaded')." $post->post_title</p>";
+return '<p>'.stripslashes(get_option('subscribe_reloaded_subscription_confirmed')).'</p>';
 
 ?>

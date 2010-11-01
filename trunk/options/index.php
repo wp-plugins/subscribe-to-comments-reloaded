@@ -6,24 +6,24 @@ if (__FILE__ == $_SERVER['SCRIPT_FILENAME'] ) {
   exit;
 }
 
-function subscribe_reloaded_update_option( $_option, $_value, $_type ){
+function subscribe_reloaded_update_option( $_option = '', $_value = '', $_type = ''){
 	if (!isset($_value)) return true;
 	switch($_type){
 		case 'yesno':
 			if ($_value=='yes' || $_value=='no'){
-				update_option($_option, $_value);
+				update_option('subscribe_reloaded_'.$_option, $_value);
 				return true;
 			}
 			
 			break;
 		case 'integer':
-			update_option($_option, abs(intval($_value)));
+			update_option('subscribe_reloaded_'.$_option, abs(intval($_value)));
 			
 			return true;
 			break;
 			
 		default:
-			update_option($_option, str_replace('"', "'", $_value));
+			update_option('subscribe_reloaded_'.$_option, str_replace('"', "'", $_value));
 			return true;
 			break;
 	}
@@ -31,8 +31,8 @@ function subscribe_reloaded_update_option( $_option, $_value, $_type ){
 	return false;
 }
 
-function subscribe_reloaded_get_option($_option, $_default){
-	$value = get_option($_option, $_default);
+function subscribe_reloaded_get_option($_option = '', $_default = ''){
+	$value = get_option('subscribe_reloaded_'.$_option, $_default);
 	return stripslashes($value);
 }
 
@@ -42,8 +42,10 @@ load_plugin_textdomain('subscribe-reloaded', WP_PLUGIN_DIR .'/subscribe-to-comme
 // Define the panels
 $array_panels = array(
 	__('Manage subscriptions','subscribe-reloaded'),
+	__('Stats','subscribe-reloaded'),
 	__('Options','subscribe-reloaded'),
-	__('Messages','subscribe-reloaded'),
+	__('Mail Messages','subscribe-reloaded'),
+	__('Other Messages','subscribe-reloaded'),
 	__('Support','subscribe-reloaded')
 );
 
@@ -55,12 +57,12 @@ if ($wp_locale->text_direction != 'ltr') $array_panels = array_reverse($array_pa
 
 ?>
 <div class="wrap">
-	<div id="subscribe-to-comments-icon" class="<?php echo $wp_locale->text_direction ?>"></div>
+	<div id="subscribe-to-comments-icon" class="icon32 <?php echo $wp_locale->text_direction ?>"></div>
 	<h2 class="medium">
 		<?php
 		foreach($array_panels as $a_panel_id => $a_panel_details){
-			echo '<a class="menu-tabs';
-			if ($current_panel != $a_panel_id+1) echo ' menu-tab-inactive';
+			echo '<a class="nav-tab nav-tab';
+			echo ($current_panel == $a_panel_id+1)?'-active':'-inactive';
 			echo '" href="admin.php?page=subscribe-to-comments-reloaded/options/index.php&subscribepanel='.($a_panel_id+1).'">'.$a_panel_details.'</a>';
 		}
 		?>
