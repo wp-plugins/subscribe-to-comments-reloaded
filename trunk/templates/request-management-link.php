@@ -24,7 +24,7 @@ if (!empty($_POST['sre'])){
 	$from_email = get_option('subscribe_reloaded_from_email', get_bloginfo('admin_email'));
 	$subject = stripslashes(get_option('subscribe_reloaded_management_subject', 'Manage your subscriptions on [blog_name]'));
 	$message = stripslashes(get_option('subscribe_reloaded_management_content', ''));
-	$manager_link = get_bloginfo('url').get_option('subscribe_reloaded_manager_page', '');	
+	$manager_link = get_bloginfo('url').get_option('subscribe_reloaded_manager_page', '/comment-subscriptions');	
 	$clean_email = $wp_subscribe_reloaded->clean_email($_POST['sre']);
 	$subscriber_salt = md5($wp_subscribe_reloaded->salt.$clean_email);
 		

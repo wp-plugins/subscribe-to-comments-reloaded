@@ -8,12 +8,22 @@ $wpdb->query("DROP TABLE IF EXISTS `{$wpdb->prefix}subscribe_reloaded`");
 // Goodbye options...
 delete_option('subscribe_reloaded_manager_page');
 delete_option('subscribe_reloaded_manager_page_title');
+delete_option('subscribe_reloaded_request_mgmt_link');
+delete_option('subscribe_reloaded_request_mgmt_link_thankyou');
+delete_option('subscribe_reloaded_subscribe_without_commenting');
+delete_option('subscribe_reloaded_subscription_confirmed');
+delete_option('subscribe_reloaded_subscription_confirmed_dci');
+delete_option('subscribe_reloaded_author_text');
+delete_option('subscribe_reloaded_user_text');
+
 delete_option('subscribe_reloaded_purge_days');
 delete_option('subscribe_reloaded_from_name');
 delete_option('subscribe_reloaded_from_email');
 delete_option('subscribe_reloaded_checked_by_default');
 delete_option('subscribe_reloaded_enable_double_check');
 delete_option('subscribe_reloaded_notify_authors');
+delete_option('subscribe_reloaded_process_trackbacks');
+delete_option('subscribe_reloaded_enable_admin_messages');
 
 delete_option('subscribe_reloaded_notification_subject');
 delete_option('subscribe_reloaded_notification_content');

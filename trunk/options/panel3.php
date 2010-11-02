@@ -16,6 +16,7 @@ if (isset($_POST['options'])){
 	if (isset($_POST['options']['enable_double_check']) && !subscribe_reloaded_update_option('enable_double_check', $_POST['options']['enable_double_check'], 'yesno')) $faulty_fields = __('Enable double check','subscribe-reloaded').', ';
 	if (isset($_POST['options']['notify_authors']) && !subscribe_reloaded_update_option('notify_authors', $_POST['options']['notify_authors'], 'yesno')) $faulty_fields = __('Notify authors','subscribe-reloaded').', ';
 	if (isset($_POST['options']['process_trackbacks']) && !subscribe_reloaded_update_option('process_trackbacks', $_POST['options']['process_trackbacks'], 'yesno')) $faulty_fields = __('Send trackbacks','subscribe-reloaded').', ';
+	if (isset($_POST['options']['enable_admin_messages']) && !subscribe_reloaded_update_option('enable_admin_messages', $_POST['options']['enable_admin_messages'], 'yesno')) $faulty_fields = __('Notify admin','subscribe-reloaded').', ';
 
 	// Display an alert in the admin interface if something went wrong
 	echo '<div class="updated fade"><p>';
@@ -36,7 +37,7 @@ if (isset($_POST['options'])){
 	<tr>
 		<th scope="row"><label for="manager_page"><?php _e('Management page','subscribe-reloaded') ?></label></th>
 		<td><input type="text" name="options[manager_page]" id="manager_page" value="<?php echo subscribe_reloaded_get_option('manager_page'); ?>" size="10">
-			<div class="description"><?php _e('The permalink for your management page (<code>/manage-subscriptions</code> or <code>/?page_id=345</code>). This page <b>does not</b> actually exist in the system, but its permalink must follow your Wordpress\' permalink settings.','subscribe-reloaded'); ?></div></td>
+			<div class="description"><?php _e('The permalink for your management page (something like <code>/manage-subscriptions</code> or <code>/?page_id=345</code>). This page <b>does not</b> actually exist in the system, but its permalink must follow your Wordpress\' permalink settings.','subscribe-reloaded'); ?></div></td>
 	</tr>
 	<tr>
 		<th scope="row"><label for="purge_days"><?php _e('Autopurge requests','subscribe-reloaded') ?></label></th>
@@ -80,7 +81,14 @@ if (isset($_POST['options'])){
 			<input type="radio" name="options[process_trackbacks]" id="process_trackbacks" value="yes"<?php echo (subscribe_reloaded_get_option('process_trackbacks') == 'yes')?' checked="checked"':''; ?>> <?php _e('Yes','subscribe-reloaded') ?> &nbsp; &nbsp; &nbsp;
 			<input type="radio" name="options[process_trackbacks]" value="no" <?php echo (subscribe_reloaded_get_option('process_trackbacks') == 'no')?'  checked="checked"':''; ?>> <?php _e('No','subscribe-reloaded') ?>
 			<div class="description"><?php _e('Notify users when a new trackback or pingback is added to the discussion.','subscribe-reloaded'); ?></div></td>
-	</tr>	
+	</tr>
+	<tr>
+		<th scope="row"><label for="enable_admin_messages"><?php _e('Notify admin','subscribe-reloaded') ?></label></th>
+		<td>
+			<input type="radio" name="options[enable_admin_messages]" id="enable_admin_messages" value="yes"<?php echo (subscribe_reloaded_get_option('enable_admin_messages') == 'yes')?' checked="checked"':''; ?>> <?php _e('Yes','subscribe-reloaded') ?> &nbsp; &nbsp; &nbsp;
+			<input type="radio" name="options[enable_admin_messages]" value="no" <?php echo (subscribe_reloaded_get_option('enable_admin_messages') == 'no')?'  checked="checked"':''; ?>> <?php _e('No','subscribe-reloaded') ?>
+			<div class="description"><?php _e('Notify the administrator when users subscribe without commenting.','subscribe-reloaded'); ?></div></td>
+	</tr>
 </tbody>
 </table>
 <p class="submit"><input type="submit" value="<?php _e('Save Changes') ?>" class="button-primary" name="Submit"></p>
