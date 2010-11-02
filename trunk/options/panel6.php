@@ -25,7 +25,7 @@ if (strpos($_SERVER['SCRIPT_FILENAME'], basename(__FILE__))){
 </tbody>
 </table>
 
-<h3><?php _e("Don't want to donate? You can still help",'wp-slimstat-options') ?></h3>
+<h3><?php _e("Don't want to donate? You can still help",'subscribe-reloaded') ?></h3>
 <p><?php _e("If you don't want to donate money, please consider blogging about my plugin with a link to the plugin's page. Please let your readers know what makes your blog better. You can also contribute donating your time: do not hesitate to send me bug reports, your localization files, ideas on how to improve Subscribe to Comments Reloaded and so on. Whatever you do, thanks for using my plugin!",'subscribe-reloaded') ?></p>
 
 <h3><?php _e("Vote and show your appreciation",'subscribe-reloaded') ?></h3>
