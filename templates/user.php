@@ -11,7 +11,7 @@ ob_start();
 load_plugin_textdomain('subscribe-reloaded', WP_PLUGIN_DIR .'/subscribe-to-comments-reloaded/langs', '/subscribe-to-comments-reloaded/langs');
 $wp_subscribe_reloaded = new wp_subscribe_reloaded();
 
-$clean_email = !empty($_POST['sre'])?$wp_subscribe_reloaded->clean_email($_POST['sre']):(!empty($_GET['srp'])?$wp_subscribe_reloaded->clean_email($_GET['srp']):'undefined');
+$clean_email = !empty($_POST['sre'])?$wp_subscribe_reloaded->clean_email($_POST['sre']):(!empty($_GET['sre'])?$wp_subscribe_reloaded->clean_email($_GET['sre']):'undefined');
 
 if (!empty($_POST['post_list']) && !empty($_POST['action_type'])){
 	$post_list = implode("','", $_POST['post_list']);
