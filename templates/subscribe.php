@@ -19,7 +19,6 @@ if (($post_ID > 0) && !is_object($post)){
 if (!empty($_POST['subscribe_reloaded_email'])){
 	$wp_subscribe_reloaded = new wp_subscribe_reloaded();
 	$enable_double_check = get_option('subscribe_reloaded_enable_double_check', 'no');
-	$enable_admin_messages = ;
 	
 	// Send a message to the administrator, if the case
 	if (get_option('subscribe_reloaded_enable_admin_messages', 'no') == 'yes'){
