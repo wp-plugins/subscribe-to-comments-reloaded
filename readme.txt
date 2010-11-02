@@ -61,3 +61,14 @@ Subscribe to Comments Reloaded is a robust plugin that enables commenters to sig
 
 = 1.0 =
 * First release
+
+== Language Localization ==
+
+Subscribe to Comments Reloaded can speak your language! I used the `Portable Object` (.po) standard
+to implement this feature. If you want to provide a localized file in your
+language, use the template files (.pot) you'll find inside the `lang` folder,
+and contact me on the [support forum](http://lab.duechiacchiere.it/index.php?board=5.0) when your
+localization is ready. Right now the following localizations are available (in alphabetical order):
+
+* Italian
+* Russian (violetnotes)
