@@ -40,13 +40,12 @@ echo '<p>'.stripslashes(get_option('subscribe_reloaded_author_text')).'</p>';
 <?php
 	$subscriptions = $wpdb->get_results("SELECT `email`, `status`, `dt` FROM $wp_subscribe_reloaded->table_subscriptions WHERE `post_ID` = '$clean_post_id' ORDER BY `dt` ASC, `email` ASC", OBJECT);
 	if (is_array($subscriptions) && !empty($subscriptions)){
-		$title = __('Title','subscribe-reloaded').': <strong>'.get_the_title($clean_post_id).'</strong>';
-		echo "<p>$title</p>";
+		echo '<p>'.__('Title','subscribe-reloaded').': <strong>'.get_the_title($clean_post_id).'</strong></p>';
 		echo '<p>'.__('Legend: Y: subscribed, N: suspended, C: awaiting confirmation','subscribe-reloaded').'</p>';
 		echo '<ul>';
 		foreach($subscriptions as $i => $a_subscription){
 			$subscriber_salt = md5($wp_subscribe_reloaded->salt.$a_subscription->email);
-			$manager_link = get_option('subscribe_reloaded_manager_page', '');
+			$manager_link = get_bloginfo('url').get_option('subscribe_reloaded_manager_page', '/comment-subscriptions');
 			if (strpos($manager_link, '?') !== false)
 				$manager_link = "$manager_link&sre=".urlencode($a_subscription->email)."&srk=$subscriber_salt";
 			else

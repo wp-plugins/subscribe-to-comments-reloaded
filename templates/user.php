@@ -11,17 +11,19 @@ ob_start();
 load_plugin_textdomain('subscribe-reloaded', WP_PLUGIN_DIR .'/subscribe-to-comments-reloaded/langs', '/subscribe-to-comments-reloaded/langs');
 $wp_subscribe_reloaded = new wp_subscribe_reloaded();
 
+$clean_email = !empty($_POST['sre'])?$wp_subscribe_reloaded->clean_email($_POST['sre']):(!empty($_GET['srp'])?$wp_subscribe_reloaded->clean_email($_GET['srp']):'undefined');
+
 if (!empty($_POST['post_list']) && !empty($_POST['action_type'])){
 	$post_list = implode("','", $_POST['post_list']);
 	switch($_POST['action_type']){
 		case 'd':
-			$wpdb->query("DELETE FROM $wp_subscribe_reloaded->table_subscriptions WHERE `post_ID` IN ('$post_list')");
+			$wpdb->query("DELETE FROM $wp_subscribe_reloaded->table_subscriptions WHERE `post_ID` IN ('$post_list') AND `email` = '$clean_email'");
 			break;
 		case 's':
-			$wpdb->query("UPDATE $wp_subscribe_reloaded->table_subscriptions SET `status` = 'N' WHERE `post_ID` IN ('$post_list')");
+			$wpdb->query("UPDATE $wp_subscribe_reloaded->table_subscriptions SET `status` = 'N' WHERE `post_ID` IN ('$post_list') AND `email` = '$clean_email'");
 			break;
 		case 'a':
-			$wpdb->query("UPDATE $wp_subscribe_reloaded->table_subscriptions SET `status` = 'Y' WHERE `post_ID` IN ('$post_list')");
+			$wpdb->query("UPDATE $wp_subscribe_reloaded->table_subscriptions SET `status` = 'Y' WHERE `post_ID` IN ('$post_list') AND `email` = '$clean_email'");
 			break;
 		default:
 			break;
@@ -36,9 +38,9 @@ echo '<p>'.stripslashes(get_option('subscribe_reloaded_user_text')).'</p>';
 	onsubmit="return confirm('<?php _e('Please remember: this operation cannot be undone. Are you sure you want to proceed?', 'subscribe-reloaded') ?>')">
 <fieldset style="border:0">
 <?php
-	$clean_email = !empty($_POST['sre'])?$wp_subscribe_reloaded->clean_email($_POST['sre']):(!empty($_GET['sre'])?$wp_subscribe_reloaded->clean_email($_GET['sre']):'');
 	$subscriptions = $wpdb->get_results("SELECT `status`, `post_ID`, `dt` FROM $wp_subscribe_reloaded->table_subscriptions WHERE `email` = '$clean_email' ORDER BY `status` ASC, `post_ID` ASC", OBJECT);
 	if (is_array($subscriptions) && !empty($subscriptions)){
+		echo '<p>'.__('Email','subscribe-reloaded').': <strong>'.$clean_email.'</strong></p>';
 		echo '<p>'.__('Legend: Y: subscribed, N: suspended, C: awaiting confirmation','subscribe-reloaded').'</p>';
 		echo '<ul>';
 		foreach($subscriptions as $a_subscription){
