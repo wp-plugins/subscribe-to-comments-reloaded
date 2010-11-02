@@ -337,8 +337,7 @@ Please confirm your request by clicking on this link:
 	public function subscribe_reloaded_manage($_input = ''){
 		$manager_page_permalink = get_option('subscribe_reloaded_manager_page', '/comment-subscriptions');
 	
-		$find_manager_permalink = strpos($_SERVER["REQUEST_URI"], $manager_page_permalink);
-		if ( ($find_manager_permalink === false) || ($find_manager_permalink > 0)) return $_input;
+		if (strpos($_SERVER["REQUEST_URI"], $manager_page_permalink) === false) return $_input;
 
 		$post_ID = !empty($_POST['srp'])?intval($_POST['srp']):(!empty($_GET['srp'])?intval($_GET['srp']):0);
 
