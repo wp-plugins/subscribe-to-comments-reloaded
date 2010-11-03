@@ -72,4 +72,4 @@ and contact me on the [support forum](http://lab.duechiacchiere.it/index.php?boa
 localization is ready. Right now the following localizations are available (in alphabetical order):
 
 * Italian
-* Russian (violetnotes)
+* Russian ([Marika Bukvonka](http://violetnotes.com))
