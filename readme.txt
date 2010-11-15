@@ -34,7 +34,7 @@ Subscribe to Comments Reloaded is a robust plugin that enables commenters to sig
 == Screenshots ==
 
 1. Manage your subscriptions
-2. Customize the behavior
+2. Customize the plugin's behavior
 3. Use your own messages to interact with your users
 
 == Changelog ==
