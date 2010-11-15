@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=Z732J
 Tags: subscribe, comments, notification, subscription, manage, double check-in, follow, commenting
 Requires at least: 2.9.2
 Tested up to: 3.1
-Stable tag: 1.2.1
+Stable tag: 1.3
 
 == Description ==
 Subscribe to Comments Reloaded is a robust plugin that enables commenters to sign up for e-mail notification of subsequent entries. The plugin includes a full-featured subscription manager that your commenters can use to unsubscribe to certain posts or suspend all notifications. It solves most of the issues that affect Mark Jaquith's version, using the latest Wordpress features and functionality. Plus, allows administrators to enable a double opt-in mechanism, requiring users to confirm their subscription clicking on a link they will receive via email.
@@ -16,22 +16,21 @@ Subscribe to Comments Reloaded is a robust plugin that enables commenters to sig
 
 ## Main Features
 * Does not modify Wordpress system tables anymore
-* Imports Mark Jaquith's Subscribe To Comments data (**copies and then deletes** the old column in `wp_comments`)
+* Imports Mark Jaquith's Subscribe To Comments data (**copies but does not delete** the old data)
 * Management page is now easier to create and adapts to EVERY layout existing out there
 * If you decide to uninstall this plugin, no crap will be left around in your DB, I promise!
 * Source code is easier to read and update, and its size is almost halved (you're welcome, providers!)
 * Messages are fully customizable, no poEdit required
 * Fully localizable in your language (please contribute!)
-* Uses WP timezone settings and date formatting
 
 == Installation ==
 
-1. If you are using Subscribe To Comments by Mark Jaquith, disable it
+1. If you are using Subscribe To Comments by Mark Jaquith, disable it (no need to uninstall it, though)
 2. Upload the entire folder and all the subfolders to your Wordpress plugins' folder
 3. Activate it
 4. Customize all the messages (Settings > Subscribe to Comments > Messages)
 5. If your template does not call the 'comment_form' action, you will have to manually edit it. To show the checkbox and its label, add: `<?php if (function_exists('subscribe_reloaded_show')) subscribe_reloaded_show(); ?>`
-6. If you're updating from a previous version, please make sure to deactivate/activate the plugin after upgrading and to **enter a valid value** for the new Management Page field under Settings > Subscribe to Comments > Options
+6. If you're updating from a previous version, please make sure to deactivate/activate the plugin after upgrading
 
 == Screenshots ==
 
@@ -40,6 +39,13 @@ Subscribe to Comments Reloaded is a robust plugin that enables commenters to sig
 3. Use your own messages to interact with your users
 
 == Changelog ==
+
+= 1.3 =
+* A new column in the Edit Comments panel will now tell you on-the-fly who's subscribed to what
+* StCR doesn't remove the other plugin's data anymore (it's none of my business, indeed!)
+* You can now use a custom CSS class, inline styles and/or HTML code to style the checkbox shown to your visitors
+* Brazilian localization added (thank you Ronaldo Richieri)
+* French localization added (thank you Li-An)
 
 = 1.2.1 =
 * Maintenance release, fixes a bunch of inconsistencies highlighted by its users. Thank you everybody for your patience!
@@ -71,5 +77,10 @@ language, use the template files (.pot) you'll find inside the `lang` folder,
 and contact me on the [support forum](http://lab.duechiacchiere.it/index.php?board=5.0) when your
 localization is ready. Right now the following localizations are available (in alphabetical order):
 
+* Portuguese, Brazil ([Ronaldo Richieri](http://richieri.com))
+* French ([Li-An](http://www.li-an.fr/wpplugins/mes-traductions-de-plugins/#subscribe))
 * Italian
 * Russian ([Marika Bukvonka](http://violetnotes.com))
+
+== List of donors in alphabetical order ==
+* [Yochai](http://watch-the-walking-dead-online.com/)

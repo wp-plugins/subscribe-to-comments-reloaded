@@ -13,6 +13,9 @@ if (isset($_POST['options'])){
 	if (isset($_POST['options']['from_name']) && !subscribe_reloaded_update_option('from_name', $_POST['options']['from_name'], 'text')) $faulty_fields = __('Sender name','subscribe-reloaded').', ';
 	if (isset($_POST['options']['from_email']) && !subscribe_reloaded_update_option('from_email', $_POST['options']['from_email'], 'text')) $faulty_fields = __('Sender email address','subscribe-reloaded').', ';
 	if (isset($_POST['options']['checked_by_default']) && !subscribe_reloaded_update_option('checked_by_default', $_POST['options']['checked_by_default'], 'yesno')) $faulty_fields = __('Checked by default','subscribe-reloaded').', ';
+	if (isset($_POST['options']['checkbox_class']) && !subscribe_reloaded_update_option('checkbox_class', $_POST['options']['checkbox_class'], 'text')) $faulty_fields = __('Custom CSS Class','subscribe-reloaded').', ';
+	if (isset($_POST['options']['checkbox_inline_style']) && !subscribe_reloaded_update_option('checkbox_inline_style', $_POST['options']['checkbox_inline_style'], 'text')) $faulty_fields = __('Custom inline style','subscribe-reloaded').', ';
+	if (isset($_POST['options']['checkbox_html']) && !subscribe_reloaded_update_option('checkbox_html', $_POST['options']['checkbox_html'], 'text')) $faulty_fields = __('Custom HTML','subscribe-reloaded').', ';
 	if (isset($_POST['options']['enable_double_check']) && !subscribe_reloaded_update_option('enable_double_check', $_POST['options']['enable_double_check'], 'yesno')) $faulty_fields = __('Enable double check','subscribe-reloaded').', ';
 	if (isset($_POST['options']['notify_authors']) && !subscribe_reloaded_update_option('notify_authors', $_POST['options']['notify_authors'], 'yesno')) $faulty_fields = __('Notify authors','subscribe-reloaded').', ';
 	if (isset($_POST['options']['process_trackbacks']) && !subscribe_reloaded_update_option('process_trackbacks', $_POST['options']['process_trackbacks'], 'yesno')) $faulty_fields = __('Send trackbacks','subscribe-reloaded').', ';
@@ -36,12 +39,12 @@ if (isset($_POST['options'])){
 <tbody>
 	<tr>
 		<th scope="row"><label for="manager_page"><?php _e('Management page','subscribe-reloaded') ?></label></th>
-		<td><input type="text" name="options[manager_page]" id="manager_page" value="<?php echo subscribe_reloaded_get_option('manager_page'); ?>" size="10">
+		<td><?php echo get_bloginfo('url') ?> <input type="text" name="options[manager_page]" id="manager_page" value="<?php echo subscribe_reloaded_get_option('manager_page'); ?>" size="30">
 			<div class="description"><?php _e('The permalink for your management page (something like <code>/manage-subscriptions</code> or <code>/?page_id=345</code>). This page <b>does not</b> actually exist in the system, but its permalink must follow your Wordpress\' permalink settings.','subscribe-reloaded'); ?></div></td>
 	</tr>
 	<tr>
 		<th scope="row"><label for="purge_days"><?php _e('Autopurge requests','subscribe-reloaded') ?></label></th>
-		<td><input type="text" name="options[purge_days]" id="purge_days" value="<?php echo subscribe_reloaded_get_option('purge_days'); ?>" size="10"> days
+		<td><input type="text" name="options[purge_days]" id="purge_days" value="<?php echo subscribe_reloaded_get_option('purge_days'); ?>" size="10"> <?php _e('days','subscribe-reloaded') ?>
 			<div class="description"><?php _e("Delete pending subscriptions (not confirmed) after X days. Zero disables this feature.",'subscribe-reloaded'); ?></div></td>
 	</tr>
 	<tr>
@@ -62,6 +65,21 @@ if (isset($_POST['options'])){
 			<div class="description"><?php _e('Decide if the checkbox should be checked by default or not.','subscribe-reloaded'); ?></div></td>
 	</tr>
 	<tr>
+		<th scope="row"><label for="checkbox_class"><?php _e('Custom CSS Class','subscribe-reloaded') ?></label></th>
+		<td><input type="text" name="options[checkbox_class]" id="checkbox_class" value="<?php echo subscribe_reloaded_get_option('checkbox_class'); ?>" size="20">
+			<div class="description"><?php _e('Custom CSS class to associate to the checkbox, if you want to customize its style.','subscribe-reloaded'); ?></div></td>
+	</tr>
+	<tr>
+		<th scope="row"><label for="checkbox_inline_style"><?php _e('Custom inline style','subscribe-reloaded') ?></label></th>
+		<td><input type="text" name="options[checkbox_inline_style]" id="checkbox_inline_style" value="<?php echo subscribe_reloaded_get_option('checkbox_inline_style'); ?>" size="20">
+			<div class="description"><?php _e('Custom inline CSS to add to the checkbox.','subscribe-reloaded'); ?></div></td>
+	</tr>
+	<tr>
+		<th scope="row"><label for="checkbox_html"><?php _e('Custom HTML','subscribe-reloaded') ?></label></th>
+		<td><input type="text" name="options[checkbox_html]" id="checkbox_html" value="<?php echo subscribe_reloaded_get_option('checkbox_html'); ?>" size="50">
+			<div class="description"><?php _e('Custom HTML code to be used when displaying the checkbox. Allowed tags: [checkbox_field], [checkbox_label]','subscribe-reloaded'); ?></div></td>
+	</tr>
+	<tr>
 		<th scope="row"><label for="enable_double_check"><?php _e('Enable double check','subscribe-reloaded') ?></label></th>
 		<td>
 			<input type="radio" name="options[enable_double_check]" id="enable_double_check" value="yes"<?php echo (subscribe_reloaded_get_option('enable_double_check') == 'yes')?' checked="checked"':''; ?>> <?php _e('Yes','subscribe-reloaded') ?> &nbsp; &nbsp; &nbsp;
@@ -69,11 +87,11 @@ if (isset($_POST['options'])){
 			<div class="description"><?php _e('Send a notification email to confirm the subscription (to avoid addresses misuse).','subscribe-reloaded'); ?></div></td>
 	</tr>
 	<tr>
-		<th scope="row"><label for="notify_authors"><?php _e('Notify authors','subscribe-reloaded') ?></label></th>
+		<th scope="row"><label for="notify_authors"><?php _e('Notify admin','subscribe-reloaded') ?></label></th>
 		<td>
 			<input type="radio" name="options[notify_authors]" id="notify_authors" value="yes"<?php echo (subscribe_reloaded_get_option('notify_authors') == 'yes')?' checked="checked"':''; ?>> <?php _e('Yes','subscribe-reloaded') ?> &nbsp; &nbsp; &nbsp;
 			<input type="radio" name="options[notify_authors]" value="no" <?php echo (subscribe_reloaded_get_option('notify_authors') == 'no')?'  checked="checked"':''; ?>> <?php _e('No','subscribe-reloaded') ?>
-			<div class="description"><?php _e('Notify authors when a new comment is posted to one of their articles.','subscribe-reloaded'); ?></div></td>
+			<div class="description"><?php _e('Notify the administrator when a new comment is posted.','subscribe-reloaded'); ?></div></td>
 	</tr>
 	<tr>
 		<th scope="row"><label for="process_trackbacks"><?php _e('Send trackbacks','subscribe-reloaded') ?></label></th>
@@ -83,7 +101,7 @@ if (isset($_POST['options'])){
 			<div class="description"><?php _e('Notify users when a new trackback or pingback is added to the discussion.','subscribe-reloaded'); ?></div></td>
 	</tr>
 	<tr>
-		<th scope="row"><label for="enable_admin_messages"><?php _e('Notify admin','subscribe-reloaded') ?></label></th>
+		<th scope="row"><label for="enable_admin_messages"><?php _e('Track all subscriptions','subscribe-reloaded') ?></label></th>
 		<td>
 			<input type="radio" name="options[enable_admin_messages]" id="enable_admin_messages" value="yes"<?php echo (subscribe_reloaded_get_option('enable_admin_messages') == 'yes')?' checked="checked"':''; ?>> <?php _e('Yes','subscribe-reloaded') ?> &nbsp; &nbsp; &nbsp;
 			<input type="radio" name="options[enable_admin_messages]" value="no" <?php echo (subscribe_reloaded_get_option('enable_admin_messages') == 'no')?'  checked="checked"':''; ?>> <?php _e('No','subscribe-reloaded') ?>
