@@ -17,9 +17,8 @@ Subscribe to Comments Reloaded is a robust plugin that enables commenters to sig
 ## Main Features
 * Does not modify Wordpress system tables anymore
 * Imports Mark Jaquith's Subscribe To Comments data (**copies but does not delete** the old data)
-* Management page is now easier to create and adapts to EVERY layout existing out there
+* The Management page for your visitors adapts to EVERY template existing out there
 * If you decide to uninstall this plugin, no crap will be left around in your DB, I promise!
-* Source code is easier to read and update, and its size is almost halved (you're welcome, providers!)
 * Messages are fully customizable, no poEdit required
 * Fully localizable in your language (please contribute!)
 
