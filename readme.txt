@@ -28,7 +28,7 @@ Subscribe to Comments Reloaded is a robust plugin that enables commenters to sig
 2. Upload the entire folder and all the subfolders to your Wordpress plugins' folder
 3. Activate it
 4. Customize all the messages (Settings > Subscribe to Comments > Messages)
-5. If your template does not call the 'comment_form' action, you will have to manually edit it. To show the checkbox and its label, add: `<?php if (function_exists('subscribe_reloaded_show')) subscribe_reloaded_show(); ?>` 
+5. If your template does not call the 'comment_form' action, you will have to manually edit it. To show the checkbox and its label, add: `<?php if (function_exists('subscribe_reloaded_show')) subscribe_reloaded_show(); ?>`
 6. If you're upgrading from a previous version, please make sure to deactivate/activate the plugin after upgrading
 
 == Screenshots ==
@@ -83,3 +83,4 @@ localization is ready. Right now the following localizations are available (in a
 
 == List of donors in alphabetical order ==
 * [Yochai](http://watch-the-walking-dead-online.com/)
+* [Nicola](http://pausaxn.it)
