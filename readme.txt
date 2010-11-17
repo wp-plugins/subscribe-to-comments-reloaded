@@ -83,4 +83,4 @@ localization is ready. Right now the following localizations are available (in a
 
 == List of donors in alphabetical order ==
 * [Yochai](http://watch-the-walking-dead-online.com/)
-* [Nicola](http://pausaxn.it)
+* [Pausaxn](http://pausaxn.it)
