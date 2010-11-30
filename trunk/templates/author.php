@@ -5,8 +5,8 @@ if (strpos($_SERVER['SCRIPT_FILENAME'], basename(__FILE__))){
   exit;
 }
 global $wpdb;
-ob_start();
 
+ob_start();
 // Load localization files
 load_plugin_textdomain('subscribe-reloaded', WP_PLUGIN_DIR .'/subscribe-to-comments-reloaded/langs', '/subscribe-to-comments-reloaded/langs');
 $wp_subscribe_reloaded = new wp_subscribe_reloaded();
@@ -42,7 +42,7 @@ echo '<p>'.stripslashes(get_option('subscribe_reloaded_author_text')).'</p>';
 	if (is_array($subscriptions) && !empty($subscriptions)){
 		echo '<p>'.__('Title','subscribe-reloaded').': <strong>'.get_the_title($clean_post_id).'</strong></p>';
 		echo '<p>'.__('Legend: Y: subscribed, N: suspended, C: awaiting confirmation','subscribe-reloaded').'</p>';
-		echo '<ul>';
+		echo '<ul class="subscribe-reloaded-list">';
 		foreach($subscriptions as $i => $a_subscription){
 			$subscriber_salt = md5($wp_subscribe_reloaded->salt.$a_subscription->email);
 			$manager_link = get_bloginfo('url').get_option('subscribe_reloaded_manager_page', '/comment-subscriptions');
@@ -50,7 +50,7 @@ echo '<p>'.stripslashes(get_option('subscribe_reloaded_author_text')).'</p>';
 				$manager_link = "$manager_link&sre=".urlencode($a_subscription->email)."&srk=$subscriber_salt";
 			else
 				$manager_link = "$manager_link?sre=".urlencode($a_subscription->email)."&srk=$subscriber_salt";
-			echo "<li><input type='checkbox' name='email_list[]' value='{$a_subscription->email}' id='e_$i'/> <label for='e_$i'><a href='$manager_link'>$a_subscription->email</a> - $a_subscription->dt</label> [$a_subscription->status]</li>\n";
+			echo "<li><input type='checkbox' name='email_list[]' value='{$a_subscription->email}' id='e_$i'/> <label for='e_$i'><a class='subscribe-column-1' href='$manager_link'>$a_subscription->email</a></label> <span class='subscribe-separator subscribe-separator-1'>&mdash;</span> <span class='subscribe-column-2'>$a_subscription->dt</span> <span class='subscribe-separator subscribe-separator-2'>&mdash;</span> <span class='subscribe-column-3'>$a_subscription->status</span></li>\n";
 		}
 		echo '</ul>';
 		echo '<p><a class="small-text" href="#" onclick="t=document.getElementById(\'email_list_form\').elements;for(i in t) t[i].checked=1">'.__('Select all','subscribe-reloaded').'</a> - ';

@@ -24,6 +24,7 @@ delete_option('subscribe_reloaded_enable_double_check');
 delete_option('subscribe_reloaded_notify_authors');
 delete_option('subscribe_reloaded_process_trackbacks');
 delete_option('subscribe_reloaded_enable_admin_messages');
+delete_option('subscribe_reloaded_admin_subscribe');
 
 delete_option('subscribe_reloaded_notification_subject');
 delete_option('subscribe_reloaded_notification_content');
