@@ -49,7 +49,7 @@ if (!empty($_POST['sre'])){
 ?>
 
 <p><?php echo stripslashes(get_option('subscribe_reloaded_request_mgmt_link')); ?></p>
-<form action="<?php echo $_SERVER['REQUEST_URI'] ?>" method="post" onsubmit="if(this.subscribe_reloaded_email.value=='' || his.subscribe_reloaded_email.value.indexOf('@')==0) return false">
+<form action="<?php echo $_SERVER['REQUEST_URI'] ?>" method="post" onsubmit="if(this.subscribe_reloaded_email.value=='' || this.subscribe_reloaded_email.value.indexOf('@')==0) return false">
 <fieldset style="border:0">
 	<p><label for="subscribe_reloaded_email"><?php _e('Email','subscribe-reloaded') ?></label>
 	<input type="text" class="subscribe-form-field" name="sre" value="<?php echo isset($_COOKIE['comment_author_email_'.COOKIEHASH])?$_COOKIE['comment_author_email_'.COOKIEHASH]:'email'; ?>" size="22"/> 
