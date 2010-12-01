@@ -259,7 +259,7 @@ class wp_subscribe_reloaded {
 		}
 
 		// Send a notification to all the users subscribed to this post
-		if (!empty($info)){
+		if (!empty($info) && $info->comment_approved == '1'){
 			$subscribed_emails = $this->_get_subscriptions($info->comment_post_ID, 'Y');
 			foreach($subscribed_emails as $a_email){
 				// Skip the user who posted this new comment
