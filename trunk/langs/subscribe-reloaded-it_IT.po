@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: WP Slim Stat 2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-11-30 12:44-0500\n"
-"PO-Revision-Date: 2010-11-30 12:46-0500\n"
+"PO-Revision-Date: 2010-12-01 09:22-0500\n"
 "Last-Translator: Camu <info@duechiacchiere.it>\n"
 "Language-Team: due chiacchiere <info@duechiacchiere.it>\n"
 "MIME-Version: 1.0\n"
@@ -447,7 +447,7 @@ msgstr "Pagina di gestione"
 
 #: options/panel3.php:44
 msgid "The permalink for your management page (something like <code>/manage-subscriptions</code> or <code>/?page_id=345</code>). This page <b>does not</b> actually exist in the system, but its permalink must follow your Wordpress' permalink settings."
-msgstr "Il permalink associato alla pagina di gestione (tipo <code>/manage-subscriptions</code> o <code>/page_id=345</code>). Questa pagina non esiste fisicamente in Wordpress, ma il suo permalink deve essere consistente con la tua configurazione di Wordpress."
+msgstr "Il permalink associato alla pagina di gestione (tipo <code>/manage-subscriptions</code> o <code>/?page_id=345</code>). Questa pagina non esiste fisicamente in Wordpress, ma il suo permalink deve essere consistente con la tua configurazione di Wordpress."
 
 #: options/panel3.php:48
 msgid "days"
