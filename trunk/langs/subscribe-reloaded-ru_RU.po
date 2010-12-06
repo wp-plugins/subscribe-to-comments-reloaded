@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: WP Slim Stat 2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-11-15 10:30-0500\n"
-"PO-Revision-Date: 2010-11-15 10:30-0500\n"
-"Last-Translator: Camu <info@duechiacchiere.it>\n"
+"PO-Revision-Date: 2010-12-03 15:03+0300\n"
+"Last-Translator: MB <violetnotes@aol.com>\n"
 "Language-Team: due chiacchiere <info@duechiacchiere.it>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -124,9 +124,8 @@ msgstr ""
 "[manager_link]"
 
 #: subscribe-to-comments-reloaded.php:546
-#, fuzzy
 msgid "Subscribed"
-msgstr "Ярлык оформленной подписки"
+msgstr "Подписано"
 
 #: subscribe-to-comments-reloaded.php:555
 #: options/panel3.php:63
@@ -139,7 +138,7 @@ msgstr "Да"
 
 #: subscribe-to-comments-reloaded.php:557
 msgid "Awaiting confirmation"
-msgstr ""
+msgstr "Ожидает подтверждения"
 
 #: subscribe-to-comments-reloaded.php:558
 #: options/panel3.php:64
@@ -323,17 +322,17 @@ msgstr "Выбор по умолчанию"
 #: options/panel3.php:16
 #: options/panel3.php:68
 msgid "Custom CSS Class"
-msgstr ""
+msgstr "Класс изменяемого CSS"
 
 #: options/panel3.php:17
 #: options/panel3.php:73
 msgid "Custom inline style"
-msgstr ""
+msgstr "Изменяемый стиль inline"
 
 #: options/panel3.php:18
 #: options/panel3.php:78
 msgid "Custom HTML"
-msgstr ""
+msgstr "Изменяемый HTML"
 
 #: options/panel3.php:19
 #: options/panel3.php:83
@@ -352,7 +351,7 @@ msgstr "Отправлять трэкбеки"
 #: options/panel3.php:22
 #: options/panel3.php:90
 msgid "Notify admin"
-msgstr ""
+msgstr "Уведомить админа"
 
 #: options/panel3.php:27
 #: options/panel4.php:21
@@ -397,37 +396,35 @@ msgstr "Определите, должно ли окошко выбора быт
 
 #: options/panel3.php:70
 msgid "Custom CSS class to associate to the checkbox, if you want to customize its style."
-msgstr ""
+msgstr "Класс изменяемого CSS для окошка выбора, если вы хотите изменить его стиль"
 
 #: options/panel3.php:75
 msgid "Custom inline CSS to add to the checkbox."
-msgstr ""
+msgstr "Изменяемый Inline CSS для добавления к окошку выбора"
 
 #: options/panel3.php:80
 msgid "Custom HTML code to be used when displaying the checkbox. Allowed tags: [checkbox_field], [checkbox_label]"
-msgstr ""
+msgstr "Собственный код HTML для использования при отображении окошка выбора. Разрешенные теги: [checkbox_field], [checkbox_label]"
 
 #: options/panel3.php:87
 msgid "Send a notification email to confirm the subscription (to avoid addresses misuse)."
 msgstr "Отправлять письмо с просьбой подтвердить подписку (чтобы избежать использования эл. адреса без ведома владельца)"
 
 #: options/panel3.php:94
-#, fuzzy
 msgid "Notify the administrator when a new comment is posted."
-msgstr "Уведомлять авторов о новых комментариях к их статьям."
+msgstr "Уведомлять администратора о новом комментарии."
 
 #: options/panel3.php:101
 msgid "Notify users when a new trackback or pingback is added to the discussion."
 msgstr "Уведомлять подписчиков о новых трэкбеках или пингбэках к обсуждению"
 
 #: options/panel3.php:104
-#, fuzzy
 msgid "Track all subscriptions"
-msgstr "Редактирование подписки"
+msgstr "Отследить все подписки"
 
 #: options/panel3.php:108
 msgid "Notify the administrator when users subscribe without commenting."
-msgstr ""
+msgstr "Уведомлять администратора, когда пользователи подписываются без комментария."
 
 #: options/panel3.php:112
 #: options/panel4.php:66
@@ -467,27 +464,27 @@ msgstr "Текст письма об управлении подписками"
 
 #: options/panel4.php:37
 msgid "Subject of the notification email. Allowed tag: [post_title]"
-msgstr "Тема письма с уведомлением. Разрешенный тэг: [post_title]"
+msgstr "Тема письма с уведомлением. Разрешенный тег: [post_title]"
 
 #: options/panel4.php:42
 msgid "Content of the notification email. Allowed tags: [post_title], [comment_permalink], [comment_author], [comment_content], [post_permalink], [manager_link]"
-msgstr "Текст уведомления. Разрешенные тэги: [post_title],  [comment_permalink], [comment_author], [comment_content], [post_permalink], [manager_link]"
+msgstr "Текст уведомления. Разрешенные теги: [post_title],  [comment_permalink], [comment_author], [comment_content], [post_permalink], [manager_link]"
 
 #: options/panel4.php:47
 msgid "Subject of the confirmation email. Allowed tag: [post_title]"
-msgstr "Тема письма о подтверждении. Разрешенный тэг: [post_title]"
+msgstr "Тема письма о подтверждении. Разрешенный тег: [post_title]"
 
 #: options/panel4.php:52
 msgid "Content of the confirmation email. Allowed tags: [post_permalink], [confirm_link], [post_title], [manager_link]"
-msgstr "Текст письма о подтвеждении. Разрешенные тэги: [post_permalink], [confirm_link], [post_title], [manager_link]"
+msgstr "Текст письма о подтвеждении. Разрешенные теги: [post_permalink], [confirm_link], [post_title], [manager_link]"
 
 #: options/panel4.php:57
 msgid "Subject of the mail sent to those who request to access their management page. Allowed tag: [blog_name]"
-msgstr "Тема письма подписчику, сделавшему запрос на доступ к странице управления подписками. Разрешенный тэг: [blog_name]"
+msgstr "Тема письма подписчику, сделавшему запрос на доступ к странице управления подписками. Разрешенный тег: [blog_name]"
 
 #: options/panel4.php:62
 msgid "Content of the management email. Allowed tags: [blog_name], [manager_link]"
-msgstr "Текст письма об управлении подписками. Разрешенные тэги: [blog_name],[manager_link]"
+msgstr "Текст письма об управлении подписками. Разрешенные теги: [blog_name],[manager_link]"
 
 #: options/panel5.php:11
 #: options/panel5.php:43
@@ -555,19 +552,19 @@ msgstr "Форма комментария"
 
 #: options/panel5.php:45
 msgid "Label associated to the checkbox. Allowed tag: [subscribe_link]"
-msgstr "Текст рядом с окошком выбора. Разрешенный тэг: [subscribe_link]"
+msgstr "Текст рядом с окошком выбора. Разрешенный тег: [subscribe_link]"
 
 #: options/panel5.php:50
 msgid "Label shown to those who are already subscribed to a post. Allowed tag: [manager_link]"
-msgstr "Текст, видимый подписавшимся читателям. Разрешенный тэг: [manager_link]"
+msgstr "Текст, видимый подписавшимся читателям. Разрешенный тег: [manager_link]"
 
 #: options/panel5.php:55
 msgid "Label shown to those who are already subscribed, but haven't clicked on the confirmation link yet. Allowed tag: [manager_link]"
-msgstr "Текст, видимый читателям, еще не подтвердившим свою подписку. Разрешенный тэг: [manager_link]"
+msgstr "Текст, видимый читателям, еще не подтвердившим свою подписку. Разрешенный тег: [manager_link]"
 
 #: options/panel5.php:60
 msgid "Label shown to authors (and administrators). Allowed tag: [manager_link]"
-msgstr "Тест, видимый авторам и администраторам. Разрешенный тэг: [manager_link]"
+msgstr "Тест, видимый авторам и администраторам. Разрешенный тег: [manager_link]"
 
 #: options/panel5.php:70
 msgid "Title of the page your visitors will use to manage their subscriptions."
@@ -583,7 +580,7 @@ msgstr "Текст благодарности, выводимый после о�
 
 #: options/panel5.php:85
 msgid "Text shown to those who want to subscribe without commenting. Allowed tag: [post_title]"
-msgstr "Текст для желающих подписаться без комментирования. Разрешенный тэг: [manager_link]"
+msgstr "Текст для желающих подписаться без комментирования. Разрешенный тег: [manager_link]"
 
 #: options/panel5.php:90
 msgid "Thank you note shown after the subscription request has been processed (double check-in disabled)."
