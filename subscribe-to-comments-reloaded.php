@@ -338,21 +338,21 @@ class wp_subscribe_reloaded {
 	/**
 	 * Displays the appropriate management page
 	 */
-	public function subscribe_reloaded_manage($_input = ''){
+	public function subscribe_reloaded_manage($_posts = '', $_query = ''){
 		global $current_user;
 		
-		if (!empty($_input)) return $_input;
+		if (!empty($_posts)) return $_posts;
 		
 		$manager_page_permalink = get_option('subscribe_reloaded_manager_page', '/comment-subscriptions');
 		$current_page = str_replace(get_bloginfo('url'), '', $_SERVER["REQUEST_URI"]);
 		
-		if (strpos($current_page, $manager_page_permalink) === false) return $_input;
+		if (strpos($current_page, $manager_page_permalink) === false) return $_posts;
 
 		$post_ID = !empty($_POST['srp'])?intval($_POST['srp']):(!empty($_GET['srp'])?intval($_GET['srp']):0);
 
 		// Is the post_id passed in the query string valid?
 		$target_post = get_post($post_ID);
-		if (($post_ID > 0) && !is_object($target_post)) return $_input;
+		if (($post_ID > 0) && !is_object($target_post)) return $_posts;
 		
 		$action = !empty($_POST['sra'])?$_POST['sra']:(!empty($_GET['sra'])?$_GET['sra']:0);
 		$key = !empty($_POST['srk'])?$_POST['srk']:(!empty($_GET['srk'])?$_GET['srk']:0);
@@ -391,9 +391,9 @@ class wp_subscribe_reloaded {
 		global $wp_query;
 			
 		$manager_page_title = get_option('subscribe_reloaded_manager_page_title', 'Manage subscriptions');
-		$manager_page_obj = array(
+		$posts[] = 
 			(object)array(
-				'ID' => '0',
+				'ID' => -100,
 				'post_author' => '1',
 				'post_date' => '2010-10-27 11:38:56',
 				'post_date_gmt' => '2010-10-27 00:38:56',
@@ -415,16 +415,14 @@ class wp_subscribe_reloaded {
 				'post_type' => 'post',
 				'post_mime_type' => '',
 				'post_category' => '0',
-				'comment_count' => '0',
+				'comment_count' => '-1',
 				'filter' => 'raw'
-			)
-		);
+			);
 			
 		// Make WP believe this is a real page, with no comments attached
 		$wp_query->is_page = true;
 		$wp_query->is_single = false;
-		$wp_query->is_singular = true;
-        $wp_query->is_home = false;
+		$wp_query->is_home = false;
 		$wp_query->comments = false;
 
 		// Discard 404 errors thrown by other checks
@@ -435,7 +433,7 @@ class wp_subscribe_reloaded {
 		// Seems like WP adds its own HTML formatting code to the content, we don't need that here
 		remove_filter('the_content','wpautop');
 			
-		return $manager_page_obj;
+		return $posts;
 	}
 	// end subscribe_reloaded_manage
 
@@ -698,7 +696,7 @@ add_action('wp_set_comment_status', array( &$wp_subscribe_reloaded, 'comment_sta
 add_action('delete_post', array( &$wp_subscribe_reloaded, 'delete_subscription' ) );
 
 // Provide content for the management page using WP filters
-add_filter('the_posts', array(&$wp_subscribe_reloaded, 'subscribe_reloaded_manage') );
+add_filter('the_posts', array(&$wp_subscribe_reloaded, 'subscribe_reloaded_manage'),9,2);
 
 // Show the checkbox - You can manually override this by adding the corresponding function in your template
 add_action('comment_form', 'subscribe_reloaded_show');
