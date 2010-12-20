@@ -33,7 +33,7 @@ if (count($details_subscribe_reloaded) == 1) {
 		$overhead_suffix = 'MB';
 	}
 	echo __('Engine','subscribe-reloaded').": {$details_subscribe_reloaded[0]['Engine']}<br/>";
-	echo __('Records','subscribe-reloadeds').": {$details_subscribe_reloaded[0]['Rows']}<br/>";
+	echo __('Records','subscribe-reloaded').": {$details_subscribe_reloaded[0]['Rows']}<br/>";
 	echo __('Average Record Length','subscribe-reloaded').": {$details_subscribe_reloaded[0]['Avg_row_length']} bytes<br/>";
 	echo __('Created on','subscribe-reloaded').": {$details_subscribe_reloaded[0]['Create_time']}<br/>";
 	echo __('Approximate Overhead','subscribe-reloaded').": {$details_subscribe_reloaded[0]['Data_free']} $overhead_suffix ";
