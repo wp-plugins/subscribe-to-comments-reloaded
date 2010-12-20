@@ -63,7 +63,7 @@ if ($wp_locale->text_direction != 'ltr') $array_panels = array_reverse($array_pa
 		foreach($array_panels as $a_panel_id => $a_panel_details){
 			echo '<a class="nav-tab nav-tab';
 			echo ($current_panel == $a_panel_id+1)?'-active':'-inactive';
-			echo '" href="admin.php?page=subscribe-to-comments-reloaded/options/index.php&subscribepanel='.($a_panel_id+1).'">'.$a_panel_details.'</a>';
+			echo '" href="options-general.php?page=subscribe-to-comments-reloaded/options/index.php&subscribepanel='.($a_panel_id+1).'">'.$a_panel_details.'</a>';
 		}
 		?>
 	</h2>

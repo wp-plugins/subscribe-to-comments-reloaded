@@ -16,6 +16,7 @@ $post = get_post($post_ID);
 if (($post_ID > 0) && !is_object($post)){
 	return '';
 }
+$post_permalink = get_permalink($post_ID);
 if (!empty($_POST['sre'])){
 	$wp_subscribe_reloaded = new wp_subscribe_reloaded();
 
@@ -24,35 +25,57 @@ if (!empty($_POST['sre'])){
 	$from_email = get_option('subscribe_reloaded_from_email', get_bloginfo('admin_email'));
 	$subject = stripslashes(get_option('subscribe_reloaded_management_subject', 'Manage your subscriptions on [blog_name]'));
 	$message = stripslashes(get_option('subscribe_reloaded_management_content', ''));
-	$manager_link = get_bloginfo('url').get_option('subscribe_reloaded_manager_page', '/comment-subscriptions');	
+	$manager_link = get_bloginfo('url').get_option('subscribe_reloaded_manager_page', '/comment-subscriptions');
+	if (function_exists('qtrans_convertURL')) $manager_link = qtrans_convertURL($manager_link);
+	
 	$clean_email = $wp_subscribe_reloaded->clean_email($_POST['sre']);
 	$subscriber_salt = md5($wp_subscribe_reloaded->salt.$clean_email);
-		
+
 	$headers = "MIME-Version: 1.0\n";
 	$headers .= "From: $from_name <$from_email>\n";
-	$headers .= "Content-Type: text/plain; charset=".get_bloginfo('charset')."\n";
-	
+	$headers .= "Content-Type: text/html; charset=".get_bloginfo('charset')."\n";
+
 	if (strpos($manager_link, '?') !== false)
 		$manager_link = "$manager_link&sre=".urlencode($clean_email)."&srk=$subscriber_salt";
 	else
 		$manager_link = "$manager_link?sre=".urlencode($clean_email)."&srk=$subscriber_salt";
-		
+
 	// Replace tags with their actual values
 	$subject = str_replace('[blog_name]', get_bloginfo('name'), $subject);
 	$message = str_replace('[blog_name]', get_bloginfo('name'), $message);
 	$message = str_replace('[manager_link]', $manager_link, $message);
+	
+	// QTranslate support
+	if(function_exists('qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage')){
+		$subject = qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage($subject);
+		$message = qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage($message);
+	}
 
 	wp_mail($clean_email, $subject, $message, $headers);
-		
-	echo '<p>'.stripslashes(get_option('subscribe_reloaded_request_mgmt_link_thankyou')).'</p>';
+
+	$message = str_replace('[post_permalink]', $post_permalink, stripslashes(get_option('subscribe_reloaded_request_mgmt_link_thankyou')));
+	if(function_exists('qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage')){
+		$message = str_replace('[post_title]', qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage($post->post_title), $message);
+		$message = qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage($message);
+	}
+	else{
+		$message = str_replace('[post_title]', $post->post_title, $message);
+	}
+	
+	echo $message;
 } else {
 ?>
 
-<p><?php echo stripslashes(get_option('subscribe_reloaded_request_mgmt_link')); ?></p>
+<p><?php 
+$message = stripslashes(get_option('subscribe_reloaded_request_mgmt_link'));
+if(function_exists('qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage')) $message = qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage($message);
+echo $message;
+?></p>
 <form action="<?php echo $_SERVER['REQUEST_URI'] ?>" method="post" onsubmit="if(this.subscribe_reloaded_email.value=='' || this.subscribe_reloaded_email.value.indexOf('@')==0) return false">
 <fieldset style="border:0">
 	<p><label for="subscribe_reloaded_email"><?php _e('Email','subscribe-reloaded') ?></label>
-	<input type="text" class="subscribe-form-field" name="sre" value="<?php echo isset($_COOKIE['comment_author_email_'.COOKIEHASH])?$_COOKIE['comment_author_email_'.COOKIEHASH]:'email'; ?>" size="22"/> 
+	<input type="text" class="subscribe-form-field" name="sre" value="<?php echo isset($_COOKIE['comment_author_email_'.COOKIEHASH])?$_COOKIE['comment_author_email_'.COOKIEHASH]:'email'; ?>" size="22"
+		onfocus="if(this.value==this.defaultValue)this.value=''" onblur="if(this.value=='')this.value=this.defaultValue" /> 
 	<input name="submit" type="submit" class="subscribe-form-button" value="<?php _e('Send','subscribe-reloaded') ?>" /></p>
 </fieldset>
 </form>

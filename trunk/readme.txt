@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=Z732J
 Tags: subscribe, comments, notification, subscription, manage, double check-in, follow, commenting
 Requires at least: 2.9.2
 Tested up to: 3.1
-Stable tag: 1.4
+Stable tag: 1.5
 
 Subscribe to Comments Reloaded allows commenters to sign up for e-mail notifications of subsequent replies.
 
@@ -17,23 +17,25 @@ Subscribe to Comments Reloaded is a robust plugin that enables commenters to sig
 * MySQL 5.x or higher
 
 ## Main Features
-* Does not modify Wordpress system tables anymore
-* Imports Mark Jaquith's Subscribe To Comments data (**copies but does not delete** the old data)
-* The Management page for your visitors adapts to EVERY template existing out there
-* If you decide to uninstall this plugin, no crap will be left around in your DB, I promise!
-* Messages are fully customizable, no poEdit required
-* Fully localizable in your language (please contribute!)
+* It does not modify Wordpress system tables
+* You can manage all the subscription with its handy admin panel
+* It imports Mark Jaquith's Subscribe To Comments data (**copies but does not delete** the old data)
+* it has a "clean uninstall" procedure
+* All the messages are fully customizable, no poEdit required
+* Available in multiple languages
+* It ignores Spam comments
+* It's compatible with [Fluency Admin](http://deanjrobinson.com/projects/fluency-admin/) and [QTranslate](http://wordpress.org/extend/plugins/qtranslate/)
+* It has a truckload of options to customize its behavior
 
 == Installation ==
 
 1. If you are using Subscribe To Comments by Mark Jaquith, disable it (no need to uninstall it, though)
 2. Upload the entire folder and all the subfolders to your Wordpress plugins' folder
 3. Activate it
-5. Customize the Permalink value under Settings > Subscribe to Comments > Options (first value). It must reflect your permalinks' structure (nice permalinks, subfolders, post IDs, etc)
-5. If you don't see the checkbox to subscribe, you will have to manually edit your template, and add `<?php if (function_exists('subscribe_reloaded_show')) subscribe_reloaded_show(); ?>` somewhere inside `comments.php`
-6. If you're upgrading from a previous version, please make sure to deactivate/activate the plugin after upgrading
+5. Customize the Permalink value under Settings > Subscribe to Comments > Options (first field). It **must** reflect your permalinks' structure
+5. If you don't see the checkbox to subscribe, you will have to manually edit your template, and add `<?php if (function_exists('subscribe_reloaded_show')) subscribe_reloaded_show(); ?>` somewhere to your `comments.php`
+6. If you're upgrading from a previous version, please make sure to deactivate/activate the plugin
 7. Optional: customize all the messages under Settings > Subscribe to Comments > Messages
-8. Some templates are showing the latest comments on the management page: unfortunately that's a problem with the template, not the plugin. Please contact your theme's developer for more information
 
 == Screenshots ==
 
@@ -42,6 +44,14 @@ Subscribe to Comments Reloaded is a robust plugin that enables commenters to sig
 3. Use your own messages to interact with your users
 
 == Changelog ==
+
+= 1.5 =
+* StCR is now compatible with QTranslate (thank you [Odd Henriksen](http://www.oddhenriksen.net/))
+* Added a few more options to customize your messages (thank you [derekbeck](http://wordpress.org/support/profile/derekbeck))
+* Added a new option under Settings > Subscribe to Comments > Support that allows you to optimize the database on-the-fly
+* You can now click on each  email address, in the 'Manage Subscriptions' panel, to view all the subscription associated to it
+* Emails' content-type has been changed to text/html
+* Spanish localization added (thank you [TodoWordPress team](http://www.todowp.org/))
 
 = 1.4 =
 * Fixed a problem that made the latest comments appear on the management page
@@ -67,10 +77,9 @@ Subscribe to Comments Reloaded is a robust plugin that enables commenters to sig
 
 == Language Localization ==
 
-Subscribe to Comments Reloaded can speak your language! I used the `Portable Object` (.po) standard
-to implement this feature. If you want to provide a localized file in your
-language, use the template files (.pot) you'll find inside the `lang` folder,
-and contact me on the [support forum](http://lab.duechiacchiere.it/index.php?board=5.0) when your
+Subscribe to Comments Reloaded can speak your language! If you want to provide a localized file in your
+language, use the template files (.pot) you'll find inside the `langs` folder,
+and contact me on the [support forum](http://lab.duechiacchiere.it/index.php?board=5.0) once your
 localization is ready. Right now the following localizations are available (in alphabetical order):
 
 * French ([Li-An](http://www.li-an.fr/wpplugins/mes-traductions-de-plugins/#subscribe))
@@ -79,8 +88,12 @@ localization is ready. Right now the following localizations are available (in a
 * Norwegian ([Odd Henriksen](http://www.oddhenriksen.net/))
 * Portuguese, Brazil ([Ronaldo Richieri](http://richieri.com))
 * Russian ([Marika Bukvonka](http://violetnotes.com))
+* Spanish ([TodoWordPress team](http://www.todowp.org/))
 
-== List of donors in alphabetical order ==
+== List of donors ==
+Please send a donation of at least $5 in order to be included in this list. Thank you.
+* [Jason Pelletier]
 * [Pausaxn](http://pausaxn.it)
-* [Yochai](http://watch-the-walking-dead-online.com/)
+* [Teresa Jordan](http://www.teresajordan.com)
+
 

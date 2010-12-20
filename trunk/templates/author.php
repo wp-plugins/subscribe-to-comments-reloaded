@@ -30,8 +30,9 @@ if (!empty($_POST['email_list']) && !empty($_POST['action_type'])){
 	}
 	echo '<p><b>'.__('Subscriptions have been successfully updated.','subscribe-reloaded').'</b></p>';
 }
-
-echo '<p>'.stripslashes(get_option('subscribe_reloaded_author_text')).'</p>';
+$message = stripslashes(get_option('subscribe_reloaded_author_text'));
+if(function_exists('qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage')) $message = qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage($message);
+echo "<p>$message</p>";
 ?>
 
 <form action="<?php echo htmlspecialchars($_SERVER['REQUEST_URI']) ?>" method="post" id="email_list_form"
