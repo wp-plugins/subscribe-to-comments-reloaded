@@ -95,5 +95,3 @@ Please send a donation of at least $5 in order to be included in this list. Than
 * [Jason Pelletier]
 * [Pausaxn](http://pausaxn.it)
 * [Teresa Jordan](http://www.teresajordan.com)
-
-
