@@ -7,7 +7,7 @@ if (strpos($_SERVER['SCRIPT_FILENAME'], basename(__FILE__))){
 
 if (isset($_GET['ot']) && $_GET['ot']=='yes'){
 	$wpdb->query("OPTIMIZE TABLE `$wp_subscribe_reloaded->table_subscriptions`");
-	echo '<div id="wp-slimstat-message" class="updated fade"><p>';
+	echo '<div class="updated fade"><p>';
 	_e('StCR table has been successfully optimized.','subscribe-reloaded');		
 	echo '</p></div>';
 }
@@ -32,11 +32,11 @@ if (count($details_subscribe_reloaded) == 1) {
 		$details_subscribe_reloaded[0]['Data_free'] = intval($details_subscribe_reloaded[0]['Data_free']/1024);
 		$overhead_suffix = 'MB';
 	}
-	echo __('Engine','wp-slimstat-options').": {$details_subscribe_reloaded[0]['Engine']}<br/>";
-	echo __('Records','wp-slimstat-options').": {$details_subscribe_reloaded[0]['Rows']}<br/>";
-	echo __('Average Record Length','wp-slimstat-options').": {$details_subscribe_reloaded[0]['Avg_row_length']} bytes<br/>";
-	echo __('Created on','wp-slimstat-options').": {$details_subscribe_reloaded[0]['Create_time']}<br/>";
-	echo __('Approximate Overhead','wp-slimstat-options').": {$details_subscribe_reloaded[0]['Data_free']} $overhead_suffix ";
+	echo __('Engine','subscribe-reloaded').": {$details_subscribe_reloaded[0]['Engine']}<br/>";
+	echo __('Records','subscribe-reloadeds').": {$details_subscribe_reloaded[0]['Rows']}<br/>";
+	echo __('Average Record Length','subscribe-reloaded').": {$details_subscribe_reloaded[0]['Avg_row_length']} bytes<br/>";
+	echo __('Created on','subscribe-reloaded').": {$details_subscribe_reloaded[0]['Create_time']}<br/>";
+	echo __('Approximate Overhead','subscribe-reloaded').": {$details_subscribe_reloaded[0]['Data_free']} $overhead_suffix ";
 	if ($details_subscribe_reloaded[0]['Data_free'] > 0) echo '[<a href="options-general.php?page=subscribe-to-comments-reloaded/options/index.php&subscribepanel=6&ot=yes">'.__('optimize','subscribe-reloaded').'</a>]';
 }
 ?></p>
