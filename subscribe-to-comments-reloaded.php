@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Subscribe to Comments Reloaded
-Version: 1.4
+Version: 1.5
 Plugin URI: http://lab.duechiacchiere.it/index.php?board=5.0
 Description: Subscribe to Comments Reloaded is a robust plugin that enables commenters to sign up for e-mail notifications. It includes a full-featured subscription manager that your commenters can use to unsubscribe to certain posts or suspend all notifications.
 Author: camu
@@ -21,6 +21,7 @@ function subscribe_reloaded_show(){
 	$show_subscription_box = true;
 	$html_to_show = '';
 	$user_link = get_bloginfo('url').get_option('subscribe_reloaded_manager_page', '');
+	if (function_exists('qtrans_convertURL')) $user_link = qtrans_convertURL($user_link);
 	if (strpos($user_link, '?') !== false)
 		$manager_link = "$user_link&amp;srp=$post->ID";
 	else
@@ -49,6 +50,7 @@ function subscribe_reloaded_show(){
 		$checked_by_default = get_option('subscribe_reloaded_checked_by_default', 'no');
 		$checkbox_label = str_replace('[subscribe_link]', "$manager_link&amp;sra=s", 
 			stripslashes(get_option('subscribe_reloaded_checkbox_label', __("Notify me of followup comments via e-mail. You can also <a href='[subscribe_link]'>subscribe</a> without commenting.",'subscribe-reloaded'))));
+		if(function_exists('qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage')) $checkbox_label = qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage($checkbox_label);
 		$checkbox_class = get_option('subscribe_reloaded_checkbox_class', '');
 		$checkbox_inline_style = get_option('subscribe_reloaded_checkbox_inline_style', 'width:30px');
 		if (!empty($checkbox_class)) $checkbox_class = " class='$checkbox_class'";
@@ -62,9 +64,12 @@ function subscribe_reloaded_show(){
 			$checkbox_html_wrap = str_replace('[checkbox_field]', $checkbox_field, $checkbox_html_wrap);
 			$html_to_show = str_replace('[checkbox_label]', $checkbox_label, $checkbox_html_wrap) . $html_to_show;
 		}
-	}	
+	}
 	echo "<!-- BEGIN: subscribe to comments reloaded -->$html_to_show<!-- END: subscribe to comments reloaded -->";
 }
+
+// Show the checkbox - You can manually override this by adding the corresponding function in your template
+add_action('comment_form', 'subscribe_reloaded_show');
 
 class wp_subscribe_reloaded {
 
@@ -74,9 +79,48 @@ class wp_subscribe_reloaded {
 	public function __construct(){
 		global $wpdb;
 
-		// We use a bunch of tables to store data
+		// We use a table to store the information about our subscribers
 		$this->table_subscriptions = $wpdb->prefix . 'subscribe_reloaded';
 		$this->salt = defined('NONCE_KEY')?NONCE_KEY:'please create a unique key in your wp-config.php';
+		
+		// Initialization routines that should be executed on activation/deactivation
+		register_activation_hook( __FILE__, array( &$this, 'activate' ) );
+		register_deactivation_hook( __FILE__, array( &$this, 'deactivate' ) );
+		
+		// Add appropriate entries in the admin menu
+		add_action('admin_menu', array( &$this, 'add_config_menu' ) );
+		add_action('admin_print_styles-subscribe-to-comments-reloaded/options/index.php', array( &$this, 'add_stylesheet') );
+		add_action('admin_print_styles-edit-comments.php', array( &$this, 'add_stylesheet') );
+		add_action('admin_print_styles-edit-comments.php', array( &$this, 'add_stylesheet') );
+		add_action('admin_print_styles-post.php', array( &$this, 'add_stylesheet') );
+
+		// What to do when a new comment is posted
+		add_action('comment_post', array( &$this, 'new_comment_posted' ) );
+
+		// Monitor actions on existing comments
+		add_action('delete_comment', array( &$this, 'comment_deleted' ) );
+		add_action('wp_set_comment_status', array( &$this, 'comment_status' ) );
+
+		// Remove subscriptions attached to a post that is being deleted
+		add_action('delete_post', array( &$this, 'delete_subscription' ) );
+
+		// Provide content for the management page using WP filters
+		$manager_page_permalink = get_option('subscribe_reloaded_manager_page', '/comment-subscriptions');
+		if (function_exists('qtrans_convertURL')) $manager_page_permalink = qtrans_convertURL($manager_page_permalink);
+		if (empty($manager_page_permalink)) $manager_page_permalink = get_option('subscribe_reloaded_manager_page', '/comment-subscriptions');
+		if (strpos($_SERVER["REQUEST_URI"], $manager_page_permalink) !== false){
+			add_filter('the_posts', array(&$this, 'subscribe_reloaded_manage'),9,2);
+		}
+
+		// Create a hook to use with the daily cron job
+		add_action('subscribe_reloaded_purge', array( &$this,'subscribe_reloaded_purge') );
+
+		// Add a new column to the Edit Comments panel
+		add_filter('manage_edit-comments_columns', array( &$this,'add_column_header') );
+		add_action('manage_comments_custom_column', array( &$this,'add_column') );
+
+		// Contextual help
+		add_action('contextual_help', array(&$this,'contextual_help'),10,3);
 	}
 	// end __construct
 
@@ -161,7 +205,6 @@ class wp_subscribe_reloaded {
 	 * Performs some clean-up maintenance (disable cron job).
 	 */
 	public function deactivate() {
-
 		// Unschedule the autopurge hook
 		if (wp_next_scheduled('subscribe_reloaded_purge') > 0)
 			wp_clear_scheduled_hook('subscribe_reloaded_purge');
@@ -192,6 +235,8 @@ class wp_subscribe_reloaded {
 		$subject = stripslashes(get_option('subscribe_reloaded_double_check_subject', 'Please confirm your subscribtion to [post_title]'));
 		$message = stripslashes(get_option('subscribe_reloaded_double_check_content', ''));
 		$manager_link = get_bloginfo('url').get_option('subscribe_reloaded_manager_page', '/comment-subscriptions');
+		if (function_exists('qtrans_convertURL')) $manager_link = qtrans_convertURL($manager_link);
+		
 		$clean_email = $this->clean_email($_email);
 		$subscriber_salt = md5($this->salt.$clean_email);
 
@@ -206,17 +251,27 @@ class wp_subscribe_reloaded {
 
 		$headers = "MIME-Version: 1.0\n";
 		$headers .= "From: $from_name <$from_email>\n";
-		$headers .= "Content-Type: text/plain; charset=".get_bloginfo('charset')."\n";
+		$headers .= "Content-Type: text/html; charset=".get_bloginfo('charset')."\n";
 
 		$post = get_post($_post_ID);
 		$post_permalink = get_permalink($_post_ID);
 
 		// Replace tags with their actual values
 		$subject = str_replace('[post_title]', $post->post_title, $subject);
-		$message = str_replace('[post_title]', $post->post_title, $message);
+		
 		$message = str_replace('[post_permalink]', $post_permalink, $message);
 		$message = str_replace('[confirm_link]', $confirm_link, $message);
 		$message = str_replace('[manager_link]', $manager_link, $message);
+		
+		// QTranslate support
+		if(function_exists('qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage')){
+			$subject = qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage($subject);
+			$message = str_replace('[post_title]', qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage($post->post_title), $message);
+			$message = qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage($message);
+		}
+		else{
+			$message = str_replace('[post_title]', $post->post_title, $message);
+		}
 
 		wp_mail($clean_email, $subject, $message, $headers);
 	}
@@ -342,12 +397,6 @@ class wp_subscribe_reloaded {
 		global $current_user;
 		
 		if (!empty($_posts)) return $_posts;
-		
-		$manager_page_permalink = get_option('subscribe_reloaded_manager_page', '/comment-subscriptions');
-		$current_page = str_replace(get_bloginfo('url'), '', $_SERVER["REQUEST_URI"]);
-		
-		if (strpos($current_page, $manager_page_permalink) === false) return $_posts;
-
 		$post_ID = !empty($_POST['srp'])?intval($_POST['srp']):(!empty($_GET['srp'])?intval($_GET['srp']):0);
 
 		// Is the post_id passed in the query string valid?
@@ -391,9 +440,11 @@ class wp_subscribe_reloaded {
 		global $wp_query;
 			
 		$manager_page_title = get_option('subscribe_reloaded_manager_page_title', 'Manage subscriptions');
+		if(function_exists('qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage')) $manager_page_title = qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage($manager_page_title);
+		
 		$posts[] = 
 			(object)array(
-				'ID' => -100,
+				'ID' => '9999999',
 				'post_author' => '1',
 				'post_date' => '2010-10-27 11:38:56',
 				'post_date_gmt' => '2010-10-27 00:38:56',
@@ -415,7 +466,7 @@ class wp_subscribe_reloaded {
 				'post_type' => 'post',
 				'post_mime_type' => '',
 				'post_category' => '0',
-				'comment_count' => '-1',
+				'comment_count' => '0',
 				'filter' => 'raw'
 			);
 			
@@ -535,7 +586,7 @@ class wp_subscribe_reloaded {
 	 * Adds a new column header to the Edit Comments panel
 	 */
 	public function add_column_header($_columns) {
-		$_columns['subscribe-reloaded'] = __('Subscribed');
+		$_columns['subscribe-reloaded'] = __('Subscribed','subscribe-reloaded');
 		return $_columns;
 	}
 	// end add_column_header
@@ -612,6 +663,8 @@ class wp_subscribe_reloaded {
 		$subject = stripslashes(get_option('subscribe_reloaded_notification_subject', 'There is a new comment on the post [post_title]'));
 		$message = stripslashes(get_option('subscribe_reloaded_notification_content', ''));
 		$manager_link = get_bloginfo('url').get_option('subscribe_reloaded_manager_page', '/comment-subscriptions');
+		if (function_exists('qtrans_convertURL')) $manager_link = qtrans_convertURL($manager_link);
+		
 		$clean_email = $this->clean_email($_email);
 		$subscriber_salt = md5($this->salt.$clean_email);
 		if (strpos($manager_link, '?') !== false){
@@ -623,7 +676,7 @@ class wp_subscribe_reloaded {
 
 		$headers = "MIME-Version: 1.0\n";
 		$headers .= "From: $from_name <$from_email>\n";
-		$headers .= "Content-Type: text/plain; charset=".get_bloginfo('charset')."\n";
+		$headers .= "Content-Type: text/html; charset=".get_bloginfo('charset')."\n";
 
 		$post = get_post($_post_ID);
 		$comment = get_comment($_comment_ID);
@@ -632,12 +685,22 @@ class wp_subscribe_reloaded {
 
 		// Replace tags with their actual values
 		$subject = str_replace('[post_title]', $post->post_title, $subject);
-		$message = str_replace('[post_title]', $post->post_title, $message);
+		
 		$message = str_replace('[post_permalink]', $post_permalink, $message);
 		$message = str_replace('[comment_permalink]', $comment_permalink, $message);
 		$message = str_replace('[comment_author]', $comment->comment_author, $message);
 		$message = str_replace('[comment_content]', $comment->comment_content, $message);
 		$message = str_replace('[manager_link]', $manager_link, $message);
+		
+		// QTranslate support
+		if(function_exists('qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage')){
+			$subject = qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage($subject);
+			$message = str_replace('[post_title]', qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage($post->post_title), $message);
+			$message = qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage($message);
+		}
+		else{
+			$message = str_replace('[post_title]', $post->post_title, $message);
+		}
 
 		wp_mail($clean_email, $subject, $message, $headers);
 	}
@@ -665,48 +728,13 @@ class wp_subscribe_reloaded {
 }
 // end of class declaration
 
-// Ok, let's use every tool we defined here above 
+// Bootstrap the whole thing
 $wp_subscribe_reloaded = new wp_subscribe_reloaded();
 
-// Setup a cookie if the user just subscribed without commenting
+// Set a cookie if the user just subscribed without commenting
 $subscribe_to_comments_action = !empty($_POST['sra'])?$_POST['sra']:(!empty($_GET['sra'])?$_GET['sra']:0);
 $subscribe_to_comments_post_ID = !empty($_POST['srp'])?intval($_POST['srp']):(!empty($_GET['srp'])?intval($_GET['srp']):0);
 if (!empty($subscribe_to_comments_action) && !empty($_POST['subscribe_reloaded_email']) && ($subscribe_to_comments_action == 's') && ($subscribe_to_comments_post_ID > 0)){
 	$subscribe_to_comments_clean_email = $wp_subscribe_reloaded->clean_email($_POST['subscribe_reloaded_email']);
 	setcookie('comment_author_email'.COOKIEHASH, $subscribe_to_comments_clean_email, time()+1209600, '/');
 }
-
-// Initialization routine that should be executed on activation/deactivation
-register_activation_hook( __FILE__, array( &$wp_subscribe_reloaded, 'activate' ) );
-register_deactivation_hook( __FILE__, array( &$wp_subscribe_reloaded, 'deactivate' ) );
-
-// Add appropriate entries in the admin menu
-add_action('admin_menu', array( &$wp_subscribe_reloaded, 'add_config_menu' ) );
-add_action('admin_print_styles-subscribe-to-comments-reloaded/options/index.php', array( &$wp_subscribe_reloaded, 'add_stylesheet') );
-add_action('admin_print_styles-edit-comments.php', array( &$wp_subscribe_reloaded, 'add_stylesheet') );
-
-// What to do when a new comment is posted
-add_action('comment_post', array( &$wp_subscribe_reloaded, 'new_comment_posted' ) );
-
-// Monitor actions on existing comments
-add_action('delete_comment', array( &$wp_subscribe_reloaded, 'comment_deleted' ) );
-add_action('wp_set_comment_status', array( &$wp_subscribe_reloaded, 'comment_status' ) );
-
-// Remove subscriptions attached to a post that is being deleted
-add_action('delete_post', array( &$wp_subscribe_reloaded, 'delete_subscription' ) );
-
-// Provide content for the management page using WP filters
-add_filter('the_posts', array(&$wp_subscribe_reloaded, 'subscribe_reloaded_manage'),9,2);
-
-// Show the checkbox - You can manually override this by adding the corresponding function in your template
-add_action('comment_form', 'subscribe_reloaded_show');
-
-// Create a hook to use with the daily cron job
-add_action('subscribe_reloaded_purge', array( &$wp_subscribe_reloaded,'subscribe_reloaded_purge') );
-
-// Add a new column to the Edit Comments panel
-add_filter('manage_edit-comments_columns', array( &$wp_subscribe_reloaded,'add_column_header') );
-add_action('manage_comments_custom_column', array( &$wp_subscribe_reloaded,'add_column') );
-
-// Contextual help
-add_action('contextual_help', array(&$wp_subscribe_reloaded,'contextual_help'),10,3);

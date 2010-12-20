@@ -30,10 +30,11 @@ if (!empty($_POST['post_list']) && !empty($_POST['action_type'])){
 		default:
 			break;
 	}
-	echo '<p><b>'.__('Subscriptions have been successfully updated.','subscribe-reloaded').'</b></p>';
+	echo '<p><b>'.__('All the subscriptions have been successfully updated.','subscribe-reloaded').'</b></p>';
 }
-
-echo '<p>'.stripslashes(get_option('subscribe_reloaded_user_text')).'</p>';
+$message = stripslashes(get_option('subscribe_reloaded_user_text'));
+if(function_exists('qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage')) $message = qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage($message);
+echo "<p>$message</p>";
 ?>
 
 <form action="<?php echo htmlspecialchars($_SERVER['REQUEST_URI']) ?>" method="post" id="post_list_form"

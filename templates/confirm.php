@@ -14,6 +14,8 @@ $clean_email = urldecode($wp_subscribe_reloaded->clean_email($_GET['sre']));
 $post = get_post($clean_post_id);
 
 $wpdb->query("UPDATE $wp_subscribe_reloaded->table_subscriptions SET `status` = 'Y' WHERE `email` = '$clean_email' AND `post_ID` = '$clean_post_id'");
-return '<p>'.stripslashes(get_option('subscribe_reloaded_subscription_confirmed')).'</p>';
+$message = stripslashes(get_option('subscribe_reloaded_subscription_confirmed'));
+if(function_exists('qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage')) $message = qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage($message);
+return "<p>$message</p>";
 
 ?>

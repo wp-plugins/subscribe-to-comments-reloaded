@@ -67,7 +67,7 @@ elseif (!empty($clean_email) && !empty($_POST['action_type'])){
 <div class="postbox" style="width:32%;margin-right:10px">
 <h3 class='hndle'><?php _e('Update subscription','subscribe-reloaded') ?></h3>
 <p><?php _e('Update the email address associated to a specific subscription (by post ID).','subscribe-reloaded') ?></p>
-<form action="admin.php?page=subscribe-to-comments-reloaded/options/index.php&subscribepanel=1" method="post" id="update_address_form"
+<form action="options-general.php?page=subscribe-to-comments-reloaded/options/index.php&subscribepanel=1" method="post" id="update_address_form"
 	onsubmit="return confirm('<?php _e('Please remember: this operation cannot be undone. Are you sure you want to proceed?', 'subscribe-reloaded') ?>')">
 <fieldset style="border:0">
 <p style="float:left"><?php _e('From','subscribe-reloaded') ?> &nbsp;<input type='text' size='15' name='old_sre' value='' /></p>
@@ -82,7 +82,7 @@ elseif (!empty($clean_email) && !empty($_POST['action_type'])){
 <div class="postbox" style="width:32%;margin-right:10px">
 <h3><?php _e('Change status','subscribe-reloaded') ?></h3>
 <p><?php _e('Change the status of an email address or permanently delete all its subscriptions.','subscribe-reloaded') ?></p>
-<form action="admin.php?page=subscribe-to-comments-reloaded/options/index.php&subscribepanel=1" method="post">
+<form action="options-general.php?page=subscribe-to-comments-reloaded/options/index.php&subscribepanel=1" method="post">
 <p style="float:left"><input type="text" size="35" name="sre" value="" /></p>
 <p style="float:left"><?php _e('Action','subscribe-reloaded') ?>: <select name="action_type" style="width:10em">
 	<option value=''>-------------</option>
@@ -97,7 +97,7 @@ elseif (!empty($clean_email) && !empty($_POST['action_type'])){
 <div class="postbox" style="width:32%">
 <h3 class='hndle'><?php _e('Update email address','subscribe-reloaded') ?></h3>
 <p><?php _e('You can "mass update" all the occurrences of a given email address (exact matches ony).','subscribe-reloaded') ?></p>
-<form action="admin.php?page=subscribe-to-comments-reloaded/options/index.php&subscribepanel=1" method="post" id="update_address_form"
+<form action="options-general.php?page=subscribe-to-comments-reloaded/options/index.php&subscribepanel=1" method="post" id="update_address_form"
 	onsubmit="return confirm('<?php _e('Please remember: this operation cannot be undone. Are you sure you want to proceed?', 'subscribe-reloaded') ?>')">
 <fieldset style="border:0">
 <p style="float:left"><?php _e('From','subscribe-reloaded') ?> &nbsp;<input type='text' size='20' name='old_sre' value='' /></p>
@@ -147,17 +147,17 @@ if (!empty($clean_email)){
 	$ending_to = min($count_total, $starting_from+25);
 	if ($starting_from > 0){
 		$new_starting = ($starting_from > 25)?$starting_from-25:0;
-		echo "<a href='admin.php?page=subscribe-to-comments-reloaded/options/index.php&amp;subscribepanel=1&amp;starting=$new_starting&amp;sre=$clean_email&amp;srt=$search_type'>".__('&laquo; Previous','subscribe-reloaded')."</a> ";
+		echo "<a href='options-general.php?page=subscribe-to-comments-reloaded/options/index.php&amp;subscribepanel=1&amp;starting=$new_starting&amp;sre=$clean_email&amp;srt=$search_type'>".__('&laquo; Previous','subscribe-reloaded')."</a> ";
 	}
 	if (($ending_to < $count_total) && ($count_results > 0)){
 		$new_starting = $starting_from+25;
-		echo "<a href='admin.php?page=subscribe-to-comments-reloaded/options/index.php&amp;subscribepanel=1&amp;starting=$new_starting&amp;sre=$clean_email&amp;srt=$search_type'>".__('Next &raquo;','subscribe-reloaded')."</a> ";
+		echo "<a href='options-general.php?page=subscribe-to-comments-reloaded/options/index.php&amp;subscribepanel=1&amp;starting=$new_starting&amp;sre=$clean_email&amp;srt=$search_type'>".__('Next &raquo;','subscribe-reloaded')."</a> ";
 	}
 } ?></p>
 <h3><?php _e('Search email address','subscribe-reloaded') ?></h3>
-<form action="admin.php?page=subscribe-to-comments-reloaded/options/index.php&subscribepanel=1" method="post">
+<form action="options-general.php?page=subscribe-to-comments-reloaded/options/index.php&subscribepanel=1" method="post">
 <p><?php printf(__('You can either <a href="%s">list all the subscriptions</a> or find those where the <b>email</b>','subscribe-reloaded'), 
-	'admin.php?page=subscribe-to-comments-reloaded/options/index.php&subscribepanel=1&sre=@&srt=c') ?>&nbsp;
+	'options-general.php?page=subscribe-to-comments-reloaded/options/index.php&subscribepanel=1&sre=@&srt=c') ?>&nbsp;
 <select name="srt">
 	<option value='e'><?php _e('equals','subscribe-reloaded') ?></option>
 	<option value='c'><?php _e('contains','subscribe-reloaded') ?></option>
@@ -169,7 +169,7 @@ if (!empty($clean_email)){
 
 <?php if (empty($clean_email) && empty($_POST['post_list']) && empty($_POST['action_type'])) return; ?>
 
-<form action="admin.php?page=subscribe-to-comments-reloaded/options/index.php<?php if(!empty($current_panel)) echo '&subscribepanel='.$current_panel; ?>" method="post" id="post_list_form"
+<form action="options-general.php?page=subscribe-to-comments-reloaded/options/index.php<?php if(!empty($current_panel)) echo '&subscribepanel='.$current_panel; ?>" method="post" id="post_list_form"
 	onsubmit="return confirm('<?php _e('Please remember: this operation cannot be undone. Are you sure you want to proceed?', 'subscribe-reloaded') ?>')">
 <fieldset style="border:0">
 <?php
@@ -178,16 +178,17 @@ if (!empty($clean_email)){
 		echo '<p>'.__('Subscriptions for:','subscribe-reloaded')." <b>$clean_email</b> &raquo; ".__('Rows:','subscribe-reloaded').' '.($starting_from+1)." - $ending_to ".__('of','subscribe-reloaded')." $count_total [$order_by $order]</p>";
 		echo '<p>'.__('Legend: Y: subscribed, N: suspended, C: awaiting confirmation','subscribe-reloaded').'</p>';
 		echo '<ul>';
-		$order_dt = "<a style='text-decoration:none' title='".__('Reverse the order by Date/Time','subscribe-reloaded')."' href='admin.php?page=subscribe-to-comments-reloaded/options/index.php&amp;subscribepanel=1&amp;sre=$clean_email&amp;srt=$search_type&amp;srob=dt&amp;sro=".(($order=='ASC')?"DESC'>&or;":"ASC'>&and;")."</a>";
-		$order_status = "<a style='text-decoration:none' title='".__('Reverse the order by Date/Time','subscribe-reloaded')."' href='admin.php?page=subscribe-to-comments-reloaded/options/index.php&amp;subscribepanel=1&amp;sre=$clean_email&amp;srt=$search_type&amp;srob=status&amp;sro=".(($order=='ASC')?"DESC'>&or;":"ASC'>&and;")."</a>";
-		$order_post_id = "<a style='text-decoration:none' title='".__('Reverse the order by Post ID','subscribe-reloaded')."' href='admin.php?page=subscribe-to-comments-reloaded/options/index.php&amp;subscribepanel=1&amp;sre=$clean_email&amp;srt=$search_type&amp;srob=post_ID&amp;sro=".(($order=='ASC')?"DESC'>&or;":"ASC'>&and;")."</a>";
+		$order_dt = "<a style='text-decoration:none' title='".__('Reverse the order by Date/Time','subscribe-reloaded')."' href='options-general.php?page=subscribe-to-comments-reloaded/options/index.php&amp;subscribepanel=1&amp;sre=$clean_email&amp;srt=$search_type&amp;srob=dt&amp;sro=".(($order=='ASC')?"DESC'>&or;":"ASC'>&and;")."</a>";
+		$order_status = "<a style='text-decoration:none' title='".__('Reverse the order by Date/Time','subscribe-reloaded')."' href='options-general.php?page=subscribe-to-comments-reloaded/options/index.php&amp;subscribepanel=1&amp;sre=$clean_email&amp;srt=$search_type&amp;srob=status&amp;sro=".(($order=='ASC')?"DESC'>&or;":"ASC'>&and;")."</a>";
+		$order_post_id = "<a style='text-decoration:none' title='".__('Reverse the order by Post ID','subscribe-reloaded')."' href='options-general.php?page=subscribe-to-comments-reloaded/options/index.php&amp;subscribepanel=1&amp;sre=$clean_email&amp;srt=$search_type&amp;srob=post_ID&amp;sro=".(($order=='ASC')?"DESC'>&or;":"ASC'>&and;")."</a>";
 		$show_email_column = (($search_type == 'c') || ($search_type == 'n'))?"<span class='subscribe-column subscribe-column-2'>".__('Email','subscribe-reloaded')."</span>":'';
-		echo "<li class='subscribe-list-header'><input class='checkbox' type='checkbox' name='subscription_list_select_all' id='stcr_select_all' onchange='t=document.getElementById(\"post_list_form\").elements;for(i in t)if(i>0){if(t[i].checked==1){t[i].checked=0} else{t[i].checked=1}}'/> <span class='subscribe-column subscribe-column-1'>".__('Post (ID)','subscribe-reloaded')." &nbsp;&nbsp;$order_post_id</span> $show_email_column <span class='subscribe-column subscribe-column-3'>".__('Date and Time','subscribe-reloaded')." &nbsp;&nbsp;$order_dt</span> <span class='subscribe-column subscribe-column-4'>".__('Status','subscribe-reloaded')." &nbsp;&nbsp;$order_status</span></li>\n";
+		$first_column_width = empty($show_email_column)?' style="width:50%"':'';
+		echo "<li class='subscribe-list-header'><input class='checkbox' type='checkbox' name='subscription_list_select_all' id='stcr_select_all' onchange='t=document.getElementById(\"post_list_form\").elements;for(i in t)if(i>0){if(t[i].checked==1){t[i].checked=0} else{t[i].checked=1}}'/> <span$first_column_width class='subscribe-column subscribe-column-1'>".__('Post (ID)','subscribe-reloaded')." &nbsp;&nbsp;$order_post_id</span> $show_email_column <span class='subscribe-column subscribe-column-3'>".__('Date and Time','subscribe-reloaded')." &nbsp;&nbsp;$order_dt</span> <span class='subscribe-column subscribe-column-4'>".__('Status','subscribe-reloaded')." &nbsp;&nbsp;$order_status</span></li>\n";
 		foreach($subscriptions as $a_subscription){
 			$title = get_the_title($a_subscription->post_ID);
-			$specific_email = (($search_type == 'c') || ($search_type == 'n'))?"$a_subscription->email ":'';
+			$specific_email = (($search_type == 'c') || ($search_type == 'n'))?"<a href='options-general.php?page=subscribe-to-comments-reloaded/options/index.php&subscribepanel=1&sre=$a_subscription->email&srt=e'>$a_subscription->email</a> ":'';
 			$alternate = empty($alternate)?' class="alternate"':'';
-			echo "<li$alternate><input class='checkbox' type='checkbox' name='subscription_list[]' value='$a_subscription->post_ID,$a_subscription->email' id='sub_{$a_subscription->dt}'/> <label class='subscribe-column subscribe-column-1' for='sub_{$a_subscription->dt}'><a href='$manager_link$a_subscription->post_ID'>$title</a> ($a_subscription->post_ID)</label> <span class='subscribe-column subscribe-column-2'>$specific_email</span> <span class='subscribe-column subscribe-column-3'>$a_subscription->dt</span> <span class='subscribe-column subscribe-column-4'>$a_subscription->status</span></li>\n";
+			echo "<li$alternate><input class='checkbox' type='checkbox' name='subscription_list[]' value='$a_subscription->post_ID,$a_subscription->email' id='sub_{$a_subscription->dt}'/> <label$first_column_width class='subscribe-column subscribe-column-1' for='sub_{$a_subscription->dt}'><a href='$manager_link$a_subscription->post_ID'>$title</a> ($a_subscription->post_ID)</label> <span class='subscribe-column subscribe-column-2'>$specific_email</span> <span class='subscribe-column subscribe-column-3'>$a_subscription->dt</span> <span class='subscribe-column subscribe-column-4'>$a_subscription->status</span></li>\n";
 		}
 		echo '</ul>';
 		echo '<p>'.__('Action:','subscribe-reloaded').' <input type="radio" name="action_type" value="d" id="action_type_delete" /> <label for="action_type_delete">'.__('Delete forever','subscribe-reloaded').'</label> &nbsp;&nbsp;&nbsp;&nbsp; ';
