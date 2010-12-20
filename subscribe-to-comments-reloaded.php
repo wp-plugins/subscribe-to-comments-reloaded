@@ -586,6 +586,7 @@ class wp_subscribe_reloaded {
 	 * Adds a new column header to the Edit Comments panel
 	 */
 	public function add_column_header($_columns) {
+		load_plugin_textdomain('subscribe-reloaded', WP_PLUGIN_DIR .'/subscribe-to-comments-reloaded/langs', '/subscribe-to-comments-reloaded/langs');
 		$_columns['subscribe-reloaded'] = __('Subscribed','subscribe-reloaded');
 		return $_columns;
 	}
