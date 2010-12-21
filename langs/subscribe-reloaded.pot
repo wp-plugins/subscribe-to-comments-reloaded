@@ -1,38 +1,38 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: WP Slim Stat 2.0\n"
+"Project-Id-Version: Subscribe to Comments Reloaded\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-12-20 13:35-0500\n"
-"PO-Revision-Date: 2010-12-20 13:43-0500\n"
+"POT-Creation-Date: 2010-12-21 12:10-0500\n"
+"PO-Revision-Date: 2010-12-21 12:10-0500\n"
 "Last-Translator: Camu <info@duechiacchiere.it>\n"
-"Language-Team: due chiacchiere <info@duechiacchiere.it>\n"
+"Language-Team: Odd Henriksen <odd@henriksen.cx>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-Language: Italian\n"
-"X-Poedit-Country: ITALY\n"
+"X-Poedit-Language: Norwegian Bokmal\n"
+"X-Poedit-Country: NORWAY\n"
 "X-Poedit-KeywordsList: __;_e\n"
-"X-Poedit-Basepath: .\n"
-"Plural-Forms: s\n"
+"X-Poedit-Basepath: ../\n"
+"Plural-Forms: er\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: subscribe-to-comments-reloaded.php:34
-#: subscribe-to-comments-reloaded.php:190
+#: subscribe-to-comments-reloaded.php:191
 msgid "You are subscribed to this entry. <a href='[manager_link]'>Manage</a> your subscriptions."
 msgstr ""
 
 #: subscribe-to-comments-reloaded.php:39
-#: subscribe-to-comments-reloaded.php:191
+#: subscribe-to-comments-reloaded.php:192
 msgid "Your subscription to this entry needs to be confirmed. <a href='[manager_link]'>Manage your subscriptions</a>."
 msgstr ""
 
 #: subscribe-to-comments-reloaded.php:46
-#: subscribe-to-comments-reloaded.php:192
+#: subscribe-to-comments-reloaded.php:193
 msgid "You can <a href='[manager_link]'>manage the subscriptions</a> of this entry."
 msgstr ""
 
 #: subscribe-to-comments-reloaded.php:52
-#: subscribe-to-comments-reloaded.php:186
+#: subscribe-to-comments-reloaded.php:187
 msgid "Notify me of followup comments via e-mail. You can also <a href='[subscribe_link]'>subscribe</a> without commenting."
 msgstr ""
 
@@ -69,46 +69,48 @@ msgstr ""
 msgid "In order to cancel or suspend one or more notifications, select the corresponding checkbox(es) and click on the button at the end of the list. You are currently subscribed to:"
 msgstr ""
 
-#: subscribe-to-comments-reloaded.php:184
+#: subscribe-to-comments-reloaded.php:185
 msgid "There is a new comment to [post_title]"
 msgstr ""
 
-#: subscribe-to-comments-reloaded.php:185
-msgid "There is a new comment to [post_title].\nComment Link: [comment_permalink]\nAuthor: [comment_author]\nComment:\n[comment_content]\nPermalink: [post_permalink]\nManage your subscriptions: [manager_link]"
-msgstr ""
-
-#: subscribe-to-comments-reloaded.php:193
-msgid "Please confirm your subscription to [post_title]"
+#: subscribe-to-comments-reloaded.php:186
+#, fuzzy
+msgid ""
+"There is a new comment to [post_title].\n"
+"Comment Link: [comment_permalink]\n"
+"Author: [comment_author]\n"
+"Comment:\n"
+"[comment_content]\n"
+"Permalink: [post_permalink]\n"
+"Manage your subscriptions: [manager_link]"
 msgstr ""
 
 #: subscribe-to-comments-reloaded.php:194
-msgid "You have requested to be notified every time a new comment is added to:\n[post_permalink]\n\nPlease confirm your request by clicking on this link:\n[confirm_link]
+#, fuzzy
+msgid "Please confirm your subscription to [post_title]"
 msgstr ""
 
 #: subscribe-to-comments-reloaded.php:195
-msgid "Manage your subscriptions on [blog_name]"
+msgid ""
+"You have requested to be notified every time a new comment is added to:\n"
+"[post_permalink]\n"
+"\n"
+"Please confirm your request by clicking on this link:\n"
+"[confirm_link]"
 msgstr ""
 
 #: subscribe-to-comments-reloaded.php:196
-msgid "You have requested to manage your subscriptions to the articles on [blog_name]. Follow this link to access your personal page:\n[manager_link]"
+msgid "Manage your subscriptions on [blog_name]"
 msgstr ""
 
-#: subscribe-to-comments-reloaded.php:589
+#: subscribe-to-comments-reloaded.php:197
+msgid ""
+"You have requested to manage your subscriptions to the articles on [blog_name]. Follow this link to access your personal page:\n"
+"[manager_link]"
+msgstr ""
+
+#: subscribe-to-comments-reloaded.php:592
 msgid "Subscribed"
-msgstr ""
-
-#: subscribe-to-comments-reloaded.php:603
-#: options/panel3.php:64
-#: options/panel3.php:86
-#: options/panel3.php:93
-#: options/panel3.php:100
-#: options/panel3.php:107
-#: options/panel3.php:114
-msgid "Yes"
-msgstr ""
-
-#: subscribe-to-comments-reloaded.php:605
-msgid "Awaiting confirmation"
 msgstr ""
 
 #: subscribe-to-comments-reloaded.php:606
@@ -118,22 +120,38 @@ msgstr ""
 #: options/panel3.php:101
 #: options/panel3.php:108
 #: options/panel3.php:115
+#: options/panel3.php:122
+msgid "Yes"
+msgstr ""
+
+#: subscribe-to-comments-reloaded.php:608
+msgid "Awaiting confirmation"
+msgstr ""
+
+#: subscribe-to-comments-reloaded.php:609
+#: options/panel3.php:66
+#: options/panel3.php:88
+#: options/panel3.php:95
+#: options/panel3.php:102
+#: options/panel3.php:109
+#: options/panel3.php:116
+#: options/panel3.php:123
 msgid "No"
 msgstr ""
 
-#: subscribe-to-comments-reloaded.php:616
+#: subscribe-to-comments-reloaded.php:619
 msgid "Need help on how to use Subscribe to Comments Reloaded? Visit the official"
 msgstr ""
 
-#: subscribe-to-comments-reloaded.php:616
+#: subscribe-to-comments-reloaded.php:619
 msgid "support forum"
 msgstr ""
 
-#: subscribe-to-comments-reloaded.php:617
+#: subscribe-to-comments-reloaded.php:620
 msgid "Feeling generous?"
 msgstr ""
 
-#: subscribe-to-comments-reloaded.php:617
+#: subscribe-to-comments-reloaded.php:620
 msgid "Donate a few bucks!"
 msgstr ""
 
@@ -165,6 +183,7 @@ msgid "The status has been successfully updated. Rows affected:"
 msgstr ""
 
 #: options/panel1.php:68
+#, fuzzy
 msgid "Update subscription"
 msgstr ""
 
@@ -300,8 +319,8 @@ msgid "Reverse the order by Post ID"
 msgstr ""
 
 #: options/panel1.php:184
-#: templates/request-management-link.php:76
-#: templates/subscribe.php:82
+#: templates/request-management-link.php:77
+#: templates/subscribe.php:83
 #: templates/user.php:46
 msgid "Email"
 msgstr ""
@@ -315,6 +334,7 @@ msgid "Date and Time"
 msgstr ""
 
 #: options/panel1.php:186
+#, fuzzy
 msgid "Status"
 msgstr ""
 
@@ -339,42 +359,42 @@ msgid "Management Page ID"
 msgstr ""
 
 #: options/panel3.php:12
-#: options/panel3.php:47
+#: options/panel3.php:48
 msgid "Autopurge requests"
 msgstr ""
 
 #: options/panel3.php:13
-#: options/panel3.php:52
+#: options/panel3.php:53
 msgid "Sender name"
 msgstr ""
 
 #: options/panel3.php:14
-#: options/panel3.php:57
+#: options/panel3.php:58
 msgid "Sender email address"
 msgstr ""
 
 #: options/panel3.php:15
-#: options/panel3.php:62
+#: options/panel3.php:63
 msgid "Checked by default"
 msgstr ""
 
 #: options/panel3.php:16
-#: options/panel3.php:69
+#: options/panel3.php:70
 msgid "Custom CSS Class"
 msgstr ""
 
 #: options/panel3.php:17
-#: options/panel3.php:74
+#: options/panel3.php:75
 msgid "Custom inline style"
 msgstr ""
 
 #: options/panel3.php:18
-#: options/panel3.php:79
+#: options/panel3.php:80
 msgid "Custom HTML"
 msgstr ""
 
 #: options/panel3.php:19
-#: options/panel3.php:84
+#: options/panel3.php:85
 msgid "Enable double check"
 msgstr ""
 
@@ -383,98 +403,107 @@ msgid "Notify authors"
 msgstr ""
 
 #: options/panel3.php:21
-#: options/panel3.php:98
-msgid "Send trackbacks"
+#: options/panel3.php:99
+msgid "Enable HTML emails"
 msgstr ""
 
 #: options/panel3.php:22
-#: options/panel3.php:91
-msgid "Notify admin"
+#: options/panel3.php:106
+msgid "Send trackbacks"
 msgstr ""
 
 #: options/panel3.php:23
-#: options/panel3.php:112
+#: options/panel3.php:92
+msgid "Notify admin"
+msgstr ""
+
+#: options/panel3.php:24
+#: options/panel3.php:120
 msgid "Let admin subscribe"
 msgstr ""
 
-#: options/panel3.php:28
+#: options/panel3.php:29
 #: options/panel4.php:21
 #: options/panel5.php:28
 msgid "Your settings have been successfully updated."
 msgstr ""
 
-#: options/panel3.php:31
+#: options/panel3.php:32
 #: options/panel4.php:24
 #: options/panel5.php:31
 msgid "There was an error updating the following fields:"
 msgstr ""
 
-#: options/panel3.php:42
+#: options/panel3.php:43
 #: options/panel5.php:64
 msgid "Management page"
 msgstr ""
 
-#: options/panel3.php:44
+#: options/panel3.php:45
 msgid "The permalink for your management page (something like <code>/manage-subscriptions</code> or <code>/?page_id=345</code>). This page <b>does not</b> actually exist in the system, but its permalink must follow your Wordpress' permalink settings."
 msgstr ""
 
-#: options/panel3.php:48
+#: options/panel3.php:49
 msgid "days"
 msgstr ""
 
-#: options/panel3.php:49
+#: options/panel3.php:50
 msgid "Delete pending subscriptions (not confirmed) after X days. Zero disables this feature."
 msgstr ""
 
-#: options/panel3.php:54
+#: options/panel3.php:55
 msgid "Name to use for the \"from\" field when sending a new notification to the user."
 msgstr ""
 
-#: options/panel3.php:59
+#: options/panel3.php:60
 msgid "Email address to use for the \"from\" field when sending a new notification to the user."
 msgstr ""
 
-#: options/panel3.php:66
+#: options/panel3.php:67
 msgid "Decide if the checkbox should be checked by default or not."
 msgstr ""
 
-#: options/panel3.php:71
+#: options/panel3.php:72
 msgid "Custom CSS class to associate to the checkbox, if you want to customize its style."
 msgstr ""
 
-#: options/panel3.php:76
+#: options/panel3.php:77
 msgid "Custom inline CSS to add to the checkbox."
 msgstr ""
 
-#: options/panel3.php:81
+#: options/panel3.php:82
 msgid "Custom HTML code to be used when displaying the checkbox. Allowed tags: [checkbox_field], [checkbox_label]"
 msgstr ""
 
-#: options/panel3.php:88
+#: options/panel3.php:89
 msgid "Send a notification email to confirm the subscription (to avoid addresses misuse)."
 msgstr ""
 
-#: options/panel3.php:95
+#: options/panel3.php:96
 msgid "Notify the administrator when a new comment is posted."
 msgstr ""
 
-#: options/panel3.php:102
+#: options/panel3.php:103
+msgid "If enabled, will send email messages with content-type = text/html instead of text/plain"
+msgstr ""
+
+#: options/panel3.php:110
 msgid "Notify users when a new trackback or pingback is added to the discussion."
 msgstr ""
 
-#: options/panel3.php:105
+#: options/panel3.php:113
 msgid "Track all subscriptions"
 msgstr ""
 
-#: options/panel3.php:109
+#: options/panel3.php:117
 msgid "Notify the administrator when users subscribe without commenting."
 msgstr ""
 
-#: options/panel3.php:116
+#: options/panel3.php:124
 msgid "Let the administrator subscribe to comments when logged in."
 msgstr ""
 
-#: options/panel3.php:120
+#: options/panel3.php:128
 #: options/panel4.php:66
 #: options/panel5.php:109
 msgid "Save Changes"
@@ -623,18 +652,22 @@ msgid "Text shown to those who request to manage their subscriptions."
 msgstr ""
 
 #: options/panel5.php:80
+#, fuzzy
 msgid "Thank you note shown after the request here above has been processed. Allowed tags: [post_title], [post_permalink]"
 msgstr ""
 
 #: options/panel5.php:85
+#, fuzzy
 msgid "Text shown to those who want to subscribe without commenting. Allowed tags: [post_title], [post_permalink]"
 msgstr ""
 
 #: options/panel5.php:90
+#, fuzzy
 msgid "Thank you note shown after the subscription request has been processed (double check-in disabled). Allowed tags: [post_title], [post_permalink]"
 msgstr ""
 
 #: options/panel5.php:95
+#, fuzzy
 msgid "Thank you note shown after the subscription request has been processed (double check-in enabled). Allowed tags: [post_title], [post_permalink]"
 msgstr ""
 
@@ -647,6 +680,7 @@ msgid "Introductory text for the users' management page."
 msgstr ""
 
 #: options/panel6.php:11
+#, fuzzy
 msgid "StCR table has been successfully optimized."
 msgstr ""
 
@@ -730,8 +764,8 @@ msgstr ""
 msgid "Sorry, no subscriptions found."
 msgstr ""
 
-#: templates/request-management-link.php:79
-#: templates/subscribe.php:84
+#: templates/request-management-link.php:80
+#: templates/subscribe.php:85
 msgid "Send"
 msgstr ""
 
@@ -745,6 +779,9 @@ msgid "User:"
 msgstr ""
 
 #: templates/user.php:33
+#, fuzzy
 msgid "All the subscriptions have been successfully updated."
 msgstr ""
 
+#~ msgid "Remove or suspend email address"
+#~ msgstr ""
