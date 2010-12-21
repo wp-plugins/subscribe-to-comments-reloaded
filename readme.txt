@@ -50,7 +50,7 @@ Subscribe to Comments Reloaded is a robust plugin that enables commenters to sig
 * Added a few more options to customize your messages (thank you [derekbeck](http://wordpress.org/support/profile/derekbeck))
 * Added a new option under Settings > Subscribe to Comments > Support that allows you to optimize the database on-the-fly
 * You can now click on each  email address, in the 'Manage Subscriptions' panel, to view all the subscription associated to it
-* Emails' content-type has been changed to text/html
+* Emails' content-type can been changed to text/html (Settings > Subscribe to Comments > Options)
 * Spanish localization added (thank you [TodoWordPress team](http://www.todowp.org/))
 
 = 1.4 =
@@ -92,6 +92,6 @@ localization is ready. Right now the following localizations are available (in a
 
 == List of donors ==
 Please send a donation of at least $5 in order to be included in this list. Thank you.
-* [Jason Pelletier]
+* Jason Pelletier
 * [Pausaxn](http://pausaxn.it)
 * [Teresa Jordan](http://www.teresajordan.com)

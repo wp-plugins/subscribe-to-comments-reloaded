@@ -176,7 +176,8 @@ class wp_subscribe_reloaded {
 		add_option('subscribe_reloaded_checked_by_default', 'no', '', 'no');
 		add_option('subscribe_reloaded_enable_double_check', 'no', '', 'no');
 		add_option('subscribe_reloaded_notify_authors', 'no', '', 'no');
-		add_option('subscribe_reloaded_process_trackbacks', 'no', '', 'no');
+		add_option('subscribe_reloaded_enable_html_emails', 'no', '', 'no');
+		add_option('subscribe_reloaded_process_trackbacks', 'no', '', 'no');		
 		add_option('subscribe_reloaded_enable_admin_messages', 'no', '', 'no');
 		add_option('subscribe_reloaded_admin_subscribe', 'no', '', 'no');
 
@@ -251,7 +252,8 @@ class wp_subscribe_reloaded {
 
 		$headers = "MIME-Version: 1.0\n";
 		$headers .= "From: $from_name <$from_email>\n";
-		$headers .= "Content-Type: text/html; charset=".get_bloginfo('charset')."\n";
+		$content_type = (get_option('subscribe_reloaded_enable_html_emails', 'no') == 'yes')?'text/html':'text/plain';
+		$headers .= "Content-Type: $content_type; charset=".get_bloginfo('charset')."\n";
 
 		$post = get_post($_post_ID);
 		$post_permalink = get_permalink($_post_ID);
@@ -677,7 +679,8 @@ class wp_subscribe_reloaded {
 
 		$headers = "MIME-Version: 1.0\n";
 		$headers .= "From: $from_name <$from_email>\n";
-		$headers .= "Content-Type: text/html; charset=".get_bloginfo('charset')."\n";
+		$content_type = (get_option('subscribe_reloaded_enable_html_emails', 'no') == 'yes')?'text/html':'text/plain';
+		$headers .= "Content-Type: $content_type; charset=".get_bloginfo('charset')."\n";
 
 		$post = get_post($_post_ID);
 		$comment = get_comment($_comment_ID);

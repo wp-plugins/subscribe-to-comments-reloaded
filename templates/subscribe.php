@@ -32,7 +32,8 @@ if (!empty($_POST['subscribe_reloaded_email'])){
 		
 		$headers = "MIME-Version: 1.0\n";
 		$headers .= "From: $from_name <$from_email>\n";
-		$headers .= "Content-Type: text/html; charset=".get_bloginfo('charset')."\n";
+		$content_type = (get_option('subscribe_reloaded_enable_html_emails', 'no') == 'yes')?'text/html':'text/plain';
+		$headers .= "Content-Type: $content_type; charset=".get_bloginfo('charset')."\n";
 		wp_mail(get_bloginfo('admin_email'), $subject, $message, $headers);
 	}
 	if ($enable_double_check == 'yes' && !$wp_subscribe_reloaded->is_user_subscribed($post_ID, $_POST['subscribe_reloaded_email'], 'C')){
