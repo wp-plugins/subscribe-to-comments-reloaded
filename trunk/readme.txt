@@ -82,13 +82,13 @@ language, use the template files (.pot) you'll find inside the `langs` folder,
 and contact me on the [support forum](http://lab.duechiacchiere.it/index.php?board=5.0) once your
 localization is ready. Right now the following localizations are available (in alphabetical order):
 
-* French ([Li-An](http://www.li-an.fr/wpplugins/mes-traductions-de-plugins/#subscribe))
-* German ([derhenry](http://www.derhenry.net/2010/subscribe-to-comments-reloaded/))
-* Italian
-* Norwegian ([Odd Henriksen](http://www.oddhenriksen.net/))
-* Portuguese, Brazil ([Ronaldo Richieri](http://richieri.com))
-* Russian ([Marika Bukvonka](http://violetnotes.com))
-* Spanish ([TodoWordPress team](http://www.todowp.org/))
+* French - [Li-An](http://www.li-an.fr/wpplugins/mes-traductions-de-plugins/#subscribe)
+* German - [derhenry](http://www.derhenry.net/2010/subscribe-to-comments-reloaded/)
+* Italian - myself
+* Norwegian - [Odd Henriksen](http://www.oddhenriksen.net/)
+* Portuguese, Brazil - [Ronaldo Richieri](http://richieri.com)
+* Russian - [Marika Bukvonka](http://violetnotes.com)
+* Spanish - [TodoWordPress team](http://www.todowp.org/) and [Zinedine](http://www.informacioniphone.com)
 
 == List of donors ==
 
