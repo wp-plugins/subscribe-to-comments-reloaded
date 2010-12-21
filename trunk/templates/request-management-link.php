@@ -33,7 +33,8 @@ if (!empty($_POST['sre'])){
 
 	$headers = "MIME-Version: 1.0\n";
 	$headers .= "From: $from_name <$from_email>\n";
-	$headers .= "Content-Type: text/html; charset=".get_bloginfo('charset')."\n";
+	$content_type = (get_option('subscribe_reloaded_enable_html_emails', 'no') == 'yes')?'text/html':'text/plain';
+	$headers .= "Content-Type: $content_type; charset=".get_bloginfo('charset')."\n";
 
 	if (strpos($manager_link, '?') !== false)
 		$manager_link = "$manager_link&sre=".urlencode($clean_email)."&srk=$subscriber_salt";
