@@ -2,10 +2,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Subscribe To Comments Reloaded\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-12-21 12:08-0500\n"
-"PO-Revision-Date: 2010-12-21 12:08-0500\n"
+"POT-Creation-Date: 2010-12-21 12:39-0500\n"
+"PO-Revision-Date: 2010-12-21 12:39-0500\n"
 "Last-Translator: Camu <info@duechiacchiere.it>\n"
-"Language-Team: TodoWordPress <traducciones@todowp.org>\n"
+"Language-Team: TodoWordPress <traducciones@tdwp.ws>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -217,7 +217,6 @@ msgid "From"
 msgstr "Desde"
 
 #: options/panel1.php:74
-#, fuzzy
 msgid "PID"
 msgstr "PID"
 
@@ -367,7 +366,6 @@ msgid "Sorry, no subscriptions found for"
 msgstr "Disculpa, no se encontraron suscripciones para"
 
 #: options/panel3.php:11
-#, fuzzy
 msgid "Management Page ID"
 msgstr "Administración de la ID de la página"
 
@@ -665,24 +663,20 @@ msgid "Text shown to those who request to manage their subscriptions."
 msgstr "Texto que se muestra cuando alguien solicita acceso a la página para administrar suscripciones."
 
 #: options/panel5.php:80
-#, fuzzy
 msgid "Thank you note shown after the request here above has been processed. Allowed tags: [post_title], [post_permalink]"
-msgstr "Nota de agradecimiento que aparece después de haber sido procesada la solicitud."
+msgstr "Nota de agradecimiento que aparece después de haber sido procesada la solicitud. Etiquetas permitidas: [post_title] y [post_permalink]."
 
 #: options/panel5.php:85
-#, fuzzy
 msgid "Text shown to those who want to subscribe without commenting. Allowed tags: [post_title], [post_permalink]"
-msgstr "Texto que se muestra cualquier alguien se quiere suscribir sin comentar. Etiquetas permitidas: [post_title]."
+msgstr "Texto que se muestra cualquier alguien se quiere suscribir sin comentar. Etiquetas permitidas: [post_title] y [post_permalink]."
 
 #: options/panel5.php:90
-#, fuzzy
 msgid "Thank you note shown after the subscription request has been processed (double check-in disabled). Allowed tags: [post_title], [post_permalink]"
-msgstr "Nota de agradecimiento que aparece después de procesar la solicitud de suscripción (cuando la confirmación está desactivada)."
+msgstr "Nota de agradecimiento que aparece después de procesar la solicitud de suscripción (cuando la confirmación está desactivada). Etiquetas permitidas: [post_title] y [post_permalink]."
 
 #: options/panel5.php:95
-#, fuzzy
 msgid "Thank you note shown after the subscription request has been processed (double check-in enabled). Allowed tags: [post_title], [post_permalink]"
-msgstr "Nota de agradecimiento que aparece después de procesar la solicitud de suscripción (cuando la confirmación está activada)."
+msgstr "Nota de agradecimiento que aparece después de procesar la solicitud de suscripción (cuando la confirmación está activada). Etiquetas disponibles: [post_title] y [post_permalink]."
 
 #: options/panel5.php:100
 msgid "Introductory text for the authors' management page."
@@ -693,41 +687,40 @@ msgid "Introductory text for the users' management page."
 msgstr "Texto de introducción para los usuarios en la página de administración."
 
 #: options/panel6.php:11
-#, fuzzy
 msgid "StCR table has been successfully optimized."
-msgstr "Tu configuración se ha actualizado correctamente."
+msgstr "La tabla StCR ha sido optimizada correctamente."
 
 #: options/panel6.php:15
 msgid "Database"
-msgstr ""
+msgstr "Base de datos"
 
 #: options/panel6.php:35
 msgid "Engine"
-msgstr ""
+msgstr "Motor"
 
 #: options/panel6.php:36
 msgid "Records"
-msgstr ""
+msgstr "Registros"
 
 #: options/panel6.php:37
 msgid "Average Record Length"
-msgstr ""
+msgstr "Duración media del registro"
 
 #: options/panel6.php:38
 msgid "Created on"
-msgstr ""
+msgstr "Creado el"
 
 #: options/panel6.php:39
 msgid "Approximate Overhead"
-msgstr ""
+msgstr "Aproximado al alza"
 
 #: options/panel6.php:40
 msgid "optimize"
-msgstr ""
+msgstr "optimizar"
 
 #: options/panel6.php:44
 msgid "Support the author"
-msgstr ""
+msgstr "Soporte del autor"
 
 #: options/panel6.php:45
 msgid "How valuable is the feature offered by this plugin to your visitors? Subscribe to Comments Reloaded is and will always be free, but consider supporting the author if this plugin made your web site better, especially if you are making money out of it. Any donation received will be reinvested in the development of Subscribe to Comments Reloaded, and to buy some food for my hungry family."
@@ -792,7 +785,15 @@ msgid "User:"
 msgstr "Usuario:"
 
 #: templates/user.php:33
-#, fuzzy
 msgid "All the subscriptions have been successfully updated."
-msgstr "Las suscripciones se han actualizado correctamente."
+msgstr "Todas las suscripciones se han actualizado correctamente."
 
+#~ msgid "Pageviews by day - Click on a day for hourly metrics"
+#~ msgstr ""
+#~ "Páginas vistas por día - Pulsa en un día para ver estadísticas por horas"
+
+#~ msgid "Pageviews by hour"
+#~ msgstr "Páginas vistas por hora"
+
+#~ msgid "No data to display"
+#~ msgstr "No hay datos para mostrar"
