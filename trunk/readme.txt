@@ -91,7 +91,9 @@ localization is ready. Right now the following localizations are available (in a
 * Spanish ([TodoWordPress team](http://www.todowp.org/))
 
 == List of donors ==
+
 Please send a donation of at least $5 in order to be included in this list. Thank you.
+
 * Jason Pelletier
 * [Pausaxn](http://pausaxn.it)
 * [Teresa Jordan](http://www.teresajordan.com)
