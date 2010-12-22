@@ -51,7 +51,7 @@ if (!empty($_POST['sre'])){
 		$subject = qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage($subject);
 		$message = qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage($message);
 	}
-
+	if($content_type == 'text/html') $message = $wp_subscribe_reloaded->wrap_html_message($message, $subject);
 	wp_mail($clean_email, $subject, $message, $headers);
 
 	$message = str_replace('[post_permalink]', $post_permalink, stripslashes(get_option('subscribe_reloaded_request_mgmt_link_thankyou')));

@@ -45,6 +45,10 @@ Subscribe to Comments Reloaded is a robust plugin that enables commenters to sig
 
 == Changelog ==
 
+= 1.5.1 = 
+* Fixed a conflict between Wordpress' stylesheets and StCR's (thank you [Sahas Katta](http://en.gravatar.com/sahaskatta))
+* If HTML emails are enabled, quicktags are added to the textareas
+
 = 1.5 =
 * StCR is now compatible with QTranslate (thank you [Odd Henriksen](http://www.oddhenriksen.net/))
 * Added a few more options to customize your messages (thank you [derekbeck](http://wordpress.org/support/profile/derekbeck))
@@ -71,10 +75,6 @@ Subscribe to Comments Reloaded is a robust plugin that enables commenters to sig
 * Brazilian localization added (thank you Ronaldo Richieri)
 * French localization added (thank you Li-An)
 
-= 1.2.1 =
-* Maintenance release, fixes a bunch of inconsistencies highlighted by its users. Thank you everybody for your patience!
-* Sorry for this 'double release' in two days, hopefully it won't happen anymore ;)
-
 == Language Localization ==
 
 Subscribe to Comments Reloaded can speak your language! If you want to provide a localized file in your
@@ -82,13 +82,13 @@ language, use the template files (.pot) you'll find inside the `langs` folder,
 and contact me on the [support forum](http://lab.duechiacchiere.it/index.php?board=5.0) once your
 localization is ready. Right now the following localizations are available (in alphabetical order):
 
-* French, [Li-An](http://www.li-an.fr/wpplugins/mes-traductions-de-plugins/#subscribe)
-* German, [derhenry](http://www.derhenry.net/2010/subscribe-to-comments-reloaded/)
-* Italian, myself
-* Norwegian, [Odd Henriksen](http://www.oddhenriksen.net/)
-* Portuguese (Brazil), [Ronaldo Richieri](http://richieri.com)
-* Russian, [Marika Bukvonka](http://violetnotes.com)
-* Spanish, [TodoWordPress team](http://www.todowp.org/) and [Zinedine](http://www.informacioniphone.com)
+* French - [Li-An](http://www.li-an.fr/wpplugins/mes-traductions-de-plugins/#subscribe)
+* German - [derhenry](http://www.derhenry.net/2010/subscribe-to-comments-reloaded/)
+* Italian - myself
+* Norwegian - [Odd Henriksen](http://www.oddhenriksen.net/)
+* Portuguese, Brazil - [Ronaldo Richieri](http://richieri.com)
+* Russian - [Marika Bukvonka](http://violetnotes.com)
+* Spanish - [TodoWordPress team](http://www.todowp.org/) and [Zinedine](http://www.informacioniphone.com)
 
 == List of donors ==
 

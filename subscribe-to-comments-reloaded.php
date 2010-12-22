@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Subscribe to Comments Reloaded
-Version: 1.5
+Version: 1.5.1
 Plugin URI: http://lab.duechiacchiere.it/index.php?board=5.0
 Description: Subscribe to Comments Reloaded is a robust plugin that enables commenters to sign up for e-mail notifications. It includes a full-featured subscription manager that your commenters can use to unsubscribe to certain posts or suspend all notifications.
 Author: camu
@@ -89,10 +89,9 @@ class wp_subscribe_reloaded {
 		
 		// Add appropriate entries in the admin menu
 		add_action('admin_menu', array( &$this, 'add_config_menu' ) );
-		add_action('admin_print_styles-subscribe-to-comments-reloaded/options/index.php', array( &$this, 'add_stylesheet') );
-		add_action('admin_print_styles-edit-comments.php', array( &$this, 'add_stylesheet') );
-		add_action('admin_print_styles-edit-comments.php', array( &$this, 'add_stylesheet') );
-		add_action('admin_print_styles-post.php', array( &$this, 'add_stylesheet') );
+		add_action('admin_print_styles-subscribe-to-comments-reloaded/options/index.php', array( &$this, 'add_options_stylesheet') );
+		add_action('admin_print_styles-edit-comments.php', array( &$this, 'add_post_comments_stylesheet') );
+		add_action('admin_print_styles-post.php', array( &$this, 'add_post_comments_stylesheet') );
 
 		// What to do when a new comment is posted
 		add_action('comment_post', array( &$this, 'new_comment_posted' ) );
@@ -274,7 +273,7 @@ class wp_subscribe_reloaded {
 		else{
 			$message = str_replace('[post_title]', $post->post_title, $message);
 		}
-
+		if($content_type == 'text/html') $message = $this->wrap_html_message($message, $subject);
 		wp_mail($clean_email, $subject, $message, $headers);
 	}
 	// end confirmation_email
@@ -576,9 +575,15 @@ class wp_subscribe_reloaded {
 	/**
 	 * Adds a custom stylesheet file to the admin interface
 	 */
-	public function add_stylesheet() {
+	public function add_options_stylesheet() {
 		// It looks like WP_PLUGIN_URL doesn't honor the HTTPS setting in wp-config.php
 		$stylesheet_url = (is_ssl()?str_replace('http://', 'https://', WP_PLUGIN_URL):WP_PLUGIN_URL).'/subscribe-to-comments-reloaded/style.css';
+		wp_register_style('subscribe-to-comments', $stylesheet_url);
+		wp_enqueue_style('subscribe-to-comments');
+	}
+	public function add_post_comments_stylesheet() {
+		// It looks like WP_PLUGIN_URL doesn't honor the HTTPS setting in wp-config.php
+		$stylesheet_url = (is_ssl()?str_replace('http://', 'https://', WP_PLUGIN_URL):WP_PLUGIN_URL).'/subscribe-to-comments-reloaded/post-and-comments.css';
 		wp_register_style('subscribe-to-comments', $stylesheet_url);
 		wp_enqueue_style('subscribe-to-comments');
 	}
@@ -622,6 +627,14 @@ class wp_subscribe_reloaded {
 		return $contextual_help;
 	}
 	// end contextual_help
+	
+	/**
+	 * Creates the HTML structure to properly handle HTML messages
+	 */
+	public function wrap_html_message($_message = '', $subject = ''){
+		return "<html><head><title>$subject</title></head><body>$message</body></html>";
+	}
+	// end _wrap_html_message
 
 	/**
 	 * Creates a table in the database
@@ -705,7 +718,7 @@ class wp_subscribe_reloaded {
 		else{
 			$message = str_replace('[post_title]', $post->post_title, $message);
 		}
-
+		if($content_type == 'text/html') $message = $this->wrap_html_message($message, $subject);
 		wp_mail($clean_email, $subject, $message, $headers);
 	}
 	// end _notify_user
