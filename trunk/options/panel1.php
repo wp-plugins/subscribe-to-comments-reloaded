@@ -96,7 +96,7 @@ elseif (!empty($clean_email) && !empty($_POST['action_type'])){
 
 <div class="postbox" style="width:32%">
 <h3 class='hndle'><?php _e('Update email address','subscribe-reloaded') ?></h3>
-<p><?php _e('You can "mass update" all the occurrences of a given email address (exact matches ony).','subscribe-reloaded') ?></p>
+<p><?php _e('You can "mass update" all the occurrences of a given email address (exact matches only).','subscribe-reloaded') ?></p>
 <form action="options-general.php?page=subscribe-to-comments-reloaded/options/index.php&subscribepanel=1" method="post" id="update_address_form"
 	onsubmit="return confirm('<?php _e('Please remember: this operation cannot be undone. Are you sure you want to proceed?', 'subscribe-reloaded') ?>')">
 <fieldset style="border:0">

@@ -26,8 +26,10 @@ if (isset($_POST['options'])){
 	}
 	echo "</p></div>\n";
 }
-
+wp_print_scripts( 'quicktags' );
+$is_html_enabled = (get_option('subscribe_reloaded_enable_html_emails', 'no') == 'yes');
 ?>
+
 <form action="admin.php?page=subscribe-to-comments-reloaded/options/index.php&subscribepanel=<?php echo $current_panel ?>" method="post">
 <table class="form-table <?php echo $wp_locale->text_direction ?>">
 <tbody>
@@ -38,7 +40,13 @@ if (isset($_POST['options'])){
 	</tr>
 	<tr>
 		<th scope="row"><label for="notification_content"><?php _e('Notification message','subscribe-reloaded') ?></label></th>
-		<td><textarea name="options[notification_content]" id="notification_content" cols="70" rows="5"><?php echo subscribe_reloaded_get_option('notification_content'); ?></textarea>
+		<td><?php if($is_html_enabled): ?>
+			<input type="button" id="qtbold1" class="button-secondary" onclick="edInsertTag(document.getElementById('notification_content'), 0);" value="<?php _e('Bold') ?>" />
+			<input type="button" id="qtitalics1" class="button-secondary" onclick="edInsertTag(document.getElementById('notification_content'), 1);" value="<?php _e('Italic') ?>" />
+			<input type="button" id="qtlink1" class="button-secondary" onclick="edInsertLink(document.getElementById('notification_content'), 2);" value="<?php _e('Link') ?>" />
+			<input type="button" id="qtimg1" class="button-secondary" onclick="edInsertImage(document.getElementById('notification_content'));" value="<?php _e('Image') ?>" />
+			<br/><?php endif ?>
+			<textarea name="options[notification_content]" id="notification_content" cols="70" rows="5"><?php echo subscribe_reloaded_get_option('notification_content'); ?></textarea>
 			<div class="description" style="padding-top:0"><?php _e('Content of the notification email. Allowed tags: [post_title], [comment_permalink], [comment_author], [comment_content], [post_permalink], [manager_link]','subscribe-reloaded'); ?></div></td>
 	</tr>
 	<tr>
@@ -48,7 +56,13 @@ if (isset($_POST['options'])){
 	</tr>
 	<tr>
 		<th scope="row"><label for="double_check_content"><?php _e('Double check message','subscribe-reloaded') ?></label></th>
-		<td><textarea name="options[double_check_content]" id="double_check_content" cols="70" rows="5"><?php echo subscribe_reloaded_get_option('double_check_content'); ?></textarea>
+		<td><?php if($is_html_enabled): ?>
+			<input type="button" id="qtbold2" class="button-secondary" onclick="edInsertTag(document.getElementById('double_check_content'), 0);" value="<?php _e('Bold') ?>" />
+			<input type="button" id="qtitalics2" class="button-secondary" onclick="edInsertTag(document.getElementById('double_check_content'), 1);" value="<?php _e('Italic') ?>" />
+			<input type="button" id="qtlink2" class="button-secondary" onclick="edInsertLink(document.getElementById('double_check_content'), 2);" value="<?php _e('Link') ?>" />
+			<input type="button" id="qtimg2" class="button-secondary" onclick="edInsertImage(document.getElementById('double_check_content'));" value="<?php _e('Image') ?>" />
+			<br/><?php endif ?>
+			<textarea name="options[double_check_content]" id="double_check_content" cols="70" rows="5"><?php echo subscribe_reloaded_get_option('double_check_content'); ?></textarea>
 			<div class="description" style="padding-top:0"><?php _e('Content of the confirmation email. Allowed tags: [post_permalink], [confirm_link], [post_title], [manager_link]','subscribe-reloaded'); ?></div></td>
 	</tr>
 	<tr>
@@ -58,7 +72,13 @@ if (isset($_POST['options'])){
 	</tr>
 	<tr>
 		<th scope="row"><label for="management_content"><?php _e('Management message','subscribe-reloaded') ?></label></th>
-		<td><textarea name="options[management_content]" id="management_content" cols="70" rows="5"><?php echo subscribe_reloaded_get_option('management_content'); ?></textarea>
+		<td><?php if($is_html_enabled): ?>
+			<input type="button" id="qtbold3" class="button-secondary" onclick="edInsertTag(document.getElementById('management_content'), 0);" value="<?php _e('Bold') ?>" />
+			<input type="button" id="qtitalics3" class="button-secondary" onclick="edInsertTag(document.getElementById('management_content'), 1);" value="<?php _e('Italic') ?>" />
+			<input type="button" id="qtlink3" class="button-secondary" onclick="edInsertLink(document.getElementById('management_content'), 2);" value="<?php _e('Link') ?>" />
+			<input type="button" id="qtimg3" class="button-secondary" onclick="edInsertImage(document.getElementById('management_content'));" value="<?php _e('Image') ?>" />
+			<br/><?php endif ?>
+			<textarea name="options[management_content]" id="management_content" cols="70" rows="5"><?php echo subscribe_reloaded_get_option('management_content'); ?></textarea>
 			<div class="description" style="padding-top:0"><?php _e('Content of the management email. Allowed tags: [blog_name], [manager_link]','subscribe-reloaded'); ?></div></td>
 	</tr>
 </tbody>
