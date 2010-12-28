@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Subscribe to Comments Reloaded\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-12-28 10:12-0500\n"
-"PO-Revision-Date: 2010-12-28 10:14-0500\n"
+"POT-Creation-Date: 2010-12-28 10:31-0500\n"
+"PO-Revision-Date: 2010-12-28 10:31-0500\n"
 "Last-Translator: Camu <info@duechiacchiere.it>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -90,7 +90,6 @@ msgstr "Es gibt Neuigkeiten zum Thema [post_title]"
 
 # @ subscribe-reloaded
 #: subscribe-to-comments-reloaded.php:185
-#, fuzzy
 msgid ""
 "There is a new comment to [post_title].\n"
 "Comment Link: [comment_permalink]\n"
@@ -110,7 +109,6 @@ msgstr ""
 
 # @ subscribe-reloaded
 #: subscribe-to-comments-reloaded.php:193
-#, fuzzy
 msgid "Please confirm your subscription to [post_title]"
 msgstr "Bitte bestätige Deinen Benachrichtigungswunsch zum Thema [post_title]"
 
@@ -232,13 +230,12 @@ msgstr "Der Status wurde erfolgreich aktualisiert. Betroffene Zeilen:"
 
 # @ subscribe-reloaded
 #: options/panel1.php:68
-#, fuzzy
 msgid "Update subscription"
 msgstr "Aktualisieren"
 
 #: options/panel1.php:69
 msgid "Update the email address associated to a specific subscription (by post ID)."
-msgstr ""
+msgstr "Aktualisierung einer eMail-Adresse, in Abhängigkeit einer Post-ID."
 
 # @ subscribe-reloaded
 #: options/panel1.php:71
@@ -257,7 +254,7 @@ msgstr "suche"
 
 #: options/panel1.php:74
 msgid "PID"
-msgstr ""
+msgstr "Post-ID"
 
 # @ subscribe-reloaded
 #: options/panel1.php:75
@@ -274,7 +271,7 @@ msgstr "Aktualisieren"
 
 #: options/panel1.php:83
 msgid "Change status"
-msgstr ""
+msgstr "Status aktualisieren"
 
 # @ subscribe-reloaded
 #: options/panel1.php:84
@@ -335,7 +332,7 @@ msgstr "Suche eMail-Adresse"
 #: options/panel1.php:159
 #, php-format
 msgid "You can either <a href=\"%s\">list all the subscriptions</a> or find those where the <b>email</b>"
-msgstr ""
+msgstr "Du kannst entweder <a href=\"%s\">alle Abos auflisten</a> oder die einer bestimmten <b>eMail-Adresse finden</b>"
 
 # @ subscribe-reloaded
 #: options/panel1.php:162
@@ -380,11 +377,11 @@ msgstr "Legende: Y: aktiviert,   N: deaktiviert,   C: schwebend"
 #: options/panel1.php:181
 #: options/panel1.php:182
 msgid "Reverse the order by Date/Time"
-msgstr ""
+msgstr "Sortiert nach Datum/Uhrzeit"
 
 #: options/panel1.php:183
 msgid "Reverse the order by Post ID"
-msgstr ""
+msgstr "Sorttiert nach Post-ID"
 
 # @ subscribe-reloaded
 #: options/panel1.php:184
@@ -396,17 +393,16 @@ msgstr "eMail"
 
 #: options/panel1.php:186
 msgid "Post (ID)"
-msgstr ""
+msgstr "Post (ID)"
 
 #: options/panel1.php:186
 msgid "Date and Time"
-msgstr ""
+msgstr "Datum und Uhrzeit"
 
 # @ subscribe-reloaded
 #: options/panel1.php:186
-#, fuzzy
 msgid "Status"
-msgstr "Statistik"
+msgstr "Status"
 
 # @ subscribe-reloaded
 #: options/panel1.php:194
@@ -488,7 +484,7 @@ msgstr "Autoren informieren"
 #: options/panel3.php:21
 #: options/panel3.php:99
 msgid "Enable HTML emails"
-msgstr ""
+msgstr "Aktiviere HTML-eMails"
 
 # @ subscribe-reloaded
 #: options/panel3.php:22
@@ -584,7 +580,7 @@ msgstr "Benachrichtigung an den Administrator, wenn ein neues Abonnement erstell
 
 #: options/panel3.php:103
 msgid "If enabled, will send email messages with content-type = text/html instead of text/plain"
-msgstr ""
+msgstr "Wenn aktiviert, wird HTML-Inhalt, statt Plain-Text verwendet"
 
 # @ subscribe-reloaded
 #: options/panel3.php:110
@@ -840,25 +836,21 @@ msgstr "Text, der angezeigt wird, wenn ein Link zur Verwaltungs-Seite angeforder
 
 # @ subscribe-reloaded
 #: options/panel5.php:90
-#, fuzzy
 msgid "Thank you note shown after the request here above has been processed. Allowed tags: [post_title], [post_permalink]"
 msgstr "Text, der angezeigt wird, wenn die Benachrichtigungs-Einstellungen gespeichert wurden."
 
 # @ subscribe-reloaded
 #: options/panel5.php:100
-#, fuzzy
 msgid "Text shown to those who want to subscribe without commenting. Allowed tags: [post_title], [post_permalink]"
 msgstr "Text, der angezeigt wird, wenn ohne weiteren Kommentar die Benachrichtigungen aktiviert wurden. Erlaubte Tags: [post_title]"
 
 # @ subscribe-reloaded
 #: options/panel5.php:110
-#, fuzzy
 msgid "Thank you note shown after the subscription request has been processed (double check-in disabled). Allowed tags: [post_title], [post_permalink]"
 msgstr "Text, der angezeigt wird, wenn die Benachrichtigungs-Einstellungen gespeichert wurden (Bestätigung nicht erforderlich)."
 
 # @ subscribe-reloaded
 #: options/panel5.php:120
-#, fuzzy
 msgid "Thank you note shown after the subscription request has been processed (double check-in enabled). Allowed tags: [post_title], [post_permalink]"
 msgstr "Text, der angezeigt wird, wenn die Benachrichtigungs-Einstellungen gespeichert wurden (Bestätigung erforderlich)."
 
@@ -874,41 +866,40 @@ msgstr "Einführungstext der Verwaltungs-Seite der Besucher."
 
 # @ subscribe-reloaded
 #: options/panel6.php:11
-#, fuzzy
 msgid "StCR table has been successfully optimized."
 msgstr "Der Status wurde erfolgreich aktualisiert."
 
 #: options/panel6.php:15
 msgid "Database"
-msgstr ""
+msgstr "Datenbank"
 
 #: options/panel6.php:35
 msgid "Engine"
-msgstr ""
+msgstr "Engine"
 
 #: options/panel6.php:36
 msgid "Records"
-msgstr ""
+msgstr "Datensätze"
 
 #: options/panel6.php:37
 msgid "Average Record Length"
-msgstr ""
+msgstr "Durchschnittliche Satzlänge"
 
 #: options/panel6.php:38
 msgid "Created on"
-msgstr ""
+msgstr "Erstellt am"
 
 #: options/panel6.php:39
 msgid "Approximate Overhead"
-msgstr ""
+msgstr "Ungefährer Overhead"
 
 #: options/panel6.php:40
 msgid "optimize"
-msgstr ""
+msgstr "optimieren"
 
 #: options/panel6.php:44
 msgid "Support the author"
-msgstr ""
+msgstr "Autor unterstützen"
 
 # @ subscribe-reloaded
 #: options/panel6.php:45
@@ -940,18 +931,15 @@ msgstr "Sage  Deinen Freunden, wie gut Subscribe to Comments Reloaded funktionie
 msgid "Subscriptions have been successfully updated."
 msgstr "Benachrichtigungs-Einstellungen wurden erfolgreich aktualisiert."
 
-# @ subscribe-reloaded
 #: templates/author.php:44
 msgid "Title"
 msgstr "Titel"
 
-# @ subscribe-reloaded
 #: templates/author.php:57
 #: templates/user.php:55
 msgid "Select all"
 msgstr "Alle auswählen"
 
-# @ subscribe-reloaded
 #: templates/author.php:58
 #: templates/user.php:56
 msgid "Invert selection"
@@ -961,25 +949,25 @@ msgstr "Auswahl umkehren"
 #: templates/author.php:59
 #: templates/user.php:57
 msgid "Delete"
-msgstr "Löschen"
+msgstr "Endgültig löschen"
 
 # @ subscribe-reloaded
 #: templates/author.php:66
 #: templates/user.php:64
 msgid "Sorry, no subscriptions found."
-msgstr "Ups, keine Abonnements gefunden."
+msgstr "Ups, keine Benachrichtigungen gefunden: "
 
 # @ subscribe-reloaded
 #: templates/request-management-link.php:80
 #: templates/subscribe.php:84
 msgid "Send"
-msgstr "Senden"
+msgstr "Abschicken"
 
 # @ subscribe-reloaded
 #: templates/subscribe.php:30
 #: templates/subscribe.php:31
 msgid "New subscription to"
-msgstr "Neue Benachrichtigungen zu"
+msgstr "Neue Benachrichtigung"
 
 # @ subscribe-reloaded
 #: templates/subscribe.php:31
@@ -988,7 +976,272 @@ msgstr "Besucher:"
 
 # @ subscribe-reloaded
 #: templates/user.php:33
-#, fuzzy
 msgid "All the subscriptions have been successfully updated."
 msgstr "Benachrichtigungs-Einstellungen wurden erfolgreich aktualisiert."
 
+# @ subscribe-reloaded
+#, fuzzy
+#~ msgid "Subscribe to Comments"
+#~ msgstr "Abo ohne Kommentar"
+
+# @ subscribe-reloaded
+#, fuzzy
+#~ msgid ""
+#~ "Text to show next to the checkbox added to the comment form. Allowed tag: "
+#~ "[subscribe_link]"
+#~ msgstr "Beschriftung der Auswahlbox. Erlaubte Tags: [subscribe_link]"
+
+# @ subscribe-reloaded
+#, fuzzy
+#~ msgid ""
+#~ "Send a notification email to confirm the subscription (to avoid addresses "
+#~ "misuse)"
+#~ msgstr ""
+#~ "Sende eine Bestätigungsnachricht, um die Gültigkeit der eMail-Adresse zu "
+#~ "verifizieren."
+
+# @ subscribe-reloaded
+#, fuzzy
+#~ msgid ""
+#~ "Text to show to those users who are already subscribed. Allowed tag: "
+#~ "[manager_link]"
+#~ msgstr ""
+#~ "Text, der angezeigt wird, wenn die Benachrichtigung bereits aktiviert "
+#~ "wurde. Erlaubte Tags: [manager_link]"
+
+# @ subscribe-reloaded
+#, fuzzy
+#~ msgid ""
+#~ "Text to show to those users who are already subscribed, but haven't "
+#~ "clicked on the confirmation link yet. Allowed tag: [manager_link]"
+#~ msgstr ""
+#~ "Text, der angezeigt wird, wenn eine Bestätigung durch den Besucher noch "
+#~ "aussteht. Erlaubte Tags: [manager_link]"
+
+# @ subscribe-reloaded
+#, fuzzy
+#~ msgid ""
+#~ "Text to show to the author, to manage subscriptions to a given post. "
+#~ "Allowed tag: [manager_link]"
+#~ msgstr ""
+#~ "Text, der angezeigt wird, wenn die Benachrichtigung bereits aktiviert "
+#~ "wurde. Erlaubte Tags: [manager_link]"
+
+# @ subscribe-reloaded
+#, fuzzy
+#~ msgid ""
+#~ "There is a new comment to [post_title].\n"
+#~ "Comment Link: [comment_permalink]\n"
+#~ "Author: [comment_author]\n"
+#~ "Comment:\n"
+#~ "[comment_content]\n"
+#~ "\n"
+#~ "Permalink: [post_permalink]\n"
+#~ "Manage your subscriptions: [manager_link]"
+#~ msgstr ""
+#~ "Es gibt Neuigkeiten zum Thema [post_title].\n"
+#~ "Zum letzten Kommentar: [comment_permalink]\n"
+#~ "[comment_author] plapperte gerade:\n"
+#~ "[comment_content]\n"
+#~ "\n"
+#~ "Zum Artikel: [post_permalink]\n"
+#~ "Verwalte Deine Benachrichtigungen: [manager_link]"
+
+# @ subscribe-reloaded
+#, fuzzy
+#~ msgid ""
+#~ "You are the author of this entry. <a href='[manager_link]'>Manage</a> its "
+#~ "subscriptions."
+#~ msgstr ""
+#~ "Du erhältst Benachrichtigungen zu diesem Thema. <a "
+#~ "href='[manager_link]'>Verwalte Deine Abonnements</a>."
+
+# @ subscribe-reloaded
+#, fuzzy
+#~ msgid "Please confirm your subscribtion to [post_title]"
+#~ msgstr ""
+#~ "Bitte bestätige Deinen Benachrichtigungswunsch zum Thema [post_title]"
+
+# @ subscribe-reloaded
+#, fuzzy
+#~ msgid ""
+#~ "Subscriptions have been successfully updated. In order to cancel or "
+#~ "suspend more notifications, select the corresponding checkbox(es) and "
+#~ "click on the button at the end of the list."
+#~ msgstr ""
+#~ "Um eine Benachrichtigung zu löschen oder zu deaktivieren, nutze die "
+#~ "entsprechende Auswahlboxen."
+
+# @ subscribe-reloaded
+#, fuzzy
+#~ msgid ""
+#~ "You can manage the subscriptions to your articles on this page. In order "
+#~ "to cancel or suspend one or more notifications, select the corresponding "
+#~ "checkbox(es) and click on the button at the end of the list."
+#~ msgstr ""
+#~ "Um eine Benachrichtigung zu löschen oder zu deaktivieren, nutze die "
+#~ "entsprechende Auswahlboxen."
+
+# @ subscribe-reloaded
+#, fuzzy
+#~ msgid "Search post ID"
+#~ msgstr "Suchen"
+
+# @ subscribe-reloaded
+#, fuzzy
+#~ msgid "Search email"
+#~ msgstr "Suche eMail-Adresse"
+
+# @ subscribe-reloaded
+#, fuzzy
+#~ msgid ""
+#~ "Thank you for using our subscription service. Your request has been "
+#~ "completed, and you should receive an email with the management link in a "
+#~ "few minutes. In the meanwhile, feel free to go back to <a href='%s'>%s</"
+#~ "a>."
+#~ msgstr ""
+#~ "Danke für das Nutzen des Benachrichtigungsdienstes. Deine Anfrage wird "
+#~ "bearbeitet und eine eMail an Dich gleich verschickt."
+
+# @ subscribe-reloaded
+#, fuzzy
+#~ msgid ""
+#~ "Thank you for using our subscription service. In order to confirm your "
+#~ "request, please check your email for the verification message and follow "
+#~ "the instructions. In the meanwhile, you can go back to <a href='%s'>%s</"
+#~ "a>."
+#~ msgstr ""
+#~ "Danke für das Nutzen des Benachrichtigungsdienstes. Bitte bestätige Deine "
+#~ "Anfrage durch den Link in der eMail, die Dir gerade zugestellt wird."
+
+# @ subscribe-reloaded
+#, fuzzy
+#~ msgid ""
+#~ "Thank you for using our subscription service. Your request has been "
+#~ "completed, and you are now subscribed to <a href='%s'>%s</a>. You will "
+#~ "receive a notification email every time a new comment to this article is "
+#~ "approved and posted by the administrator."
+#~ msgstr ""
+#~ "Danke für das Nutzen des Benachrichtigungsdienstes. Du wirst nun bei "
+#~ "jedem neuen Kommentar per eMail informiert."
+
+# @ subscribe-reloaded
+#, fuzzy
+#~ msgid ""
+#~ "You can follow the discussion on <strong>%s</strong> without having to "
+#~ "leave a comment. Cool, huh? Just enter your email address in the form "
+#~ "here below and you're all set."
+#~ msgstr ""
+#~ "Du kannst der Diskussion zum Thema <strong>[post_title]</strong> auch "
+#~ "folgen, ohne bisher selber etwas geschrieben zu haben. Krass, was? Hierzu "
+#~ "einfach Deine eMail-Adresse in das dafür vorgesehene Feld eintragen."
+
+# @ subscribe-reloaded
+#, fuzzy
+#~ msgid ""
+#~ "Your subscriptions have been successfully updated. In order to cancel or "
+#~ "suspend more notifications, select the corresponding checkbox(es) and "
+#~ "click on the button at the end of the list. You are currently subscribed "
+#~ "to:"
+#~ msgstr ""
+#~ "Um eine Benachrichtigung zu löschen oder zu deaktivieren, nutze die "
+#~ "entsprechende Auswahlboxen."
+
+# @ subscribe-reloaded
+#, fuzzy
+#~ msgid ""
+#~ "You can manage your subscriptions to the article of this blog on this "
+#~ "page. In order to cancel or suspend one or more notifications, select the "
+#~ "corresponding checkbox(es) and click on the button at the end of the "
+#~ "list. You are currently subscribed to:"
+#~ msgstr ""
+#~ "Um eine Benachrichtigung zu löschen oder zu deaktivieren, nutze die "
+#~ "entsprechende Auswahlboxen."
+
+# @ subscribe-reloaded
+#, fuzzy
+#~ msgid "Messages"
+#~ msgstr "eMail-Texte"
+
+# @ subscribe-reloaded
+#, fuzzy
+#~ msgid "The status has been successfully updated."
+#~ msgstr "Der Status wurde erfolgreich aktualisiert. Betroffene Zeilen:"
+
+# @ subscribe-reloaded
+#, fuzzy
+#~ msgid ""
+#~ "You can \"mass update\" all the occurrences of a given email address in "
+#~ "the database with a new one."
+#~ msgstr ""
+#~ "Du kannst Massen-Aktualisierungen für alle eMail-Adressen in der "
+#~ "Datenbank vornehmen."
+
+# @ subscribe-reloaded
+#, fuzzy
+#~ msgid "Remove or suspend email address"
+#~ msgstr "Absende-Adresse"
+
+# @ subscribe-reloaded
+#, fuzzy
+#~ msgid ""
+#~ "Change the status or permanently delete all the subscriptions for a given "
+#~ "email address."
+#~ msgstr ""
+#~ "Status einer eMail-Adresse ändern oder alle Benachrichtigungen löschen."
+
+# @ subscribe-reloaded
+#, fuzzy
+#~ msgid ""
+#~ "Notify authors when a new comment is posted to one of their articles."
+#~ msgstr ""
+#~ "Benachrichtigung an den Administrator, wenn ein neues Abonnement erstellt "
+#~ "wurde."
+
+# @ subscribe-reloaded
+#, fuzzy
+#~ msgid ""
+#~ "The permalink for your management page (<code>/manage-subscriptions</"
+#~ "code> or <code>/?page_id=345</code>). This page <b>does not</b> actually "
+#~ "exist in the system, but its permalink must follow your Wordpress' "
+#~ "permalink settings."
+#~ msgstr ""
+#~ "Der Permalink zur Verwaltungs-Seite (etwa <code>/comment-subscriptions</"
+#~ "code> oder <code>/?page_id=345</code>).<br/>Diese Seite existiert "
+#~ "<b>aktuell nicht</b> im System. Der Wordpress-Struktur muss entsprochen "
+#~ "werden."
+
+# @ subscribe-reloaded
+#, fuzzy
+#~ msgid ""
+#~ "Thank you note shown after the request here above has been processed."
+#~ msgstr ""
+#~ "Text, der angezeigt wird, wenn die Benachrichtigungs-Einstellungen "
+#~ "gespeichert wurden."
+
+# @ subscribe-reloaded
+#, fuzzy
+#~ msgid ""
+#~ "Text shown to those who want to subscribe without commenting. Allowed "
+#~ "tag: [post_title]"
+#~ msgstr ""
+#~ "Text, der angezeigt wird, wenn ohne weiteren Kommentar die "
+#~ "Benachrichtigungen aktiviert wurden. Erlaubte Tags: [post_title]"
+
+# @ subscribe-reloaded
+#, fuzzy
+#~ msgid ""
+#~ "Thank you note shown after the subscription request has been processed "
+#~ "(double check-in disabled)."
+#~ msgstr ""
+#~ "Text, der angezeigt wird, wenn die Benachrichtigungs-Einstellungen "
+#~ "gespeichert wurden (Bestätigung nicht erforderlich)."
+
+# @ subscribe-reloaded
+#, fuzzy
+#~ msgid ""
+#~ "Thank you note shown after the subscription request has been processed "
+#~ "(double check-in enabled)."
+#~ msgstr ""
+#~ "Text, der angezeigt wird, wenn die Benachrichtigungs-Einstellungen "
+#~ "gespeichert wurden (Bestätigung erforderlich)."

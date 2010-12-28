@@ -23,7 +23,7 @@ if (!empty($_POST['subscribe_reloaded_email'])){
 	
 	// If the case, send a message to the administrator
 	if (get_option('subscribe_reloaded_enable_admin_messages', 'no') == 'yes'){
-		$from_name = get_option('subscribe_reloaded_from_name', 'admin');
+		$from_name = stripslashes(get_option('subscribe_reloaded_from_name', 'admin'));
 		$from_email = get_option('subscribe_reloaded_from_email', get_bloginfo('admin_email'));
 		$clean_email = $wp_subscribe_reloaded->clean_email($_POST['subscribe_reloaded_email']);
 	
