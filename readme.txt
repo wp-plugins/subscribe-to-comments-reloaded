@@ -82,7 +82,7 @@ Subscribe to Comments Reloaded is a robust plugin that enables commenters to sig
 Subscribe to Comments Reloaded can speak your language! If you want to provide a localized file in your
 language, use the template files (.pot) you'll find inside the `langs` folder,
 and contact me on the [support forum](http://lab.duechiacchiere.it/index.php?board=5.0) once your
-localization is ready. Right now the following localizations are available (in alphabetical order):
+localization is ready. Currently, we support the following languages:
 
 * French - [Li-An](http://www.li-an.fr/wpplugins/mes-traductions-de-plugins/#subscribe) and Anthony
 * German - [derhenry](http://www.derhenry.net/2010/subscribe-to-comments-reloaded/)
