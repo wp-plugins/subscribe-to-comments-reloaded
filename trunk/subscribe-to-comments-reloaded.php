@@ -230,7 +230,7 @@ class wp_subscribe_reloaded {
 	 */
 	public function confirmation_email($_email = '', $_post_ID = 0){
 		// Retrieve the options from the database
-		$from_name = get_option('subscribe_reloaded_from_name', 'admin');
+		$from_name = stripslashes(get_option('subscribe_reloaded_from_name', 'admin'));
 		$from_email = get_option('subscribe_reloaded_from_email', get_bloginfo('admin_email'));
 		$subject = stripslashes(get_option('subscribe_reloaded_double_check_subject', 'Please confirm your subscribtion to [post_title]'));
 		$message = stripslashes(get_option('subscribe_reloaded_double_check_content', ''));
@@ -674,7 +674,7 @@ class wp_subscribe_reloaded {
 	 */
 	private function _notify_user($_email = '', $_post_ID = 0, $_comment_ID = 0){
 		// Retrieve the options from the database
-		$from_name = get_option('subscribe_reloaded_from_name', 'admin');
+		$from_name = stripslashes(get_option('subscribe_reloaded_from_name', 'admin'));
 		$from_email = get_option('subscribe_reloaded_from_email', get_bloginfo('admin_email'));
 		$subject = stripslashes(get_option('subscribe_reloaded_notification_subject', 'There is a new comment on the post [post_title]'));
 		$message = stripslashes(get_option('subscribe_reloaded_notification_content', ''));

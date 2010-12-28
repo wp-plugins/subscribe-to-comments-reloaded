@@ -21,7 +21,7 @@ if (!empty($_POST['sre'])){
 	$wp_subscribe_reloaded = new wp_subscribe_reloaded();
 
 	// Send management link
-	$from_name = get_option('subscribe_reloaded_from_name', 'admin');
+	$from_name = stripslashes(get_option('subscribe_reloaded_from_name', 'admin'));
 	$from_email = get_option('subscribe_reloaded_from_email', get_bloginfo('admin_email'));
 	$subject = stripslashes(get_option('subscribe_reloaded_management_subject', 'Manage your subscriptions on [blog_name]'));
 	$message = stripslashes(get_option('subscribe_reloaded_management_content', ''));
