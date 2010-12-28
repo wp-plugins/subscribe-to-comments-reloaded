@@ -23,6 +23,7 @@ Subscribe to Comments Reloaded is a robust plugin that enables commenters to sig
 * It has a "clean uninstall" procedure
 * All the messages are fully customizable, no poEdit required
 * Available in multiple languages
+* It works with Wordpress in 'multisite' mode (network activation), if used in conjunction with [Proper Network Activation](http://wordpress.org/extend/plugins/proper-network-activation/)
 * It ignores Spam comments
 * It's compatible with [Fluency Admin](http://deanjrobinson.com/projects/fluency-admin/) and [QTranslate](http://wordpress.org/extend/plugins/qtranslate/)
 * It has a truckload of options to customize its behavior
@@ -47,6 +48,7 @@ Subscribe to Comments Reloaded is a robust plugin that enables commenters to sig
 
 = 1.5.1 = 
 * Fixed a conflict between Wordpress' stylesheets and StCR's (thank you [Sahas Katta](http://en.gravatar.com/sahaskatta))
+* Fixed a bug that prevented HTML emails to be handled properly
 * If HTML emails are enabled, quicktags are added to the textareas
 
 = 1.5 =
@@ -94,6 +96,7 @@ localization is ready. Right now the following localizations are available (in a
 
 Please send a donation of at least $5 in order to be included in this list. Thank you.
 
+* [Robert Eberle](http://www.gopusa.com)
 * Jason Pelletier
-* [Pausaxn](http://pausaxn.it)
 * [Teresa Jordan](http://www.teresajordan.com)
+* [Pausaxn](http://pausaxn.it)
