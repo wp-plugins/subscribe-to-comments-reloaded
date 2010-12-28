@@ -90,7 +90,7 @@ localization is ready. Right now the following localizations are available (in a
 * Norwegian - [Odd Henriksen](http://www.oddhenriksen.net/)
 * Portuguese, Brazil - [Ronaldo Richieri](http://richieri.com)
 * Russian - [Marika Bukvonka](http://violetnotes.com)
-* Spanish - [TodoWordPress team](http://www.todowp.org/) and [Zinedine](http://www.informacioniphone.com)
+* Spanish - [TodoWordPress team](http://www.todowp.org/)
 
 == List of donors ==
 
