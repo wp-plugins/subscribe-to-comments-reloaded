@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Subscribe to Comments Reloaded\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-12-28 10:14-0500\n"
-"PO-Revision-Date: 2010-12-28 10:14-0500\n"
+"POT-Creation-Date: 2011-01-03 12:45-0500\n"
+"PO-Revision-Date: 2011-01-03 12:45-0500\n"
 "Last-Translator: Camu <info@duechiacchiere.it>\n"
 "Language-Team: due chiacchiere <info@duechiacchiere.it>\n"
 "MIME-Version: 1.0\n"
@@ -15,11 +15,6 @@ msgstr ""
 "X-Poedit-Basepath: ../\n"
 "Plural-Forms: s\n"
 "X-Poedit-SearchPath-0: .\n"
-
-#: subscribe-to-comments-reloaded.php:34
-#: subscribe-to-comments-reloaded.php:190
-msgid "You are subscribed to this entry. <a href='[manager_link]'>Manage</a> your subscriptions."
-msgstr "Sei gi&agrave; iscritto a quest'articolo. Se vuoi, puoi <a href='[manager_link]'>gestire</a> il tuo profilo."
 
 #: subscribe-to-comments-reloaded.php:39
 #: subscribe-to-comments-reloaded.php:191
@@ -91,6 +86,10 @@ msgstr ""
 "\n"
 "Permalink: [post_permalink]\n"
 "Gestisci le tue iscrizioni: [manager_link]"
+
+#: subscribe-to-comments-reloaded.php:190
+msgid "You are subscribed to this entry. <a href='[manager_link]'>Manage</a> your subscriptions."
+msgstr "Sei gi&agrave; iscritto a quest'articolo. Se vuoi, puoi <a href='[manager_link]'>gestire</a> il tuo profilo."
 
 #: subscribe-to-comments-reloaded.php:193
 msgid "Please confirm your subscription to [post_title]"
