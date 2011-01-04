@@ -88,7 +88,7 @@ localization is ready. Currently, we support the following languages:
 * German - [derhenry](http://www.derhenry.net/2010/subscribe-to-comments-reloaded/)
 * Italian - myself
 * Norwegian - [Odd Henriksen](http://www.oddhenriksen.net/)
-* Portuguese, Brazil - [Ronaldo Richieri](http://richieri.com)
+* Portuguese, Brazil - [Ronaldo Richieri](http://richieri.com) and [ClassiNoiva](http://www.classinoiva.com.br)
 * Russian - [Marika Bukvonka](http://violetnotes.com)
 * Spanish - [TodoWordPress team](http://www.todowp.org/)
 
@@ -100,3 +100,6 @@ Please send a donation of at least $5 in order to be included in this list. Than
 * Jason Pelletier
 * [Teresa Jordan](http://www.teresajordan.com)
 * [Pausaxn](http://pausaxn.it)
+* Francesco Fratellini
+* Mike Temporale
+* [Life as a Human, Inc](http://lifeasahuman.com/)
