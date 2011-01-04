@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Subscribe to Comments Reloaded\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-12-28 10:14-0500\n"
-"PO-Revision-Date: 2010-12-28 10:14-0500\n"
+"POT-Creation-Date: 2011-01-04 12:55-0500\n"
+"PO-Revision-Date: 2011-01-04 12:55-0500\n"
 "Last-Translator: Camu <info@duechiacchiere.it>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -90,7 +90,6 @@ msgstr "Há um novo comentário para [post_title]"
 
 # @ subscribe-reloaded
 #: subscribe-to-comments-reloaded.php:185
-#, fuzzy
 msgid ""
 "There is a new comment to [post_title].\n"
 "Comment Link: [comment_permalink]\n"
@@ -100,19 +99,18 @@ msgid ""
 "Permalink: [post_permalink]\n"
 "Manage your subscriptions: [manager_link]"
 msgstr ""
-"Há um novo comentário para [post_title]:\n"
-"Link: [comment_permalink]\n"
-"[Autor: [comment_author]\n"
-"Comentário: [comment_content]\n"
-"\n"
+"Há um novo comentário para [post_title].\n"
+"Link do Comentáro: [comment_permalink]\n"
+"Autor: [comment_author]\n"
+"Comentário:\n"
+"[comment_content]\n"
 "Permalink: [post_permalink]\n"
 "Gerencie suas assinaturas: [manager_link]"
 
 # @ subscribe-reloaded
 #: subscribe-to-comments-reloaded.php:193
-#, fuzzy
 msgid "Please confirm your subscription to [post_title]"
-msgstr "Por favor, confirme a sua assinatura a [post_title]"
+msgstr "Por favor, confirme sua assinatura [post_title]"
 
 # @ subscribe-reloaded
 #: subscribe-to-comments-reloaded.php:194
@@ -139,13 +137,14 @@ msgstr "Gerir as suas inscrições em [blog_name]"
 msgid ""
 "You have requested to manage your subscriptions to the articles on [blog_name]. Follow this link to access your personal page:\n"
 "[manager_link]"
-msgstr "Você pediu para gerenciar suas inscrições para os artigos no blog [blog_name]. Siga este link para acessar sua página pessoal de inscrições: [manager_link]"
+msgstr ""
+"Você pediu para gerenciar suas inscrições para os artigos no blog [blog_name]. Siga este link para acessar sua página pessoal de inscrições:\n"
+"[manager_link]"
 
 # @ subscribe-reloaded
 #: subscribe-to-comments-reloaded.php:597
-#, fuzzy
 msgid "Subscribed"
-msgstr "Descrição para os inscritos"
+msgstr "Assinaturas"
 
 # @ subscribe-reloaded
 #: subscribe-to-comments-reloaded.php:611
@@ -161,7 +160,7 @@ msgstr "Sim"
 
 #: subscribe-to-comments-reloaded.php:613
 msgid "Awaiting confirmation"
-msgstr ""
+msgstr "Aguardando a confirmação"
 
 # @ subscribe-reloaded
 #: subscribe-to-comments-reloaded.php:614
@@ -177,21 +176,20 @@ msgstr "Não"
 
 #: subscribe-to-comments-reloaded.php:624
 msgid "Need help on how to use Subscribe to Comments Reloaded? Visit the official"
-msgstr ""
+msgstr "Precisa de ajuda sobre como usar Subscribe to Comments Reloaded? Visite o oficial"
 
 # @ subscribe-reloaded
 #: subscribe-to-comments-reloaded.php:624
-#, fuzzy
 msgid "support forum"
 msgstr "Suporte"
 
 #: subscribe-to-comments-reloaded.php:625
 msgid "Feeling generous?"
-msgstr ""
+msgstr "Sentindo-se generoso(a)?"
 
 #: subscribe-to-comments-reloaded.php:625
 msgid "Donate a few bucks!"
-msgstr ""
+msgstr "Doe alguns trocados!"
 
 # @ subscribe-reloaded
 #: options/index.php:45
@@ -228,13 +226,12 @@ msgstr "O status foi atualizado com sucesso. Linhas afetadas:"
 
 # @ subscribe-reloaded
 #: options/panel1.php:68
-#, fuzzy
 msgid "Update subscription"
-msgstr "Atualizar assinaturas"
+msgstr "Atualizar Assinaturas"
 
 #: options/panel1.php:69
 msgid "Update the email address associated to a specific subscription (by post ID)."
-msgstr ""
+msgstr "Atualizar o endereço de e-mail associado a uma assinatura específica (por ID post)."
 
 # @ subscribe-reloaded
 #: options/panel1.php:71
@@ -253,7 +250,7 @@ msgstr "De"
 
 #: options/panel1.php:74
 msgid "PID"
-msgstr ""
+msgstr "PID"
 
 # @ subscribe-reloaded
 #: options/panel1.php:75
@@ -270,7 +267,7 @@ msgstr "Atualizar"
 
 #: options/panel1.php:83
 msgid "Change status"
-msgstr ""
+msgstr "Alterar status"
 
 # @ subscribe-reloaded
 #: options/panel1.php:84
@@ -279,9 +276,8 @@ msgstr "Alterar o status de um endereço de e-mail ou excluir permanentemente to
 
 # @ subscribe-reloaded
 #: options/panel1.php:87
-#, fuzzy
 msgid "Action"
-msgstr "Ação:"
+msgstr "Ação"
 
 # @ subscribe-reloaded
 #: options/panel1.php:89
@@ -312,17 +308,16 @@ msgstr "Atualização de endereço de e-mail"
 
 # @ subscribe-reloaded
 #: options/panel1.php:99
-#, fuzzy
 msgid "You can \"mass update\" all the occurrences of a given email address (exact matches only)."
 msgstr "Você pode atualizar &quot;em massa&quot; todas as ocorrências de um endereço de e-mail indicado na base de dados com um novo."
 
 #: options/panel1.php:150
 msgid "&laquo; Previous"
-msgstr ""
+msgstr "&laquo; Anterior"
 
 #: options/panel1.php:154
 msgid "Next &raquo;"
-msgstr ""
+msgstr "Seguinte &raquo;"
 
 # @ subscribe-reloaded
 #: options/panel1.php:157
@@ -331,9 +326,9 @@ msgstr "Procurar endereço de email"
 
 # @ subscribe-reloaded
 #: options/panel1.php:159
-#, fuzzy, php-format
+#, php-format
 msgid "You can either <a href=\"%s\">list all the subscriptions</a> or find those where the <b>email</b>"
-msgstr "Encontrar todas as assinaturas onde o <b>e-mail,</b>"
+msgstr "Você pode listar todas as assinaturas <a href=\"%s\"> </ a> ou encontrar pelo <b>e-mail </ b>"
 
 # @ subscribe-reloaded
 #: options/panel1.php:162
@@ -362,11 +357,11 @@ msgstr "Inscrições para:"
 
 #: options/panel1.php:178
 msgid "Rows:"
-msgstr ""
+msgstr "Linhas:"
 
 #: options/panel1.php:178
 msgid "of"
-msgstr ""
+msgstr "de"
 
 # @ subscribe-reloaded
 #: options/panel1.php:179
@@ -378,11 +373,11 @@ msgstr "Legenda: Y: inscrito, N: suspenso, C: aguardando confirmação"
 #: options/panel1.php:181
 #: options/panel1.php:182
 msgid "Reverse the order by Date/Time"
-msgstr ""
+msgstr "Inverter a ordem de Data/Hora"
 
 #: options/panel1.php:183
 msgid "Reverse the order by Post ID"
-msgstr ""
+msgstr "Inverter a ordem de Post ID"
 
 # @ subscribe-reloaded
 #: options/panel1.php:184
@@ -394,17 +389,16 @@ msgstr "E-mail"
 
 #: options/panel1.php:186
 msgid "Post (ID)"
-msgstr ""
+msgstr "Post (ID)"
 
 #: options/panel1.php:186
 msgid "Date and Time"
-msgstr ""
+msgstr "Data e Hora"
 
 # @ subscribe-reloaded
 #: options/panel1.php:186
-#, fuzzy
 msgid "Status"
-msgstr "Estatísticas"
+msgstr "Status"
 
 # @ subscribe-reloaded
 #: options/panel1.php:194
@@ -457,17 +451,17 @@ msgstr "Marcado por padrão"
 #: options/panel3.php:16
 #: options/panel3.php:70
 msgid "Custom CSS Class"
-msgstr ""
+msgstr "Personalizar CSS Class"
 
 #: options/panel3.php:17
 #: options/panel3.php:75
 msgid "Custom inline style"
-msgstr ""
+msgstr "Personalizar estilo inline"
 
 #: options/panel3.php:18
 #: options/panel3.php:80
 msgid "Custom HTML"
-msgstr ""
+msgstr "Personalizar HTML"
 
 # @ subscribe-reloaded
 #: options/panel3.php:19
@@ -483,7 +477,7 @@ msgstr "Notificar autores"
 #: options/panel3.php:21
 #: options/panel3.php:99
 msgid "Enable HTML emails"
-msgstr ""
+msgstr "Habilitar e-mails HTML"
 
 # @ subscribe-reloaded
 #: options/panel3.php:22
@@ -495,12 +489,12 @@ msgstr "Enviar trackbacks"
 #: options/panel3.php:23
 #: options/panel3.php:92
 msgid "Notify admin"
-msgstr "Notificar o administrador"
+msgstr "Notificar Administrador"
 
 #: options/panel3.php:24
 #: options/panel3.php:120
 msgid "Let admin subscribe"
-msgstr ""
+msgstr "Permitir inscrições do Admin"
 
 # @ subscribe-reloaded
 #: options/panel3.php:29
@@ -529,7 +523,7 @@ msgstr "O permalink para a sua página de gestão (algo como <code>/manage-subsc
 
 #: options/panel3.php:49
 msgid "days"
-msgstr ""
+msgstr "dias"
 
 # @ subscribe-reloaded
 #: options/panel3.php:50
@@ -553,15 +547,15 @@ msgstr "Escolha se o checkbox deve ficar marcado por padrão ou não."
 
 #: options/panel3.php:72
 msgid "Custom CSS class to associate to the checkbox, if you want to customize its style."
-msgstr ""
+msgstr "Personalizar CSS classe para associar-se para a caixa de seleção, se você quiser personalizar seu estilo."
 
 #: options/panel3.php:77
 msgid "Custom inline CSS to add to the checkbox."
-msgstr ""
+msgstr "Personalizar CSS inline para adicionar à seleção."
 
 #: options/panel3.php:82
 msgid "Custom HTML code to be used when displaying the checkbox. Allowed tags: [checkbox_field], [checkbox_label]"
-msgstr ""
+msgstr "Personalizar código HTML para ser usado ao exibir a caixa de seleção. Tags permitidas: [checkbox_field], [checkbox_label]"
 
 # @ subscribe-reloaded
 #: options/panel3.php:89
@@ -570,13 +564,12 @@ msgstr "Enviar um e-mail de notificação para confirmar a inscrição (para evi
 
 # @ subscribe-reloaded
 #: options/panel3.php:96
-#, fuzzy
 msgid "Notify the administrator when a new comment is posted."
-msgstr "Notificar o administrador quando os usuários se inscrever sem comentar."
+msgstr "Notificar o administrador quando um novo comentário for publicado."
 
 #: options/panel3.php:103
 msgid "If enabled, will send email messages with content-type = text/html instead of text/plain"
-msgstr ""
+msgstr "Se ativado envia mensagens de e-mail com o content-type = text/html, em vez de text/plain"
 
 # @ subscribe-reloaded
 #: options/panel3.php:110
@@ -585,9 +578,8 @@ msgstr "Notifique os usuários quando um trackback ou pingback novo é acrescent
 
 # @ subscribe-reloaded
 #: options/panel3.php:113
-#, fuzzy
 msgid "Track all subscriptions"
-msgstr "Gerenciar assinaturas"
+msgstr "Acompanhe assinaturas"
 
 # @ subscribe-reloaded
 #: options/panel3.php:117
@@ -596,16 +588,15 @@ msgstr "Notificar o administrador quando os usuários se inscrever sem comentar.
 
 # @ subscribe-reloaded
 #: options/panel3.php:124
-#, fuzzy
 msgid "Let the administrator subscribe to comments when logged in."
-msgstr "Notificar o administrador quando os usuários se inscrever sem comentar."
+msgstr "Deixe o administrador inscrever-se em comentários, quando estiver logado."
 
 # @ default
 #: options/panel3.php:128
 #: options/panel4.php:86
 #: options/panel5.php:144
 msgid "Save Changes"
-msgstr ""
+msgstr "Salvar Alterações"
 
 # @ subscribe-reloaded
 #: options/panel4.php:11
@@ -659,7 +650,7 @@ msgstr "Assunto do e-mail de notificação. Tags permitidas: [post_title]"
 #: options/panel5.php:124
 #: options/panel5.php:134
 msgid "Bold"
-msgstr ""
+msgstr "Bold"
 
 #: options/panel4.php:45
 #: options/panel4.php:61
@@ -672,7 +663,7 @@ msgstr ""
 #: options/panel5.php:125
 #: options/panel5.php:135
 msgid "Italic"
-msgstr ""
+msgstr "Italic"
 
 #: options/panel4.php:46
 #: options/panel4.php:62
@@ -685,7 +676,7 @@ msgstr ""
 #: options/panel5.php:126
 #: options/panel5.php:136
 msgid "Link"
-msgstr ""
+msgstr "Link"
 
 #: options/panel4.php:47
 #: options/panel4.php:63
@@ -698,7 +689,7 @@ msgstr ""
 #: options/panel5.php:127
 #: options/panel5.php:137
 msgid "Image"
-msgstr ""
+msgstr "Imagem"
 
 # @ subscribe-reloaded
 #: options/panel4.php:50
@@ -834,27 +825,23 @@ msgstr "O texto mostrado para aqueles que o solicitarem gerir as suas assinatura
 
 # @ subscribe-reloaded
 #: options/panel5.php:90
-#, fuzzy
 msgid "Thank you note shown after the request here above has been processed. Allowed tags: [post_title], [post_permalink]"
-msgstr "Nota de agradecimento exibida depois que a requisição foi processada"
+msgstr "Nota de agradecimento exibida depois que a requisição foi processada. Tags permitidas: [post_title], [post_permalink]"
 
 # @ subscribe-reloaded
 #: options/panel5.php:100
-#, fuzzy
 msgid "Text shown to those who want to subscribe without commenting. Allowed tags: [post_title], [post_permalink]"
 msgstr "O texto mostrado para aqueles que querem se inscrever sem comentar. Tags permitidas: [post_title]"
 
 # @ subscribe-reloaded
 #: options/panel5.php:110
-#, fuzzy
 msgid "Thank you note shown after the subscription request has been processed (double check-in disabled). Allowed tags: [post_title], [post_permalink]"
-msgstr "Mensagem de agradecimento exibida após a requisição de assinatura ter sido processada (confirmação desabilitada)."
+msgstr "Mensagem de agradecimento exibida após a requisição de assinatura ter sido processada (confirmação desabilitada). Tags permitidas: [post_title], [post_permalink]"
 
 # @ subscribe-reloaded
 #: options/panel5.php:120
-#, fuzzy
 msgid "Thank you note shown after the subscription request has been processed (double check-in enabled). Allowed tags: [post_title], [post_permalink]"
-msgstr "Mensagem de agradecimento exibida após a requisição de assinatura ter sido processada (confirmação habilitada)."
+msgstr "Mensagem de agradecimento exibida após a requisição de assinatura ter sido processada (confirmação habilitada). Tags permitidas: [post_title], [post_permalink]"
 
 # @ subscribe-reloaded
 #: options/panel5.php:130
@@ -868,41 +855,40 @@ msgstr "Texto introdutório para a página de gestão dos usuários."
 
 # @ subscribe-reloaded
 #: options/panel6.php:11
-#, fuzzy
 msgid "StCR table has been successfully optimized."
-msgstr "O status foi atualizado com sucesso."
+msgstr "Tabela STCR foi otimizado com sucesso."
 
 #: options/panel6.php:15
 msgid "Database"
-msgstr ""
+msgstr "Banco de Dados"
 
 #: options/panel6.php:35
 msgid "Engine"
-msgstr ""
+msgstr "Mecanismo"
 
 #: options/panel6.php:36
 msgid "Records"
-msgstr ""
+msgstr "Registros"
 
 #: options/panel6.php:37
 msgid "Average Record Length"
-msgstr ""
+msgstr "Média Duração Record"
 
 #: options/panel6.php:38
 msgid "Created on"
-msgstr ""
+msgstr "Criado em"
 
 #: options/panel6.php:39
 msgid "Approximate Overhead"
-msgstr ""
+msgstr "Overhead aproximado"
 
 #: options/panel6.php:40
 msgid "optimize"
-msgstr ""
+msgstr "otimizar"
 
 #: options/panel6.php:44
 msgid "Support the author"
-msgstr ""
+msgstr "Suporte do autor"
 
 # @ subscribe-reloaded
 #: options/panel6.php:45
@@ -982,7 +968,6 @@ msgstr "Usuário:"
 
 # @ subscribe-reloaded
 #: templates/user.php:33
-#, fuzzy
 msgid "All the subscriptions have been successfully updated."
 msgstr "As inscrições foram atualizadas com sucesso."
 
