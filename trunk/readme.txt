@@ -85,6 +85,7 @@ language, use the template files (.pot) you'll find inside the `langs` folder,
 and contact me on the [support forum](http://lab.duechiacchiere.it/index.php?board=5.0) once your
 localization is ready. Currently, we support the following languages:
 
+* Dutch - Muratje
 * French - [Li-An](http://www.li-an.fr/wpplugins/mes-traductions-de-plugins/#subscribe) and [Anthony](http://imnotgeek.com/)
 * German - [derhenry](http://www.derhenry.net/2010/subscribe-to-comments-reloaded/)
 * Italian - myself
