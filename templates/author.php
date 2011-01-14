@@ -45,7 +45,7 @@ echo "<p>$message</p>";
 		echo '<p>'.__('Legend: Y: subscribed, N: suspended, C: awaiting confirmation','subscribe-reloaded').'</p>';
 		echo '<ul class="subscribe-reloaded-list">';
 		foreach($subscriptions as $i => $a_subscription){
-			$subscriber_salt = md5($wp_subscribe_reloaded->salt.$a_subscription->email);
+			$subscriber_salt = $wp_subscribe_reloaded->generate_key($a_subscription->email);
 			$manager_link = get_bloginfo('url').get_option('subscribe_reloaded_manager_page', '/comment-subscriptions');
 			if (strpos($manager_link, '?') !== false)
 				$manager_link = "$manager_link&sre=".urlencode($a_subscription->email)."&srk=$subscriber_salt";

@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Subscribe to Comments Reloaded
-Version: 1.5.1
+Version: 1.6
 Plugin URI: http://lab.duechiacchiere.it/index.php?board=5.0
 Description: Subscribe to Comments Reloaded is a robust plugin that enables commenters to sign up for e-mail notifications. It includes a full-featured subscription manager that your commenters can use to unsubscribe to certain posts or suspend all notifications.
 Author: camu
@@ -78,6 +78,8 @@ class wp_subscribe_reloaded {
 	 */
 	public function __construct(){
 		global $wpdb;
+
+		$this->subscribe_version = '1.6';
 
 		// We use a table to store the information about our subscribers
 		$this->table_subscriptions = $wpdb->prefix . 'subscribe_reloaded';
@@ -158,7 +160,12 @@ class wp_subscribe_reloaded {
 		}
 
 		// Messages related to the management page
-		add_option('subscribe_reloaded_manager_page', '/comment-subscriptions', '', 'no');
+		if (get_option('permalink_structure','') == ''){
+			add_option('subscribe_reloaded_manager_page', '/?page_id=99999', '', 'no');
+		}
+		else{
+			add_option('subscribe_reloaded_manager_page', '/comment-subscriptions', '', 'no');
+		}
 		add_option('subscribe_reloaded_manager_page_title', __('Manage subscriptions','subscribe-reloaded'), '', 'no');
 		add_option('subscribe_reloaded_request_mgmt_link', __('To manage your subscriptions, please enter your email address here below. We will send you a message containing the link to access your personal management page.', 'subscribe-reloaded'), '', 'no');
 		add_option('subscribe_reloaded_request_mgmt_link_thankyou', __('Thank you for using our subscription service. Your request has been completed, and you should receive an email with the management link in a few minutes.', 'subscribe-reloaded'), '', 'no');
@@ -238,7 +245,7 @@ class wp_subscribe_reloaded {
 		if (function_exists('qtrans_convertURL')) $manager_link = qtrans_convertURL($manager_link);
 		
 		$clean_email = $this->clean_email($_email);
-		$subscriber_salt = md5($this->salt.$clean_email);
+		$subscriber_salt = $this->generate_key($clean_email);
 
 		if (strpos($manager_link, '?') !== false){
 			$confirm_link = "$manager_link&sre=".urlencode($clean_email)."&srk=$subscriber_salt&srp=$_post_ID&sra=c";
@@ -252,7 +259,7 @@ class wp_subscribe_reloaded {
 		$headers = "MIME-Version: 1.0\n";
 		$headers .= "From: $from_name <$from_email>\n";
 		$content_type = (get_option('subscribe_reloaded_enable_html_emails', 'no') == 'yes')?'text/html':'text/plain';
-		$headers .= "Content-Type: $content_type; charset=".get_bloginfo('charset')."\n";
+		$headers .= "Content-Type: $content_type; charset=".get_bloginfo('charset')."\nX-Subscribe-to-Comments-Version: $this->subscribe_version\n";
 
 		$post = get_post($_post_ID);
 		$post_permalink = get_permalink($_post_ID);
@@ -559,6 +566,11 @@ class wp_subscribe_reloaded {
 	}
 	// end clean_email
 
+	public function generate_key($_clean_email){
+		$day = date_i18n('Ymd');
+		return md5($day.$this->salt.$_clean_email);
+	}
+
 	/**
 	 * Adds a new entry in the admin menu, to manage this plugin's options
 	 */
@@ -665,7 +677,7 @@ class wp_subscribe_reloaded {
 	 * Checks if a key is valid for a given email address
 	 */
 	private function _is_valid_key($_key, $_email){
-		return (md5($this->salt.$_email) == $_key);
+		return ($this->generate_key($_email) == $_key);
 	}
 	// end _is_valid_key
 
@@ -682,7 +694,7 @@ class wp_subscribe_reloaded {
 		if (function_exists('qtrans_convertURL')) $manager_link = qtrans_convertURL($manager_link);
 		
 		$clean_email = $this->clean_email($_email);
-		$subscriber_salt = md5($this->salt.$clean_email);
+		$subscriber_salt = $this->generate_key($clean_email);
 		if (strpos($manager_link, '?') !== false){
 			$manager_link = "$manager_link&sre=".urlencode($clean_email)."&srk=$subscriber_salt";
 		}
@@ -693,7 +705,7 @@ class wp_subscribe_reloaded {
 		$headers = "MIME-Version: 1.0\n";
 		$headers .= "From: $from_name <$from_email>\n";
 		$content_type = (get_option('subscribe_reloaded_enable_html_emails', 'no') == 'yes')?'text/html':'text/plain';
-		$headers .= "Content-Type: $content_type; charset=".get_bloginfo('charset')."\n";
+		$headers .= "Content-Type: $content_type; charset=".get_bloginfo('charset')."\nX-Subscribe-to-Comments-Version: $this->subscribe_version\n";
 
 		$post = get_post($_post_ID);
 		$comment = get_comment($_comment_ID);

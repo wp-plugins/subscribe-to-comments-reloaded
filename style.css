@@ -32,11 +32,34 @@
 }
 .postbox{
  float:left;
+ margin-right:5px;
+ min-height:200px;
+}
+.postbox.small{
+ width:255px;
+}
+.postbox.medium{
+ width:517px
+}
+.postbox.wide{
+ width:780px
+}
+.postbox.one-third{
+ width:32%;
 }
 .postbox h3,.postbox p,.postbox ul{
  cursor:default;
  margin:0;
  padding:4px 8px 8px;
+}
+.postbox .boxline{
+ border-bottom:1px solid #dfdfdf;
+}
+.postbox span.right{
+ float:right;
+}
+.postbox p.small{
+ font-size:.8em;
 }
 .postbox .subscribe-list-navigation{
  float:right;
