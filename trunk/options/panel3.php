@@ -42,7 +42,9 @@ if (isset($_POST['options'])){
 	<tr>
 		<th scope="row"><label for="manager_page"><?php _e('Management page','subscribe-reloaded') ?></label></th>
 		<td><?php echo get_bloginfo('url') ?> <input type="text" name="options[manager_page]" id="manager_page" value="<?php echo subscribe_reloaded_get_option('manager_page'); ?>" size="30">
-			<div class="description"><?php _e('The permalink for your management page (something like <code>/manage-subscriptions</code> or <code>/?page_id=345</code>). This page <b>does not</b> actually exist in the system, but its permalink must follow your Wordpress\' permalink settings.','subscribe-reloaded'); ?></div></td>
+			<div class="description"><?php _e('The permalink for your management page (something like <code>/manage-subscriptions</code> or <code>/?page_id=345</code>). This page <b>does not</b> actually exist in the system, but its link must follow your permalink structure.','subscribe-reloaded'); 
+			if ((get_option('permalink_structure','') == '') && (strpos(subscribe_reloaded_get_option('manager_page'), '?page_id=') === false))
+				echo '<br/><strong>'.__("Warning: it looks like the value you are using may be incompatible with your permalink structure",'subscribe-reloaded').'</strong>'; ?></div></td>
 	</tr>
 	<tr>
 		<th scope="row"><label for="purge_days"><?php _e('Autopurge requests','subscribe-reloaded') ?></label></th>

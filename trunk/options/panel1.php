@@ -64,7 +64,7 @@ elseif (!empty($clean_email) && !empty($_POST['action_type'])){
 }
 ?>
 
-<div class="postbox" style="width:32%;margin-right:10px">
+<div class="postbox one-third">
 <h3 class='hndle'><?php _e('Update subscription','subscribe-reloaded') ?></h3>
 <p><?php _e('Update the email address associated to a specific subscription (by post ID).','subscribe-reloaded') ?></p>
 <form action="options-general.php?page=subscribe-to-comments-reloaded/options/index.php&subscribepanel=1" method="post" id="update_address_form"
@@ -79,7 +79,7 @@ elseif (!empty($clean_email) && !empty($_POST['action_type'])){
 </form>
 </div>
 
-<div class="postbox" style="width:32%;margin-right:10px">
+<div class="postbox one-third">
 <h3><?php _e('Change status','subscribe-reloaded') ?></h3>
 <p><?php _e('Change the status of an email address or permanently delete all its subscriptions.','subscribe-reloaded') ?></p>
 <form action="options-general.php?page=subscribe-to-comments-reloaded/options/index.php&subscribepanel=1" method="post">
@@ -94,7 +94,7 @@ elseif (!empty($clean_email) && !empty($_POST['action_type'])){
 </form>
 </div>
 
-<div class="postbox" style="width:32%">
+<div class="postbox one-third">
 <h3 class='hndle'><?php _e('Update email address','subscribe-reloaded') ?></h3>
 <p><?php _e('You can "mass update" all the occurrences of a given email address (exact matches only).','subscribe-reloaded') ?></p>
 <form action="options-general.php?page=subscribe-to-comments-reloaded/options/index.php&subscribepanel=1" method="post" id="update_address_form"
@@ -108,7 +108,7 @@ elseif (!empty($clean_email) && !empty($_POST['action_type'])){
 </form>
 </div>
 
-<div class="postbox">
+<div class="postbox" style="min-height:0">
 <p class="subscribe-list-navigation"><?php 
 if (!empty($clean_email)){
 	$search_type = !empty($_POST['srt'])?$_POST['srt']:(!empty($_GET['srt'])?$_GET['srt']:'');

@@ -29,12 +29,12 @@ if (!empty($_POST['sre'])){
 	if (function_exists('qtrans_convertURL')) $manager_link = qtrans_convertURL($manager_link);
 	
 	$clean_email = $wp_subscribe_reloaded->clean_email($_POST['sre']);
-	$subscriber_salt = md5($wp_subscribe_reloaded->salt.$clean_email);
+	$subscriber_salt = $wp_subscribe_reloaded->generate_key($clean_email);
 
 	$headers = "MIME-Version: 1.0\n";
 	$headers .= "From: $from_name <$from_email>\n";
 	$content_type = (get_option('subscribe_reloaded_enable_html_emails', 'no') == 'yes')?'text/html':'text/plain';
-	$headers .= "Content-Type: $content_type; charset=".get_bloginfo('charset')."\n";
+	$headers .= "Content-Type: $content_type; charset=".get_bloginfo('charset')."\nX-Subscribe-to-Comments-Version: $wp_subscribe_reloaded->subscribe_version\n";
 
 	if (strpos($manager_link, '?') !== false)
 		$manager_link = "$manager_link&sre=".urlencode($clean_email)."&srk=$subscriber_salt";
