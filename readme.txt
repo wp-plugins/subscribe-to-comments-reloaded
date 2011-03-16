@@ -102,12 +102,14 @@ localization is ready. Currently, we support the following languages:
 
 Please send a donation of at least $5 in order to be included in this list. Thank you.
 
-* [Robert Eberle](http://www.gopusa.com)
-* Jason Pelletier
-* [Teresa Jordan](http://www.teresajordan.com)
-* [Pausaxn](http://pausaxn.it)
-* Francesco Fratellini
-* Mike Temporale
+* [R. Eberle](http://www.gopusa.com)
+* F. Fratellini
+* [T. Jordan](http://www.teresajordan.com)
 * [Life as a Human, Inc](http://lifeasahuman.com/)
-* [Robert Schilt](http://www.trupela.com)
 * [Olivier](http://www.stocker-partager.fr)
+* L. Passuello
+* [Pausaxn](http://pausaxn.it)
+* J. Pelletier
+* [R. Schilt](http://www.trupela.com)
+* M. Temporale
+* [Vendiva](http://www.vendiva.com)
