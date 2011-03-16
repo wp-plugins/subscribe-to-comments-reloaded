@@ -94,6 +94,7 @@ localization is ready. Currently, we support the following languages:
 * German - [derhenry](http://www.derhenry.net/2010/subscribe-to-comments-reloaded/)
 * Italian - myself
 * Norwegian - [Odd Henriksen](http://www.oddhenriksen.net/)
+* Polish - [Robert Koeseling](http://www.katalogpodkastow.pl)
 * Portuguese, Brazil - [Ronaldo Richieri](http://richieri.com), [ClassiNoiva](http://www.classinoiva.com.br), [Luciano](http://litemind.com/)
 * Russian - [Marika Bukvonka](http://violetnotes.com)
 * Spanish - [TodoWordPress team](http://www.todowp.org/)
