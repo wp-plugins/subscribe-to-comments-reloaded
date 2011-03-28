@@ -106,7 +106,7 @@ Please send a donation of at least $5 in order to be included in this list. Than
 * [R. Eberle](http://www.gopusa.com)
 * F. Fratellini
 * [T. Jordan](http://www.teresajordan.com)
-* [T. de Haan](Tom de Haan)
+* [T. de Haan](http://www.tomdehaan.nl)
 * [Life as a Human, Inc](http://lifeasahuman.com/)
 * [Olivier](http://www.stocker-partager.fr)
 * L. Passuello
