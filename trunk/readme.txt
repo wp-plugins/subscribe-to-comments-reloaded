@@ -89,15 +89,18 @@ language, use the template files (.pot) you'll find inside the `langs` folder,
 and contact me on the [support forum](http://lab.duechiacchiere.it/index.php?board=5.0) once your
 localization is ready. Currently, we support the following languages:
 
-* Dutch - Muratje
+* Danish - [Torben Bendixen](http://www.freelancekonsulenten.dk/)
+* Dutch - [Muratje](http://www.muromedia.nl/)
 * French - [Li-An](http://www.li-an.fr/wpplugins/mes-traductions-de-plugins/#subscribe) and [Anthony](http://imnotgeek.com/)
 * German - [derhenry](http://www.derhenry.net/2010/subscribe-to-comments-reloaded/)
 * Italian - myself
 * Norwegian - [Odd Henriksen](http://www.oddhenriksen.net/)
 * Polish - [Robert Koeseling](http://www.katalogpodkastow.pl)
 * Portuguese, Brazil - [Ronaldo Richieri](http://richieri.com), [ClassiNoiva](http://www.classinoiva.com.br), [Luciano](http://litemind.com/)
+* Portuguese, Portugal
 * Russian - [Marika Bukvonka](http://violetnotes.com)
 * Spanish - [TodoWordPress team](http://www.todowp.org/)
+* Turkish
 
 == List of donors ==
 
@@ -115,3 +118,4 @@ Please send a donation of at least $5 in order to be included in this list. Than
 * [R. Schilt](http://www.trupela.com)
 * M. Temporale
 * [Vendiva](http://www.vendiva.com)
+* Welcome Changes
