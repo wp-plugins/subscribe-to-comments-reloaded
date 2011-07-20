@@ -3,8 +3,8 @@ Contributors: coolmann
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=Z732JS7KQ6RRL&lc=US&item_name=Subscribe%20To%20Comments%20Reloaded&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHosted
 Tags: subscribe, comments, notification, subscription, manage, double check-in, follow, commenting
 Requires at least: 2.9.2
-Tested up to: 3.1
-Stable tag: 1.6
+Tested up to: 3.2
+Stable tag: 2.0
 
 Subscribe to Comments Reloaded allows commenters to sign up for e-mail notifications of subsequent replies.
 
@@ -12,20 +12,18 @@ Subscribe to Comments Reloaded allows commenters to sign up for e-mail notificat
 Subscribe to Comments Reloaded is a robust plugin that enables commenters to sign up for e-mail notification of subsequent entries. The plugin includes a full-featured subscription manager that your commenters can use to unsubscribe to certain posts or suspend all notifications. It solves most of the issues that affect Mark Jaquith's version, using the latest Wordpress features and functionality. Plus, allows administrators to enable a double opt-in mechanism, requiring users to confirm their subscription clicking on a link they will receive via email.
 
 ## Requirements
-* Wordpress 2.9 or higher
-* [Proper Network Activation](http://wordpress.org/extend/plugins/proper-network-activation/), if you're planning to use it in a multiblog environment
+* Wordpress 2.9.2 or higher
 * PHP 5.1 or higher
 * MySQL 5.x or higher
 
 ## Main Features
-* It does not modify Wordpress system tables
-* You can manage all the subscription with its handy admin panel
-* It imports Mark Jaquith's Subscribe To Comments data (**copies but does not delete** the old data)
-* All the messages are fully customizable, no poEdit required (and you can use HTML!)
-* Available in multiple languages
-* It ignores Spam comments
+* It does not modify Wordpress' database structure
+* You can manage your subscriptions with its handy admin panel
+* It imports Mark Jaquith's Subscribe To Comments (and its clones) data
+* Messages are fully customizable, no poEdit required (and you can use HTML!)
+* You can disable subscriptions for specific posts
+* It ignores spam comments
 * It's compatible with [Fluency Admin](http://deanjrobinson.com/projects/fluency-admin/) and [QTranslate](http://wordpress.org/extend/plugins/qtranslate/)
-* It has a truckload of options to customize its behavior
 
 == Installation ==
 
@@ -33,9 +31,31 @@ Subscribe to Comments Reloaded is a robust plugin that enables commenters to sig
 2. Upload the entire folder and all the subfolders to your Wordpress plugins' folder
 3. Activate it
 5. Customize the Permalink value under Settings > Subscribe to Comments > Options (first field). It **must** reflect your permalinks' structure
-5. If you don't see the checkbox to subscribe, you will have to manually edit your template, and add `<?php if (function_exists('subscribe_reloaded_show')) subscribe_reloaded_show(); ?>` somewhere to your `comments.php`
+5. If you don't see the checkbox to subscribe, you will have to manually edit your template, and add `<?php if (function_exists('subscribe_reloaded_show')) subscribe_reloaded_show(); ?>` somewhere in your `comments.php`
 6. If you're upgrading from a previous version, please make sure to deactivate/activate the plugin
 7. Optional: customize all the messages under Settings > Subscribe to Comments > Messages
+
+== Frequently Asked Questions ==
+
+= Aaargh! Were did all my subscriptions go? =
+No panic. If you upgraded from 1.6 or earlier to 2.0+, you need to deactivate/activate StCR, in order to update the DB structure
+
+= How do I disable subscriptions for a given post? =
+Add a custom field called `stcr_disable_subscriptions` to it, with value 'yes'
+
+= Can I customize the layout of the management page? =
+Yes, each HTML tag has a CSS class or ID that you can use to change its position or look-and-feel
+
+= How do I create a 'real' management page? =
+Please refer to [this page](http://lab.duechiacchiere.it/index.php?topic=71.0) for a detailed step-by-step description on how to do that
+
+= How do I add the management page URL to my posts? =
+Use the shortcode `[subscribe-url]`, or use the following code in your theme: 
+if(function_exists('subscribe_reloaded_show')) echo '<a href="'.do_shortcode('[subscribe-url]').'">Subscribe</a>";
+
+= Can I move the subscription checkbox to another position? =
+Yes! Just disable the corresponding option under Settings > Comment Form and then add the following code where you want to display the checkbox:
+`<?php if (function_exists('subscribe_reloaded_show')) subscribe_reloaded_show(); ?>`
 
 == Screenshots ==
 
@@ -45,8 +65,25 @@ Subscribe to Comments Reloaded is a robust plugin that enables commenters to sig
 
 == Changelog ==
 
+= 2.0 =
+* StCR does not use a separate table anymore, making it fully compatible with Wordpress 'network' environments! YAY!
+* Added: option to prevent StCR from adding the subscription checkbox to the comment form (useful for those who want to display the box in different place on the page)
+* Added: you can now disable subscriptions on specific posts, by adding a custom filed `stcr_disable_subscriptions` set to 'yes'
+* Added: double opt-in is only required once, users with at least one active subscription will automatically get approved
+* Added: administrators can add new subscriptions on-the-fly
+* Added: if Akismet is detected, it will now be used to check those who subscribe without commenting
+* Added: new shortcode to add the management page URL to your posts/widgets (thank you [Greg](http://wordpress.org/support/topic/plugin-subscribe-to-comments-reloaded-plugin-does-not-create-table))
+* Added: option to enable "advanced" subscription mode, where users can choose what kind of subscription they want to activate (all, replies only)
+* Added: new localizations
+* Added: security checks when uninstalling the plugin
+* Updated: reorganized and polished the CSS classes and ID's on the management page
+* Updated: registered users are not required to confirm their subscriptions anymore (if double opt-in is enabled)
+* Fixed: a problem with Gmail addresses containing a + sign in them
+* Fixed: a bug with HTML attributes in the field "custom HTML for the checkbox" (thank you [travelvice](http://wordpress.org/support/topic/custom-html-quotes-problem-php-ecape-characters))
+* Fixed: a bug causing some themes to not display the management page
+
 = 1.6 = 
-* Completed the new tab to access some useful stats about your subscribers. This will be expanded with filters and other features in the future.
+* Added the new tab to access some useful stats about your subscribers.
 * Management links sent via email are now more secure and are valid only for the day in which they have been generated. Administrators are not affected.
 * StCR tries to detect if nice permalinks are enabled or not, and sets the corresponding option accordingly
 * Added a new custom header to the emails generated by StCR to keep track of its version
@@ -106,16 +143,7 @@ localization is ready. Currently, we support the following languages:
 
 Please send a donation of at least $5 in order to be included in this list. Thank you.
 
-* [R. Eberle](http://www.gopusa.com)
-* F. Fratellini
-* [T. Jordan](http://www.teresajordan.com)
-* [T. de Haan](http://www.tomdehaan.nl)
-* [Life as a Human, Inc](http://lifeasahuman.com/)
-* [Olivier](http://www.stocker-partager.fr)
-* L. Passuello
-* [Pausaxn](http://pausaxn.it)
-* J. Pelletier
-* [R. Schilt](http://www.trupela.com)
-* M. Temporale
-* [Vendiva](http://www.vendiva.com)
-* Welcome Changes
+[R. Eberle](http://www.gopusa.com), [T. Cerulli](http://www.tovarcerulli.com/), F. Fratellini, [T. Jordan](http://www.teresajordan.com), [T. de Haan](http://www.tomdehaan.nl),
+[Life as a Human, Inc](http://lifeasahuman.com/), [Olivier](http://www.stocker-partager.fr), L. Passuello, [Pausaxn](http://pausaxn.it),
+J. Pelletier, [R. Schilt](http://www.trupela.com), M. Temporale, [Vendiva](http://www.vendiva.com), [S. Watson](http://www.swearingdad.com/), 
+Welcome Changes
