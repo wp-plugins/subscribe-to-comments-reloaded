@@ -411,10 +411,9 @@ class wp_subscribe_reloaded{
 		$action = !empty($_POST['sra'])?$_POST['sra']:(!empty($_GET['sra'])?$_GET['sra']:0);
 		$key = !empty($_POST['srk'])?$_POST['srk']:(!empty($_GET['srk'])?$_GET['srk']:0);
 
-		if (!empty($current_user->user_email))
+		$email = $this->clean_email(!empty($_POST['sre'])?urldecode($_POST['sre']):(!empty($_GET['sre'])?$_GET['sre']:''));
+		if (empty($email) && !empty($current_user->user_email))
 			$email = $this->clean_email($current_user->user_email);
-		else
-			$email = $this->clean_email(!empty($_POST['sre'])?urldecode($_POST['sre']):(!empty($_GET['sre'])?$_GET['sre']:''));
 
 		// Subscribe without commenting
 		if (!empty($action) && ($action == 's') && ($post_ID > 0)){
