@@ -18,11 +18,18 @@ if (!function_exists('add_action')){
  * Displays the checkbox to allow visitors to subscribe
  */
 function subscribe_reloaded_show(){
+	$is_disabled = get_post_meta($info->comment_post_ID, 'stcr_disable_subscriptions', true);
+	if (!empty($is_disabled))
+		return $_comment_ID;
+			
 	global $post, $wp_subscribe_reloaded;
 	$show_subscription_box = true;
 	$html_to_show = '';
 	$user_link = get_bloginfo('url').get_option('subscribe_reloaded_manager_page', '');
-	if (function_exists('qtrans_convertURL')) $user_link = qtrans_convertURL($user_link);
+	
+	if (function_exists('qtrans_convertURL'))
+		$user_link = qtrans_convertURL($user_link);
+		
 	if (strpos($user_link, '?') !== false)
 		$manager_link = "$user_link&amp;srp=$post->ID";
 	else
