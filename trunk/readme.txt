@@ -129,7 +129,7 @@ localization is ready. Currently, we support the following languages:
 * Danish - [Torben Bendixen](http://www.freelancekonsulenten.dk/)
 * Dutch - [Muratje](http://www.muromedia.nl/)
 * French - [Li-An](http://www.li-an.fr/wpplugins/mes-traductions-de-plugins/#subscribe) and [Anthony](http://imnotgeek.com/)
-* German - [derhenry](http://www.derhenry.net/2010/subscribe-to-comments-reloaded/)
+* German - [derhenry](http://www.derhenry.net/2010/subscribe-to-comments-reloaded/), [Stefan](http://www.beedy.de/)
 * Italian - myself
 * Norwegian - [Odd Henriksen](http://www.oddhenriksen.net/)
 * Polish - [Robert Koeseling](http://www.katalogpodkastow.pl)
