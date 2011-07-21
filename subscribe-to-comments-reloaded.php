@@ -27,14 +27,14 @@ function subscribe_reloaded_show(){
 	$show_subscription_box = true;
 	$html_to_show = '';
 	$user_link = get_bloginfo('url').get_option('subscribe_reloaded_manager_page', '');
-	
+
 	if (function_exists('qtrans_convertURL'))
 		$user_link = qtrans_convertURL($user_link);
-		
-	if (strpos($user_link, '?') !== false)
-		$manager_link = "$user_link&amp;srp=$post->ID";
-	else
-		$manager_link = "$user_link?srp=$post->ID";
+
+	$manager_link = (strpos($user_link, '?') !== false)?"$user_link&amp;srp=$post->ID":"$user_link?srp=$post->ID";
+
+	// Load localization files
+	load_plugin_textdomain('subscribe-reloaded', WP_PLUGIN_DIR .'/subscribe-to-comments-reloaded/langs', '/subscribe-to-comments-reloaded/langs');
 
 	if($wp_subscribe_reloaded->is_user_subscribed($post->ID, '', 'C')){
 		$html_to_show = str_replace('[manager_link]', $user_link,
@@ -57,7 +57,6 @@ function subscribe_reloaded_show(){
 		$checkbox_label = str_replace('[subscribe_link]', "$manager_link&amp;sra=s",
 			stripslashes(get_option('subscribe_reloaded_checkbox_label', __("Notify me of followup comments via e-mail. You can also <a href='[subscribe_link]'>subscribe</a> without commenting.",'subscribe-reloaded'))));
 		$checkbox_inline_style = get_option('subscribe_reloaded_checkbox_inline_style', 'width:30px');
-		if (!empty($checkbox_class)) $checkbox_class = " class='$checkbox_class'";
 		if (!empty($checkbox_inline_style)) $checkbox_inline_style = " style='$checkbox_inline_style'";
 		$checkbox_html_wrap = stripslashes(get_option('subscribe_reloaded_checkbox_html', ''));
 		if (get_option('subscribe_reloaded_enable_advanced_subscriptions', 'no') == 'no'){
@@ -65,7 +64,8 @@ function subscribe_reloaded_show(){
 		}
 		else{
 			$checkbox_field = "<select name='subscribe-reloaded' id='subscribe-reloaded'>
-				<option value='yes'>".__('All','subscribe-reloaded')."</option>
+				<option value='none'>".__("Don't subscribe",'subscribe-reloaded')."</option>
+				<option value='yes'".((get_option('subscribe_reloaded_checked_by_default', 'no') == 'yes')?" selected='selected'":'').">".__('All','subscribe-reloaded')."</option>
 				<option value='replies'>".__('Replies to my comments','subscribe-reloaded')."</option>
 				<!-- option value='digest'>".__('Daily digest','subscribe-reloaded')."</option -->
 			</select>";
@@ -284,10 +284,11 @@ class wp_subscribe_reloaded{
 		if ((get_option('subscribe_reloaded_process_trackbacks', 'no') == 'no') && ($info->comment_type == 'trackback' || $info->comment_type == 'pingback'))
 			return $_comment_ID;
 
-		$subscriptions = array();
-
 		// Did this visitor request to be subscribed to the discussion? (and s/he is not subscribed)
 		if (!empty($_POST['subscribe-reloaded']) && !empty($info->comment_author_email)){
+			if (!in_array($_POST['subscribe-reloaded'], array('replies','digest','yes')))
+				return $_comment_ID;
+
 			switch ($_POST['subscribe-reloaded']){
 				case 'replies':
 					$status = 'R';
@@ -297,6 +298,7 @@ class wp_subscribe_reloaded{
 					break;
 				default:
 					$status = 'Y';
+					break;
 			}
 
 			if (!$this->is_user_subscribed($info->comment_post_ID, $info->comment_author_email)){
@@ -405,7 +407,7 @@ class wp_subscribe_reloaded{
 
 		if (!empty($_posts))
 			return $_posts;
-		
+
 		$post_ID = !empty($_POST['srp'])?intval($_POST['srp']):(!empty($_GET['srp'])?intval($_GET['srp']):0);
 
 		// Is the post_id passed in the query string valid?
@@ -553,7 +555,7 @@ class wp_subscribe_reloaded{
 		return false;
 	}
 	// end is_user_subscribed
-	
+
 	/**
 	 * Adds a new subscription
 	 */
