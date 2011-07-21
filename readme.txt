@@ -137,7 +137,7 @@ localization is ready. Currently, we support the following languages:
 * Portuguese, Portugal
 * Russian - [Marika Bukvonka](http://violetnotes.com)
 * Spanish - [TodoWordPress team](http://www.todowp.org/)
-* Turkish
+* Turkish - [MaD, Kali](http://www.dusunsel.com/)
 
 == List of donors ==
 
