@@ -5,6 +5,8 @@ if (!function_exists('is_admin') || !is_admin()){
 	exit;
 }
 
+$is_html_enabled = (subscribe_reloaded_get_option('enable_html_emails', 'no') == 'yes');
+
 // Update options
 if (isset($_POST['options'])){
 	$faulty_fields = '';
