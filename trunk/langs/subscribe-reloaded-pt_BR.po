@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Subscribe to Comments Reloaded\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-07-25 16:02-0500\n"
-"PO-Revision-Date: 2011-07-25 16:02-0500\n"
+"PO-Revision-Date: 2011-07-25 16:15-0500\n"
 "Last-Translator: due chiacchiere <info@duechiacchiere.it>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -44,7 +44,7 @@ msgstr "Notifique-me de novos comentários via e-mail. Você também pode <a hre
 
 #: subscribe-to-comments-reloaded.php:67
 msgid "Don't subscribe"
-msgstr ""
+msgstr "Não se inscrever"
 
 #: subscribe-to-comments-reloaded.php:68
 msgid "All"
@@ -758,15 +758,15 @@ msgstr "Usuários"
 
 #: options/panel3.php:45
 msgid "Enabled"
-msgstr ""
+msgstr "Habilitado"
 
 #: options/panel3.php:46
 msgid "Disabled"
-msgstr ""
+msgstr "Desabilitado"
 
 #: options/panel3.php:47
 msgid "Disable the virtual management page if you need to create a <a href=\"http://lab.duechiacchiere.it/index.php?topic=71.0\">real page</a> to make your theme happy."
-msgstr ""
+msgstr "Desabilite a página virtual de gerenciamento caso você precise criar uma <href=\"http://lab.duechiacchiere.it/index.php?topic=71.0\">página real</a> para deixar o seu tema feliz."
 
 # @ subscribe-reloaded
 #: options/panel3.php:53
