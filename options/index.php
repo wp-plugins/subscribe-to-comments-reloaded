@@ -21,7 +21,7 @@ function subscribe_reloaded_update_option( $_option = '', $_value = '', $_type =
 			break;
 
 		default:
-			update_option('subscribe_reloaded_'.$_option, htmlentities($_value));
+			update_option('subscribe_reloaded_'.$_option, htmlentities($_value, ENT_COMPAT, 'UTF-8'));
 			return true;
 			break;
 	}
