@@ -8,7 +8,7 @@ if (!function_exists('add_action')){
 global $wp_subscribe_reloaded;
 
 $wp_subscribe_reloaded->update_subscription_status($post_ID, $email, '-C');
-$message = stripslashes(get_option('subscribe_reloaded_subscription_confirmed'));
+$message = html_entity_decode(stripslashes(get_option('subscribe_reloaded_subscription_confirmed')));
 if(function_exists('qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage'))
 	$message = qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage($message);
 return "<p>$message</p>";

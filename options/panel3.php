@@ -7,8 +7,9 @@ if (!function_exists('is_admin') || !is_admin()){
 // Update options
 if (isset($_POST['options'])){
 	$faulty_fields = '';
+	if (isset($_POST['options']['manager_page_enabled']) && !subscribe_reloaded_update_option('manager_page_enabled', $_POST['options']['manager_page_enabled'], 'text')) $faulty_fields = __('Virtual Management Page','subscribe-reloaded').', ';
 	if (isset($_POST['options']['manager_page_title']) && !subscribe_reloaded_update_option('manager_page_title', $_POST['options']['manager_page_title'], 'text')) $faulty_fields = __('Page title','subscribe-reloaded').', ';
-	if (isset($_POST['options']['manager_page']) && !subscribe_reloaded_update_option('manager_page', $_POST['options']['manager_page'], 'text')) $faulty_fields = __('Management Page ID','subscribe-reloaded').', ';
+	if (isset($_POST['options']['manager_page']) && !subscribe_reloaded_update_option('manager_page', $_POST['options']['manager_page'], 'text')) $faulty_fields = __('Management URL','subscribe-reloaded').', ';
 	if (isset($_POST['options']['custom_header_meta']) && !subscribe_reloaded_update_option('custom_header_meta', $_POST['options']['custom_header_meta'], 'text')) $faulty_fields = __('Custom HEAD meta','subscribe-reloaded').', ';
 	
 	if (isset($_POST['options']['request_mgmt_link']) && !subscribe_reloaded_update_option('request_mgmt_link', $_POST['options']['request_mgmt_link'], 'text')) $faulty_fields = __('Request link','subscribe-reloaded').', ';
@@ -39,12 +40,20 @@ $is_html_enabled = (get_option('subscribe_reloaded_enable_html_emails', 'no') ==
 <table class="form-table <?php echo $wp_locale->text_direction ?>">
 <tbody>
 	<tr>
+		<th scope="row"><label for="manager_page_enabled"><?php _e('Virtual Management Page','subscribe-reloaded') ?></label></th>
+		<td>
+			<input type="radio" name="options[manager_page_enabled]" id="manager_page_enabled" value="yes"<?php echo (subscribe_reloaded_get_option('manager_page_enabled','no') == 'yes')?' checked="checked"':''; ?>> <?php _e('Enabled','subscribe-reloaded') ?> &nbsp; &nbsp; &nbsp;
+			<input type="radio" name="options[manager_page_enabled]" value="no" <?php echo (subscribe_reloaded_get_option('manager_page_enabled','no') == 'no')?'  checked="checked"':''; ?>> <?php _e('Disabled','subscribe-reloaded') ?>
+			<div class="description"><?php _e('Disable the virtual management page if you need to create a <a href="http://lab.duechiacchiere.it/index.php?topic=71.0">real page</a> to make your theme happy.','subscribe-reloaded') ?></div>
+		</td>
+	</tr>
+	<tr>
 		<th scope="row"><label for="manager_page_title"><?php _e('Page title','subscribe-reloaded') ?></label></th>
 		<td><input type="text" name="options[manager_page_title]" id="manager_page_title" value="<?php echo subscribe_reloaded_get_option('manager_page_title'); ?>" size="70">
 			<div class="description"><?php _e('Title of the page your visitors will use to manage their subscriptions.','subscribe-reloaded'); ?></div></td>
 	</tr>
 	<tr>
-		<th scope="row"><label for="manager_page"><?php _e('Management page','subscribe-reloaded') ?></label></th>
+		<th scope="row"><label for="manager_page"><?php _e('Management URL','subscribe-reloaded') ?></label></th>
 		<td><?php echo get_bloginfo('url') ?> <input type="text" name="options[manager_page]" id="manager_page" value="<?php echo subscribe_reloaded_get_option('manager_page'); ?>" size="30">
 			<div class="description"><?php _e('The permalink for your management page (something like <code>/manage-subscriptions</code> or <code>/?page_id=345</code>). This page <b>does not</b> actually exist in the system, but its link must follow your permalink structure.','subscribe-reloaded'); 
 			if ((get_option('permalink_structure','') == '') && (strpos(subscribe_reloaded_get_option('manager_page'), '?page_id=') === false))

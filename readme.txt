@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=Z732J
 Tags: subscribe, comments, notification, subscription, manage, double check-in, follow, commenting
 Requires at least: 2.9.2
 Tested up to: 3.2
-Stable tag: 2.0
+Stable tag: 2.0.1
 
 Subscribe to Comments Reloaded allows commenters to sign up for e-mail notifications of subsequent replies.
 
@@ -30,7 +30,7 @@ Subscribe to Comments Reloaded is a robust plugin that enables commenters to sig
 1. If you are using Subscribe To Comments by Mark Jaquith, disable it (no need to uninstall it, though)
 2. Upload the entire folder and all the subfolders to your Wordpress plugins' folder
 3. Activate it
-5. Customize the Permalink value under Settings > Subscribe to Comments > Options (first field). It **must** reflect your permalinks' structure
+5. Customize the Permalink value under Settings > Subscribe to Comments > Management Page > Management URL. It **must** reflect your permalinks' structure
 5. If you don't see the checkbox to subscribe, you will have to manually edit your template, and add `<?php if (function_exists('subscribe_reloaded_show')) subscribe_reloaded_show(); ?>` somewhere in your `comments.php`
 6. If you're upgrading from a previous version, please make sure to deactivate/activate the plugin
 7. Optional: customize all the messages under Settings > Subscribe to Comments > Messages
@@ -65,6 +65,15 @@ Yes! Just disable the corresponding option under Settings > Comment Form and the
 
 == Changelog ==
 
+= 2.0.1 =
+* Maintenance release: 2.0 shipped with a bunch of annoying bugs, sorry about that!
+* Added: option to not subscribe in 'advanced mode' (thank you [LincolnAdams](http://wordpress.org/support/topic/replies-only-broken))
+* Added: subscriptions count for each post (All Posts panel)
+* Added: option to disable the virtual management page, for those [having problems](http://lab.duechiacchiere.it/index.php?topic=71.0) with their theme
+* Fixed: subscriptions to replies only were not working properly, fixed (thank you [LincolnAdams](http://wordpress.org/support/topic/replies-only-broken))
+* Fixed: some warning popping up with WP_DEBUG mode enabled
+* Updated: most localizations are now up-to-date, thank you everybody!
+
 = 2.0 =
 * StCR does not use a separate table anymore, making it fully compatible with Wordpress 'network' environments! YAY!
 * Added: option to prevent StCR from adding the subscription checkbox to the comment form (useful for those who want to display the box in different place on the page)
@@ -93,42 +102,16 @@ Yes! Just disable the corresponding option under Settings > Comment Form and the
 * Fixed a bug that prevented HTML emails to be handled properly
 * If HTML emails are enabled, quicktags are added to the textareas
 
-= 1.5 =
-* StCR is now compatible with QTranslate (thank you [Odd Henriksen](http://www.oddhenriksen.net/))
-* Added a few more options to customize your messages (thank you [derekbeck](http://wordpress.org/support/profile/derekbeck))
-* Added a new option under Settings > Subscribe to Comments > Support that allows you to optimize the database on-the-fly
-* You can now click on each  email address, in the 'Manage Subscriptions' panel, to view all the subscription associated to it
-* Emails' content-type can been changed to text/html (Settings > Subscribe to Comments > Options)
-* Spanish localization added (thank you [TodoWordPress team](http://www.todowp.org/))
-
-= 1.4 =
-* Fixed a problem that made the latest comments appear on the management page
-* Fixed a conflict with the Recent Posts Wordpress widget
-* Added a new option to choose if logged in administrators should be able to subscribe to comments (by default they're not, thank you [Oyvind](http://lab.duechiacchiere.it/index.php?topic=104.0))
-* Added a few HTML `<span>` tags to the lists shown in the management page, to allow owners to customize their look-an-feel via CSS
-* Admin panels have been reorganized
-* You can now browse through the list of ALL the subscriptions
-* Registered users are now recognized by the system and don't need to request the management link via email (thank you [Acaro00](http://lab.duechiacchiere.it/index.php?topic=106.0))
-* German localization added (thank you [derhenry](http://www.derhenry.net/2010/subscribe-to-comments-reloaded/))
-* Norwegian localization added (thank you [Odd Henriksen](http://www.oddhenriksen.net/))
-
-= 1.3 =
-* A new column in the Edit Comments panel will now tell you on-the-fly who's subscribed to what
-* StCR doesn't remove the other plugin's data anymore (it's none of my business, indeed!)
-* You can now use a custom CSS class, inline styles and/or HTML code to style the checkbox shown to your visitors
-* Brazilian localization added (thank you Ronaldo Richieri)
-* French localization added (thank you Li-An)
-
 == Language Localization ==
 
 Subscribe to Comments Reloaded can speak your language! If you want to provide a localized file in your
 language, use the template files (.pot) you'll find inside the `langs` folder,
-and contact me on the [support forum](http://lab.duechiacchiere.it/index.php?board=5.0) once your
+and [contact me](http://www.duechiacchiere.it/contatto) once your
 localization is ready. Currently, we support the following languages:
 
 * Danish - [Torben Bendixen](http://www.freelancekonsulenten.dk/)
 * Dutch - [Muratje](http://www.muromedia.nl/)
-* French - [Li-An](http://www.li-an.fr/wpplugins/mes-traductions-de-plugins/#subscribe) and [Anthony](http://imnotgeek.com/)
+* French - [Li-An](http://www.li-an.fr/wpplugins/mes-traductions-de-plugins/#subscribe), [Anthony](http://imnotgeek.com/), Goormand
 * German - [derhenry](http://www.derhenry.net/2010/subscribe-to-comments-reloaded/), [Stefan](http://www.beedy.de/)
 * Italian - myself
 * Norwegian - [Odd Henriksen](http://www.oddhenriksen.net/)
@@ -136,7 +119,7 @@ localization is ready. Currently, we support the following languages:
 * Portuguese, Brazil - [Ronaldo Richieri](http://richieri.com), [ClassiNoiva](http://www.classinoiva.com.br), [Luciano](http://litemind.com/)
 * Portuguese, Portugal
 * Russian - [Marika Bukvonka](http://violetnotes.com)
-* Spanish - [TodoWordPress team](http://www.todowp.org/)
+* Spanish - [TodoWordPress team](http://www.todowp.org/), [Juan Luis Perez](http://www.juanluperez.com/)
 * Turkish - [MaD, Kali](http://www.dusunsel.com/)
 
 == List of donors ==
