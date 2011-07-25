@@ -8,9 +8,8 @@ if (!function_exists('add_action')){
 global $wp_subscribe_reloaded;
 
 ob_start();
+$post_permalink = get_permalink($post_ID);
 if (!empty($email)){
-	$post_permalink = get_permalink($post_ID);
-	
 	// Use Akismet, if available, to check this user is legit
 	if(function_exists('akismet_http_post')){
 		global $akismet_api_host, $akismet_api_port;
@@ -51,11 +50,11 @@ if (!empty($email)){
 	if ($enable_double_check == 'yes' && !$wp_subscribe_reloaded->is_user_subscribed($post_ID, $clean_email, 'C')){
 		$wp_subscribe_reloaded->add_subscription($post_ID, $clean_email, 'YC');
 		$wp_subscribe_reloaded->confirmation_email($post_ID, $clean_email);
-		$message = stripslashes(get_option('subscribe_reloaded_subscription_confirmed_dci'));
+		$message = html_entity_decode(stripslashes(get_option('subscribe_reloaded_subscription_confirmed_dci')));
 	}
 	else{
 		$this->add_subscription($post_ID, $clean_email, 'Y');
-		$message = stripslashes(get_option('subscribe_reloaded_subscription_confirmed'));
+		$message = html_entity_decode(stripslashes(get_option('subscribe_reloaded_subscription_confirmed')));
 	}
 	
 	$message = str_replace('[post_permalink]', $post_permalink, $message);
@@ -73,13 +72,13 @@ if (!empty($email)){
 ?>
 
 <p><?php 
-$message = str_replace('[post_permalink]', $post_permalink, stripslashes(get_option('subscribe_reloaded_subscribe_without_commenting')));
+$message = str_replace('[post_permalink]', $post_permalink, html_entity_decode(stripslashes(get_option('subscribe_reloaded_subscribe_without_commenting'))));
 if(function_exists('qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage')){
-	$message = str_replace('[post_title]', qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage($post->post_title), $message);
+	$message = str_replace('[post_title]', qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage($target_post->post_title), $message);
 	$message = qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage($message);
 }
 else{
-	$message = str_replace('[post_title]', $post->post_title, $message);
+	$message = str_replace('[post_title]', $target_post->post_title, $message);
 }
 echo $message;
 ?></p>

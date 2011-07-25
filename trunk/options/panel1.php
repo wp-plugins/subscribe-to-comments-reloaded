@@ -125,7 +125,7 @@ if (is_readable(WP_PLUGIN_DIR."/subscribe-to-comments-reloaded/options/panel1-bu
 				<input type="radio" name="sra" value="force_r" id="action_type_force_r" /> <label for="action_type_force_r">'.__('Activate and set to R','subscribe-reloaded').'</label> &nbsp;&nbsp;&nbsp;&nbsp;
 				<input type="radio" name="sra" value="activate" id="action_type_activate" /> <label for="action_type_activate">'.__('Activate','subscribe-reloaded').'</label></p>';
 		echo '<p><input type="submit" class="subscribe-form-button" value="'.__('Update subscriptions','subscribe-reloaded').'" /></p>';
-		echo "<input type='hidden' name='srf' value='$search_field'/><input type='hidden' name='srt' value='$operator'/><input type='hidden' name='srv' value='$search_value'/><input type='hidden' name='srsf' value='$starting_from'/><input type='hidden' name='srrp' value='$limit_results'/><input type='hidden' name='srob' value='$order_by'/><input type='hidden' name='sro' value='$order'/>";
+		echo "<input type='hidden' name='srf' value='$search_field'/><input type='hidden' name='srt' value='$operator'/><input type='hidden' name='srv' value='$search_value'/><input type='hidden' name='srsf' value='$offset'/><input type='hidden' name='srrp' value='$limit_results'/><input type='hidden' name='srob' value='$order_by'/><input type='hidden' name='sro' value='$order'/>";
 	}
 	elseif ($action == 'search')
 		echo '<p>'.__('Sorry, no subscriptions match your search criteria.','subscribe-reloaded')."</p>";
