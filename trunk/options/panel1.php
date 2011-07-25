@@ -101,11 +101,12 @@ if (is_readable(WP_PLUGIN_DIR."/subscribe-to-comments-reloaded/options/panel1-bu
 				$show_email_column
 				<span class='subscribe-column subscribe-column-3'>".__('Date and Time','subscribe-reloaded')." &nbsp;&nbsp;$order_dt</span>
 				<span class='subscribe-column subscribe-column-4'>".__('Status','subscribe-reloaded')." &nbsp;&nbsp;$order_status</span></li>\n";
+		$alternate = '';
 		foreach($subscriptions as $a_subscription){
 			$title = get_the_title($a_subscription->post_id);
 			$row_post = ($operator != 'equals' || $search_field != 'post_id')?"<a class='subscribe-column subscribe-column-1' href='options-general.php?page=subscribe-to-comments-reloaded/options/index.php&amp;subscribepanel=1&amp;srf=post_id&amp;srt=equals&amp;srv=$a_subscription->post_id'>$title ($a_subscription->post_id)</a> ":'';
 			$row_email = ($operator != 'equals' || $search_field != 'email')?"<span class='subscribe-column subscribe-column-2'><a href='options-general.php?page=subscribe-to-comments-reloaded/options/index.php&subscribepanel=1&amp;srf=email&amp;srt=equals&amp;srv=".urlencode($a_subscription->email)."'>$a_subscription->email</a></span> ":'';
-			$alternate = empty($alternate)?' class="row alternate"':' class="row"';
+			$alternate = ($alternate==' class="row"')?' class="row alternate"':' class="row"';
 			echo "<li$alternate>
 					<label for='sub_{$a_subscription->meta_id}' class='hidden'>Blah</label>
 					<input class='checkbox' type='checkbox' name='subscriptions_list[]' value='$a_subscription->post_id,".urlencode($a_subscription->email)."' id='sub_{$a_subscription->meta_id}' />
