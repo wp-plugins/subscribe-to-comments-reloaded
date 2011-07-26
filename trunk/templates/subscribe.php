@@ -50,11 +50,11 @@ if (!empty($email)){
 	if ($enable_double_check == 'yes' && !$wp_subscribe_reloaded->is_user_subscribed($post_ID, $clean_email, 'C')){
 		$wp_subscribe_reloaded->add_subscription($post_ID, $clean_email, 'YC');
 		$wp_subscribe_reloaded->confirmation_email($post_ID, $clean_email);
-		$message = html_entity_decode(stripslashes(get_option('subscribe_reloaded_subscription_confirmed_dci')));
+		$message = html_entity_decode(stripslashes(get_option('subscribe_reloaded_subscription_confirmed_dci')), ENT_COMPAT, 'UTF-8');
 	}
 	else{
 		$this->add_subscription($post_ID, $clean_email, 'Y');
-		$message = html_entity_decode(stripslashes(get_option('subscribe_reloaded_subscription_confirmed')));
+		$message = html_entity_decode(stripslashes(get_option('subscribe_reloaded_subscription_confirmed')), ENT_COMPAT, 'UTF-8');
 	}
 	
 	$message = str_replace('[post_permalink]', $post_permalink, $message);
@@ -72,7 +72,7 @@ if (!empty($email)){
 ?>
 
 <p><?php 
-$message = str_replace('[post_permalink]', $post_permalink, html_entity_decode(stripslashes(get_option('subscribe_reloaded_subscribe_without_commenting'))));
+$message = str_replace('[post_permalink]', $post_permalink, html_entity_decode(stripslashes(get_option('subscribe_reloaded_subscribe_without_commenting')), ENT_COMPAT, 'UTF-8'));
 if(function_exists('qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage')){
 	$message = str_replace('[post_title]', qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage($target_post->post_title), $message);
 	$message = qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage($message);

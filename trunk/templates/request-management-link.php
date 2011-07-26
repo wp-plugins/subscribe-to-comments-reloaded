@@ -12,8 +12,8 @@ if (!empty($email)){
 	// Send management link
 	$from_name = stripslashes(get_option('subscribe_reloaded_from_name', 'admin'));
 	$from_email = get_option('subscribe_reloaded_from_email', get_bloginfo('admin_email'));
-	$subject = html_entity_decode(stripslashes(get_option('subscribe_reloaded_management_subject', 'Manage your subscriptions on [blog_name]')));
-	$message = html_entity_decode(stripslashes(get_option('subscribe_reloaded_management_content', '')));
+	$subject = html_entity_decode(stripslashes(get_option('subscribe_reloaded_management_subject', 'Manage your subscriptions on [blog_name]')), ENT_COMPAT, 'UTF-8');
+	$message = html_entity_decode(stripslashes(get_option('subscribe_reloaded_management_content', '')), ENT_COMPAT, 'UTF-8');
 	$manager_link = get_bloginfo('url').get_option('subscribe_reloaded_manager_page', '/comment-subscriptions');
 	if (function_exists('qtrans_convertURL'))
 		$manager_link = qtrans_convertURL($manager_link);
@@ -45,7 +45,7 @@ if (!empty($email)){
 
 	wp_mail($clean_email, $subject, $message, $headers);
 
-	$message = str_replace('[post_permalink]', $post_permalink, html_entity_decode(stripslashes(get_option('subscribe_reloaded_request_mgmt_link_thankyou'))));
+	$message = str_replace('[post_permalink]', $post_permalink, html_entity_decode(stripslashes(get_option('subscribe_reloaded_request_mgmt_link_thankyou')), ENT_COMPAT, 'UTF-8'));
 	if(function_exists('qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage')){
 		$message = str_replace('[post_title]', qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage($post->post_title), $message);
 		$message = qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage($message);
@@ -55,7 +55,7 @@ if (!empty($email)){
 
 	echo $message;
 } else {
-	$message = html_entity_decode(stripslashes(get_option('subscribe_reloaded_request_mgmt_link')));
+	$message = html_entity_decode(stripslashes(get_option('subscribe_reloaded_request_mgmt_link')), ENT_COMPAT, 'UTF-8');
 	if(function_exists('qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage'))
 		$message = qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage($message);
 ?>

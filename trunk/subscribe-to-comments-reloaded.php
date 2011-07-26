@@ -38,27 +38,27 @@ function subscribe_reloaded_show(){
 
 	if($wp_subscribe_reloaded->is_user_subscribed($post->ID, '', 'C')){
 		$html_to_show = str_replace('[manager_link]', $user_link,
-			html_entity_decode(stripslashes(get_option('subscribe_reloaded_subscribed_waiting_label', __("Your subscription to this post needs to be confirmed. <a href='[manager_link]'>Manage your subscriptions</a>.",'subscribe-reloaded')))));
+			html_entity_decode(stripslashes(get_option('subscribe_reloaded_subscribed_waiting_label', __("Your subscription to this post needs to be confirmed. <a href='[manager_link]'>Manage your subscriptions</a>.",'subscribe-reloaded'))), ENT_COMPAT, 'UTF-8'));
 		$show_subscription_box = false;
 	}
 	elseif($wp_subscribe_reloaded->is_user_subscribed($post->ID, '')){
 		$html_to_show = str_replace('[manager_link]', $user_link,
-			html_entity_decode(stripslashes(get_option('subscribe_reloaded_subscribed_label', __("You are subscribed to this post. <a href='[manager_link]'>Manage</a> your subscriptions.",'subscribe-reloaded')))));
+			html_entity_decode(stripslashes(get_option('subscribe_reloaded_subscribed_label', __("You are subscribed to this post. <a href='[manager_link]'>Manage</a> your subscriptions.",'subscribe-reloaded'))), ENT_COMPAT, 'UTF-8'));
 		$show_subscription_box = false;
 	}
 
 	if ($wp_subscribe_reloaded->is_author($post->post_author)){	// when the second parameter is empty, cookie value will be used
 		if (get_option('subscribe_reloaded_admin_subscribe', 'no') == 'no') $show_subscription_box = false;
 		$html_to_show .= str_replace('[manager_link]', $manager_link,
-			html_entity_decode(stripslashes(get_option('subscribe_reloaded_author_label', __("You can <a href='[manager_link]'>manage the subscriptions</a> of this post.",'subscribe-reloaded')))));
+			html_entity_decode(stripslashes(get_option('subscribe_reloaded_author_label', __("You can <a href='[manager_link]'>manage the subscriptions</a> of this post.",'subscribe-reloaded'))), ENT_COMPAT, 'UTF-8'));
 	}
 
 	if ($show_subscription_box){
 		$checkbox_label = str_replace('[subscribe_link]', "$manager_link&amp;sra=s",
-			html_entity_decode(stripslashes(get_option('subscribe_reloaded_checkbox_label', __("Notify me of followup comments via e-mail. You can also <a href='[subscribe_link]'>subscribe</a> without commenting.",'subscribe-reloaded')))));
+			html_entity_decode(stripslashes(get_option('subscribe_reloaded_checkbox_label', __("Notify me of followup comments via e-mail. You can also <a href='[subscribe_link]'>subscribe</a> without commenting.",'subscribe-reloaded'))), ENT_COMPAT, 'UTF-8'));
 		$checkbox_inline_style = get_option('subscribe_reloaded_checkbox_inline_style', 'width:30px');
 		if (!empty($checkbox_inline_style)) $checkbox_inline_style = " style='$checkbox_inline_style'";
-		$checkbox_html_wrap = html_entity_decode(stripslashes(get_option('subscribe_reloaded_checkbox_html', '')));
+		$checkbox_html_wrap = html_entity_decode(stripslashes(get_option('subscribe_reloaded_checkbox_html', '')), ENT_COMPAT, 'UTF-8');
 		if (get_option('subscribe_reloaded_enable_advanced_subscriptions', 'no') == 'no'){
 			$checkbox_field = "<input$checkbox_inline_style type='checkbox' name='subscribe-reloaded' id='subscribe-reloaded' value='yes'".((get_option('subscribe_reloaded_checked_by_default', 'no') == 'yes')?" checked='checked'":'')." />";
 		}
@@ -974,7 +974,7 @@ class wp_subscribe_reloaded{
 	 * Adds custom HTML code to the HEAD section of the management page
 	 */
 	public function add_custom_header_meta(){
-		echo html_entity_decode(stripslashes(get_option('subscribe_reloaded_custom_header_meta', '')));
+		echo html_entity_decode(stripslashes(get_option('subscribe_reloaded_custom_header_meta', '')), ENT_COMPAT, 'UTF-8');
 	}
 	// end add_custom_header_meta
 
