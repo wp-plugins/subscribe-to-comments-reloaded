@@ -41,7 +41,7 @@ if (!empty($_POST['email_list'])){
 			break;
 	}
 }
-$message = html_entity_decode(stripslashes(get_option('subscribe_reloaded_author_text')));
+$message = html_entity_decode(stripslashes(get_option('subscribe_reloaded_author_text')), ENT_COMPAT, 'UTF-8');
 if(function_exists('qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage'))
 	$message = qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage($message);
 echo "<p>$message</p>";
