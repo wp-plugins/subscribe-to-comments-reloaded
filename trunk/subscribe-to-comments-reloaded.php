@@ -541,7 +541,7 @@ class wp_subscribe_reloaded{
 		$wpdb->query("
 			DELETE FROM $wpdb->postmeta
 			WHERE meta_key LIKE '\_stcr@\_%'
-				AND STR_TO_DATE(meta_value) <= DATE_SUB(NOW(), INTERVAL $autopurge_interval DAY) AND meta_value LIKE '%C'");
+				AND STR_TO_DATE(meta_value, '%Y-%m-%d %H:%i:%s') <= DATE_SUB(NOW(), INTERVAL $autopurge_interval DAY) AND meta_value LIKE '%C'");
 	}
 	// end subscribe_reloaded_purge
 
