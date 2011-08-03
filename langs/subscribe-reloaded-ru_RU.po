@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Subscribe to Comments Reloaded\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-25 16:02-0500\n"
-"PO-Revision-Date: 2011-07-25 16:02-0500\n"
+"POT-Creation-Date: 2011-08-03 12:57-0500\n"
+"PO-Revision-Date: 2011-08-03 12:57-0500\n"
 "Last-Translator: due chiacchiere <info@duechiacchiere.it>\n"
 "Language-Team: due chiacchiere <info@duechiacchiere.it>\n"
 "MIME-Version: 1.0\n"
@@ -18,49 +18,44 @@ msgstr ""
 
 #: subscribe-to-comments-reloaded.php:41
 #: subscribe-to-comments-reloaded.php:248
-#, fuzzy
 msgid "Your subscription to this post needs to be confirmed. <a href='[manager_link]'>Manage your subscriptions</a>."
 msgstr "Ваша подписка на эту статью нуждается в подтверждении. <a href='[manager_link]'>Редактировать</a> свои подписки."
 
 #: subscribe-to-comments-reloaded.php:46
 #: subscribe-to-comments-reloaded.php:247
-#, fuzzy
 msgid "You are subscribed to this post. <a href='[manager_link]'>Manage</a> your subscriptions."
 msgstr "Вы подписаны на эту статью. <a href='[manager_link]'>Редактировать</a> свои подписки."
 
 #: subscribe-to-comments-reloaded.php:53
 #: subscribe-to-comments-reloaded.php:249
-#, fuzzy
 msgid "You can <a href='[manager_link]'>manage the subscriptions</a> of this post."
 msgstr "Вы можете <a href='[manager_link]'>управлять подписками</a> на эту запись."
 
 #: subscribe-to-comments-reloaded.php:58
 #: subscribe-to-comments-reloaded.php:244
 msgid "Notify me of followup comments via e-mail. You can also <a href='[subscribe_link]'>subscribe</a> without commenting."
-msgstr "Получать новые комментарии по электронной почте. Вы можете <a href='[subscribe_link]'>подписатьсяi</a> без комментирования."
+msgstr "Получать новые комментарии по электронной почте. Вы можете <a href='[subscribe_link]'>подписаться</a> без комментирования."
 
 #: subscribe-to-comments-reloaded.php:67
-#, fuzzy
 msgid "Don't subscribe"
-msgstr "Позволить админу подписываться"
+msgstr "Не подписываться"
 
 #: subscribe-to-comments-reloaded.php:68
 msgid "All"
-msgstr ""
+msgstr "Все"
 
 #: subscribe-to-comments-reloaded.php:69
-#: templates/user.php:65
 msgid "Replies to my comments"
-msgstr ""
+msgstr "Ответы на мои комментарии"
 
 #: subscribe-to-comments-reloaded.php:70
 msgid "Daily digest"
-msgstr ""
+msgstr "Ежедневный дайджест"
 
 #: subscribe-to-comments-reloaded.php:221
 #: options/index.php:41
 msgid "Manage subscriptions"
-msgstr "Редактирование подписки"
+msgstr "Редактировать подписки"
 
 #: subscribe-to-comments-reloaded.php:222
 msgid "To manage your subscriptions, please enter your email address here below. We will send you a message containing the link to access your personal management page."
@@ -143,37 +138,7 @@ msgstr ""
 "Вы сделали запрос на редактирование своих подписок на комментарии к статьям на сайте [blog_name]. Вот ссылка на вашу личную страницу управления подписками:\n"
 "[manager_link]"
 
-#: subscribe-to-comments-reloaded.php:986
-msgid "Subscribed"
-msgstr "Подписано"
-
 #: subscribe-to-comments-reloaded.php:1000
-#: options/panel2.php:41
-#: options/panel2.php:48
-#: options/panel2.php:55
-#: options/panel5.php:42
-#: options/panel5.php:49
-#: options/panel5.php:56
-#: options/panel5.php:63
-#: options/panel5.php:70
-#: options/panel5.php:77
-msgid "Yes"
-msgstr "Да"
-
-#: subscribe-to-comments-reloaded.php:1002
-msgid "Replies"
-msgstr ""
-
-#: subscribe-to-comments-reloaded.php:1004
-msgid "Digest"
-msgstr ""
-
-#: subscribe-to-comments-reloaded.php:1006
-#, fuzzy
-msgid "Pending"
-msgstr "Crescente"
-
-#: subscribe-to-comments-reloaded.php:1007
 #: options/panel2.php:42
 #: options/panel2.php:49
 #: options/panel2.php:56
@@ -186,124 +151,112 @@ msgstr "Crescente"
 msgid "No"
 msgstr "Нет"
 
-#: subscribe-to-comments-reloaded.php:1016
-#, fuzzy
-msgid "Subscriptions"
-msgstr "Подписки для"
-
-#: subscribe-to-comments-reloaded.php:1039
+#: subscribe-to-comments-reloaded.php:1024
 msgid "Need help on how to use Subscribe to Comments Reloaded? Visit the official"
 msgstr "Нужна помощь в использовани плагина Subscribe to Comments Reloaded? Посетите наш официальный"
 
-#: subscribe-to-comments-reloaded.php:1039
+#: subscribe-to-comments-reloaded.php:1024
 msgid "support forum"
 msgstr "форум поддержки"
 
-#: subscribe-to-comments-reloaded.php:1040
+#: subscribe-to-comments-reloaded.php:1025
 msgid "Feeling generous?"
 msgstr "Хотите проявить щедрость?"
 
-#: subscribe-to-comments-reloaded.php:1040
+#: subscribe-to-comments-reloaded.php:1025
 msgid "Donate a few bucks!"
 msgstr "Пожертвуйте пару баксов!"
 
 #: options/index.php:42
-#, fuzzy
 msgid "Comment Form"
 msgstr "Форма комментария"
 
 #: options/index.php:43
-#, fuzzy
 msgid "Management Page"
 msgstr "Страница управления"
 
 #: options/index.php:44
-#, fuzzy
 msgid "Notifications"
-msgstr "Тема письма с уведомлением"
+msgstr "Уведомления"
 
 #: options/index.php:45
 #: options/panel2.php:35
 #: options/panel3.php:39
-#: options/panel4.php:34
+#: options/panel4.php:36
 msgid "Options"
 msgstr "Параметры"
 
 #: options/index.php:46
 msgid "You can help"
-msgstr ""
+msgstr "Вы можете помочь"
 
 #: options/panel1-business-logic.php:18
-#, fuzzy
 msgid "Subscription added."
-msgstr "Подписки"
+msgstr "Подписка добавлена."
 
 #: options/panel1-business-logic.php:30
-#, fuzzy
 msgid "Subscriptions updated."
-msgstr "Подписки"
+msgstr "Подписки обновлены."
 
 #: options/panel1-business-logic.php:39
-#, fuzzy
 msgid "Subscription deleted."
-msgstr "Подписка оформлена"
+msgstr "Подписка удалена."
 
 #: options/panel1-business-logic.php:54
 #: templates/author.php:22
-#: templates/user.php:22
-#, fuzzy
 msgid "Subscriptions deleted:"
-msgstr "Подписки для:"
+msgstr "Подписки удалены:"
 
 #: options/panel1-business-logic.php:58
 #: templates/author.php:26
-#: templates/user.php:26
-#, fuzzy
 msgid "Subscriptions suspended:"
-msgstr "Подписка оформлена"
+msgstr "Подписки приостановлены:"
 
 #: options/panel1-business-logic.php:62
 #: templates/author.php:30
-#: templates/user.php:30
-#, fuzzy
 msgid "Subscriptions activated:"
-msgstr "Подписки для:"
+msgstr "Подписки активированы:"
 
 #: options/panel1-business-logic.php:66
 #: options/panel1-business-logic.php:70
 #: templates/author.php:34
 #: templates/author.php:38
-#: templates/user.php:34
-#, fuzzy
 msgid "Subscriptions updated:"
-msgstr "Подписки для:"
+msgstr "Подписки обновлены:"
 
 #: options/panel1-business-logic.php:94
 msgid "&laquo; Previous"
-msgstr "&laquo; Precedenti"
+msgstr "&laquo; Обратно"
 
 #: options/panel1-business-logic.php:98
 msgid "Next &raquo;"
-msgstr "Successivi &raquo;"
+msgstr "Вперед &raquo;"
 
 #: options/panel1-edit-subscription.php:8
-#, fuzzy
 msgid "Update Subscription"
 msgstr "Обновить подписку"
 
 #: options/panel1-edit-subscription.php:10
+#: options/panel1-edit-subscription.php:14
+#: options/panel1-edit-subscription.php:15
+#: options/panel1-edit-subscription.php:16
+#: options/panel1.php:23
+#: options/panel1.php:24
+#: options/panel1.php:25
+msgid "optional"
+msgstr "по выбору"
+
+#: options/panel1-edit-subscription.php:10
 #: options/panel1.php:19
 #: options/panel1.php:81
-#: options/panel1.php:113
+#: options/panel1.php:117
 #: templates/author.php:50
-#: templates/user.php:46
 msgid "Please remember: this operation cannot be undone. Are you sure you want to proceed?"
 msgstr "Внимание: эту операцию нельзя отменить. Вы уверены, что хотите продолжить?"
 
 #: options/panel1-edit-subscription.php:12
-#, fuzzy
 msgid "Post:"
-msgstr "Ряды:"
+msgstr "Запись:"
 
 #: options/panel1-edit-subscription.php:13
 #: options/panel1.php:21
@@ -315,104 +268,86 @@ msgstr "С"
 msgid "To"
 msgstr "на"
 
-#: options/panel1-edit-subscription.php:15
+#: options/panel1-edit-subscription.php:17
 #: options/panel1.php:26
 #: options/panel1.php:45
 #: options/panel1.php:103
 msgid "Status"
 msgstr "Статус"
 
-#: options/panel1-edit-subscription.php:17
+#: options/panel1-edit-subscription.php:19
 #: options/panel1.php:28
 msgid "Keep unchanged"
-msgstr ""
+msgstr "Оставить без изменений"
 
-#: options/panel1-edit-subscription.php:18
+#: options/panel1-edit-subscription.php:20
 #: options/panel1.php:29
 #: options/panel1.php:47
-#, fuzzy
 msgid "Active"
-msgstr "Действие"
+msgstr "Активно"
 
-#: options/panel1-edit-subscription.php:19
+#: options/panel1-edit-subscription.php:21
 #: options/panel1.php:30
 #: options/panel1.php:48
 msgid "Replies only"
-msgstr ""
+msgstr "Только ответы"
 
-#: options/panel1-edit-subscription.php:20
+#: options/panel1-edit-subscription.php:22
 #: options/panel1.php:31
-#, fuzzy
 msgid "Suspended"
-msgstr "Приостановить"
+msgstr "Приостановлено"
 
-#: options/panel1-edit-subscription.php:21
+#: options/panel1-edit-subscription.php:23
 #: options/panel1.php:32
 msgid "Update"
 msgstr "Обновить"
 
 #: options/panel1.php:17
-#, fuzzy
 msgid "Mass Update Subscriptions"
-msgstr "Обновить подписки"
-
-#: options/panel1.php:23
-#: options/panel1.php:24
-#: options/panel1.php:25
-#, fuzzy
-msgid "optional"
-msgstr "Параметры"
+msgstr "Массово обновить подписки"
 
 #: options/panel1.php:39
-#, fuzzy
 msgid "Add New Subscription"
-msgstr "Новая подписка на"
+msgstr "Добавить новую подписку"
 
 #: options/panel1.php:43
-#, fuzzy
 msgid "Post ID"
-msgstr "Запись (ID)"
+msgstr "ID-номер записи"
 
 #: options/panel1.php:44
 #: options/panel1.php:90
 #: templates/request-management-link.php:65
-#: templates/subscribe.php:87
-#: templates/user.php:51
 msgid "Email"
 msgstr "Эл. адрес"
 
 #: options/panel1.php:49
 msgid "Ask user to confirm"
-msgstr ""
+msgstr "Просить подтвреждение от пользователя"
 
 #: options/panel1.php:50
 msgid "Add"
-msgstr ""
+msgstr "Добавить"
 
 #: options/panel1.php:59
-#, fuzzy
 msgid "Search subscriptions"
-msgstr "Подписки"
+msgstr "Искать в подписках"
 
 #: options/panel1.php:61
-#, fuzzy, php-format
+#, php-format
 msgid "You can either <a href=\"%s\">view all the subscriptions</a> or find those where the"
-msgstr "Вы можете <a href=\"%s\">вывести все подписки</a> или те, где значение <b>эл. адрес</b>"
+msgstr "Вы можете <a href=\"%s\">просмотреть все подписки</a> или найти те, где"
 
 #: options/panel1.php:64
-#, fuzzy
 msgid "email"
-msgstr "Эл. адрес"
+msgstr "эл. адрес"
 
 #: options/panel1.php:65
-#, fuzzy
 msgid "post ID"
-msgstr "Запись (ID)"
+msgstr "ID-номер записи"
 
 #: options/panel1.php:66
-#, fuzzy
 msgid "status"
-msgstr "Статус"
+msgstr "статус"
 
 #: options/panel1.php:69
 msgid "equals"
@@ -427,18 +362,16 @@ msgid "does not contain"
 msgstr "не содержит"
 
 #: options/panel1.php:72
-#, fuzzy
 msgid "starts with"
-msgstr "Finisce per"
+msgstr "начинается с"
 
 #: options/panel1.php:73
-#, fuzzy
 msgid "ends with"
-msgstr "Finisce per"
+msgstr "заканчивается на"
 
 #: options/panel1.php:76
 msgid "results per page:"
-msgstr ""
+msgstr "результаты постранично:"
 
 #: options/panel1.php:77
 msgid "Search"
@@ -458,9 +391,8 @@ msgid "Post (ID)"
 msgstr "Запись (ID)"
 
 #: options/panel1.php:92
-#, fuzzy
 msgid "Search query:"
-msgstr "Cerca email"
+msgstr "Поисковый запрос:"
 
 #: options/panel1.php:92
 msgid "Rows:"
@@ -472,82 +404,76 @@ msgstr " "
 
 #: options/panel1.php:93
 #: templates/author.php:56
-#: templates/user.php:52
 msgid "Legend: Y = all comments, R = replies only, C = inactive"
-msgstr ""
+msgstr "Расшифровка: Y = все комментарии, R = только ответы, C = неактивные"
 
 #: options/panel1.php:102
 msgid "Date and Time"
 msgstr "Дата и время"
 
-#: options/panel1.php:112
-#, fuzzy
-msgid "Edit"
-msgstr "Finisce per"
+#: options/panel1.php:114
+msgid "Subscription"
+msgstr "Подписки"
 
-#: options/panel1.php:113
+#: options/panel1.php:116
+msgid "Edit"
+msgstr "Редактировать"
+
+#: options/panel1.php:117
 #: templates/author.php:69
-#: templates/user.php:63
 msgid "Delete"
 msgstr "Удалить"
 
-#: options/panel1.php:121
+#: options/panel1.php:125
 #: templates/author.php:68
-#: templates/user.php:62
 msgid "Action:"
 msgstr "Действие:"
 
-#: options/panel1.php:122
+#: options/panel1.php:126
 msgid "Delete forever"
 msgstr "Удалить навсегда"
 
-#: options/panel1.php:123
+#: options/panel1.php:127
 #: templates/author.php:70
-#: templates/user.php:64
 msgid "Suspend"
 msgstr "Приостановить"
 
-#: options/panel1.php:124
+#: options/panel1.php:128
 msgid "Activate and set to Y"
-msgstr ""
+msgstr "Включить и установить на Y"
 
-#: options/panel1.php:125
+#: options/panel1.php:129
 msgid "Activate and set to R"
-msgstr ""
+msgstr "Включить и установить на R"
 
-#: options/panel1.php:126
+#: options/panel1.php:130
 #: templates/author.php:72
-#: templates/user.php:66
 msgid "Activate"
-msgstr ""
+msgstr "Включить"
 
-#: options/panel1.php:127
+#: options/panel1.php:131
 #: templates/author.php:73
-#: templates/user.php:67
 msgid "Update subscriptions"
 msgstr "Обновить подписки"
 
-#: options/panel1.php:131
-#, fuzzy
+#: options/panel1.php:135
 msgid "Sorry, no subscriptions match your search criteria."
-msgstr "Извините, не найдено подписок для"
+msgstr "Извините, ни одна подписка не соответствует вашему поисковому запросу."
 
 #: options/panel2.php:11
 #: options/panel2.php:39
-#, fuzzy
 msgid "Enable default checkbox"
-msgstr "Включить двойное подтверждение"
+msgstr "Включить стандартное окошко выбора"
 
 #: options/panel2.php:12
 #: options/panel2.php:46
 msgid "Checked by default"
-msgstr "Выбор по умолчанию"
+msgstr "Выбрано по умолчанию"
 
 #: options/panel2.php:13
 #: options/panel2.php:53
-#, fuzzy
 msgid "Advanced subscription"
-msgstr "Обновить подписку"
+msgstr "Расширенная подписка"
 
 #: options/panel2.php:14
 #: options/panel2.php:60
@@ -557,7 +483,7 @@ msgstr "Изменяемый стиль inline"
 #: options/panel2.php:15
 #: options/panel2.php:65
 msgid "Custom HTML"
-msgstr "Изменяемый HTML"
+msgstr "Собственный HTML"
 
 #: options/panel2.php:17
 msgid "Checkbox label"
@@ -579,29 +505,41 @@ msgstr "Ярлык автора"
 
 #: options/panel2.php:25
 #: options/panel3.php:26
-#: options/panel4.php:23
+#: options/panel4.php:25
 #: options/panel5.php:22
 msgid "Your settings have been successfully updated."
 msgstr "Ваши настройки успешно обновлены."
 
 #: options/panel2.php:28
 #: options/panel3.php:29
-#: options/panel4.php:26
+#: options/panel4.php:28
 #: options/panel5.php:25
 msgid "There was an error updating the following fields:"
 msgstr "Произошла ошибка в обновлении следующих полей:"
 
+#: options/panel2.php:41
+#: options/panel2.php:48
+#: options/panel2.php:55
+#: options/panel5.php:42
+#: options/panel5.php:49
+#: options/panel5.php:56
+#: options/panel5.php:63
+#: options/panel5.php:70
+#: options/panel5.php:77
+msgid "Yes"
+msgstr "Да"
+
 #: options/panel2.php:43
 msgid "Disable this option if you want to move the subscription checkbox to a different place on your page."
-msgstr ""
+msgstr "Отметите эту опцию, если хотите изменить положение окошка выбора подписки на своей странице."
 
 #: options/panel2.php:50
 msgid "Decide if the checkbox should be checked by default or not."
-msgstr "Определите, должно ли окошко выбора быть выбранным по умолчанию."
+msgstr "Должно ли окошко выбора быть выбранным по умолчанию."
 
 #: options/panel2.php:57
 msgid "Allow users to choose from different subscription types (all, replies only)."
-msgstr ""
+msgstr "Разрешить пользователям выбор из разных типов подписки (все, только ответы)."
 
 #: options/panel2.php:62
 msgid "Custom inline CSS to add to the checkbox."
@@ -613,12 +551,11 @@ msgstr "Собственный код HTML для использования п�
 
 #: options/panel2.php:72
 msgid "Messages for your visitors"
-msgstr ""
+msgstr "Сообщения вашим посетителям"
 
 #: options/panel2.php:76
-#, fuzzy
 msgid "Default label"
-msgstr "Ярлык автора"
+msgstr "Стандартный ярлык"
 
 #: options/panel2.php:78
 msgid "Label associated to the checkbox. Allowed tag: [subscribe_link]"
@@ -629,9 +566,8 @@ msgid "Label shown to those who are already subscribed to a post. Allowed tag: [
 msgstr "Текст, видимый подписавшимся читателям. Разрешенный тег: [manager_link]"
 
 #: options/panel2.php:86
-#, fuzzy
 msgid "Pending label"
-msgstr "Ярлык неподтвержденной подписки"
+msgstr "Ярлык  \"В ожидании\" "
 
 #: options/panel2.php:88
 msgid "Label shown to those who are already subscribed, but haven't clicked on the confirmation link yet. Allowed tag: [manager_link]"
@@ -643,16 +579,15 @@ msgstr "Тест, видимый авторам и администратора�
 
 #: options/panel2.php:97
 #: options/panel3.php:145
-#: options/panel4.php:103
+#: options/panel4.php:105
 #: options/panel5.php:83
 msgid "Save Changes"
 msgstr "Сохранить изменения"
 
 #: options/panel3.php:10
 #: options/panel3.php:43
-#, fuzzy
 msgid "Virtual Management Page"
-msgstr "Страница управления"
+msgstr "Виртуальная страница управления"
 
 #: options/panel3.php:11
 #: options/panel3.php:51
@@ -661,15 +596,13 @@ msgstr "Заголовок страницы"
 
 #: options/panel3.php:12
 #: options/panel3.php:56
-#, fuzzy
 msgid "Management URL"
-msgstr "Страница управления"
+msgstr "URL управления"
 
 #: options/panel3.php:13
 #: options/panel3.php:63
-#, fuzzy
 msgid "Custom HEAD meta"
-msgstr "Rapporti personali"
+msgstr "Собственный HEAD meta-тег"
 
 #: options/panel3.php:15
 #: options/panel3.php:74
@@ -708,15 +641,15 @@ msgstr "Пользователи"
 
 #: options/panel3.php:45
 msgid "Enabled"
-msgstr ""
+msgstr "Включено"
 
 #: options/panel3.php:46
 msgid "Disabled"
-msgstr ""
+msgstr "Выключено"
 
 #: options/panel3.php:47
 msgid "Disable the virtual management page if you need to create a <a href=\"http://lab.duechiacchiere.it/index.php?topic=71.0\">real page</a> to make your theme happy."
-msgstr ""
+msgstr "Отмените виртуальную страницу управления, если вам нужно создать <a href=\"http://lab.duechiacchiere.it/index.php?topic=71.0\">настоящую страницу</a> для корректной работы плагина с вашей темой оформления."
 
 #: options/panel3.php:53
 msgid "Title of the page your visitors will use to manage their subscriptions."
@@ -724,21 +657,20 @@ msgstr "Заголовок страницы, на которой пользов�
 
 #: options/panel3.php:58
 msgid "The permalink for your management page (something like <code>/manage-subscriptions</code> or <code>/?page_id=345</code>). This page <b>does not</b> actually exist in the system, but its link must follow your permalink structure."
-msgstr "Постоянная ссылка на вашу страницу управления (<code>/manage-subscriptions</code> или <code>/page_id=345</code>). Эта страница фактически <b>не существует</b> в системе, но постоянная ссылка на нее должна соответствовать вашим установкам постоянных ссылок в Wordpress."
+msgstr "Постоянная ссылка на вашу страницу управления (что-то вроде <code>/manage-subscriptions</code> или <code>/page_id=345</code>). Эта страница фактически <b>не существует</b> в системе, но постоянная ссылка на нее должна соответствовать вашим установкам постоянных ссылок в Wordpress."
 
 #: options/panel3.php:60
 msgid "Warning: it looks like the value you are using may be incompatible with your permalink structure"
-msgstr ""
+msgstr "Внимание: возможно, используемое вами значение несовместимо с вашей структурой постоянных ссылок"
 
 #: options/panel3.php:65
 msgid "Specify your custom HTML code to be added to the HEAD section of the page. Use <strong>single</strong> quotes for values."
-msgstr ""
+msgstr "Укажите свой код HTML для добавления в HEAD страницы. Используйте <strong>одинарные</strong> кавычки для значений."
 
 #: options/panel3.php:70
-#: options/panel4.php:50
-#, fuzzy
+#: options/panel4.php:52
 msgid "Messages"
-msgstr "Почтовые сообщения"
+msgstr "Сообщения"
 
 #: options/panel3.php:75
 #: options/panel3.php:85
@@ -747,9 +679,9 @@ msgstr "Почтовые сообщения"
 #: options/panel3.php:115
 #: options/panel3.php:125
 #: options/panel3.php:135
-#: options/panel4.php:61
-#: options/panel4.php:77
-#: options/panel4.php:93
+#: options/panel4.php:63
+#: options/panel4.php:79
+#: options/panel4.php:95
 msgid "Bold"
 msgstr "Жирный"
 
@@ -760,9 +692,9 @@ msgstr "Жирный"
 #: options/panel3.php:116
 #: options/panel3.php:126
 #: options/panel3.php:136
-#: options/panel4.php:62
-#: options/panel4.php:78
-#: options/panel4.php:94
+#: options/panel4.php:64
+#: options/panel4.php:80
+#: options/panel4.php:96
 msgid "Italic"
 msgstr "С наклоном"
 
@@ -773,9 +705,9 @@ msgstr "С наклоном"
 #: options/panel3.php:117
 #: options/panel3.php:127
 #: options/panel3.php:137
-#: options/panel4.php:63
-#: options/panel4.php:79
-#: options/panel4.php:95
+#: options/panel4.php:65
+#: options/panel4.php:81
+#: options/panel4.php:97
 msgid "Link"
 msgstr "Ссылка"
 
@@ -786,9 +718,9 @@ msgstr "Ссылка"
 #: options/panel3.php:118
 #: options/panel3.php:128
 #: options/panel3.php:138
-#: options/panel4.php:64
-#: options/panel4.php:80
-#: options/panel4.php:96
+#: options/panel4.php:66
+#: options/panel4.php:82
+#: options/panel4.php:98
 msgid "Image"
 msgstr "Изображение"
 
@@ -820,75 +752,75 @@ msgstr "Вводный текст на странице управления п�
 msgid "Introductory text for the users' management page."
 msgstr "Вводный текст на странице управления подписками для подписчиков."
 
-#: options/panel4.php:11
-#: options/panel4.php:38
+#: options/panel4.php:13
+#: options/panel4.php:40
 msgid "Sender name"
 msgstr "Имя отправителя"
 
-#: options/panel4.php:12
-#: options/panel4.php:43
+#: options/panel4.php:14
+#: options/panel4.php:45
 msgid "Sender email address"
 msgstr "Эл. адрес отправителя"
 
-#: options/panel4.php:13
-#: options/panel4.php:54
+#: options/panel4.php:15
+#: options/panel4.php:56
 msgid "Notification subject"
 msgstr "Тема письма с уведомлением"
 
-#: options/panel4.php:14
-#: options/panel4.php:59
+#: options/panel4.php:16
+#: options/panel4.php:61
 msgid "Notification message"
 msgstr "Текст уведомления"
 
-#: options/panel4.php:15
-#: options/panel4.php:70
+#: options/panel4.php:17
+#: options/panel4.php:72
 msgid "Double check subject"
 msgstr "Тема письма о подтверждении подписки"
 
-#: options/panel4.php:16
-#: options/panel4.php:75
+#: options/panel4.php:18
+#: options/panel4.php:77
 msgid "Double check message"
 msgstr "Текст письма о подтверждении подписки"
 
-#: options/panel4.php:17
-#: options/panel4.php:86
+#: options/panel4.php:19
+#: options/panel4.php:88
 msgid "Management subject"
 msgstr "Тема письма об управлении подписками"
 
-#: options/panel4.php:18
-#: options/panel4.php:91
+#: options/panel4.php:20
+#: options/panel4.php:93
 msgid "Management message"
 msgstr "Текст письма об управлении подписками"
 
-#: options/panel4.php:40
+#: options/panel4.php:42
 msgid "Name to use for the \"from\" field when sending a new notification to the user."
 msgstr "Имя в поле \"От кого\" в новом уведомлении пользователю."
 
-#: options/panel4.php:45
+#: options/panel4.php:47
 msgid "Email address to use for the \"from\" field when sending a new notification to the user."
 msgstr "Эл. адрес в поле \"От кого\" в новом уведомлении пользователю."
 
-#: options/panel4.php:56
+#: options/panel4.php:58
 msgid "Subject of the notification email. Allowed tag: [post_title]"
 msgstr "Тема письма с уведомлением. Разрешенный тег: [post_title]"
 
-#: options/panel4.php:67
+#: options/panel4.php:69
 msgid "Content of the notification email. Allowed tags: [post_title], [comment_permalink], [comment_author], [comment_content], [post_permalink], [manager_link]"
 msgstr "Текст уведомления. Разрешенные теги: [post_title],  [comment_permalink], [comment_author], [comment_content], [post_permalink], [manager_link]"
 
-#: options/panel4.php:72
+#: options/panel4.php:74
 msgid "Subject of the confirmation email. Allowed tag: [post_title]"
 msgstr "Тема письма о подтверждении. Разрешенный тег: [post_title]"
 
-#: options/panel4.php:83
+#: options/panel4.php:85
 msgid "Content of the confirmation email. Allowed tags: [post_permalink], [confirm_link], [post_title], [manager_link]"
 msgstr "Текст письма о подтвеждении. Разрешенные теги: [post_permalink], [confirm_link], [post_title], [manager_link]"
 
-#: options/panel4.php:88
+#: options/panel4.php:90
 msgid "Subject of the mail sent to those who request to access their management page. Allowed tag: [blog_name]"
 msgstr "Тема письма подписчику, сделавшему запрос на доступ к странице управления подписками. Разрешенный тег: [blog_name]"
 
-#: options/panel4.php:99
+#: options/panel4.php:101
 msgid "Content of the management email. Allowed tags: [blog_name], [manager_link]"
 msgstr "Текст письма об управлении подписками. Разрешенные теги: [blog_name],[manager_link]"
 
@@ -927,7 +859,7 @@ msgstr "Позволить админу подписываться"
 
 #: options/panel5.php:36
 msgid "days"
-msgstr "giorni"
+msgstr "дней"
 
 #: options/panel5.php:37
 msgid "Delete pending subscriptions (not confirmed) after X days. Zero disables this feature."
@@ -946,9 +878,8 @@ msgid "If enabled, will send email messages with content-type = text/html instea
 msgstr "При выборе этой функции сообщения будут отправляться в формате текст/html вместо обычного текста"
 
 #: options/panel5.php:61
-#, fuzzy
 msgid "Process trackbacks"
-msgstr "Отправлять трэкбеки"
+msgstr "Обрабатывать трэкбеки"
 
 #: options/panel5.php:65
 msgid "Notify users when a new trackback or pingback is added to the discussion."
@@ -988,41 +919,37 @@ msgstr "Проголосуйте и покажите свою признател
 
 #: options/panel6.php:22
 msgid "Tell other people if Subscribe to Comments Reloaded works for you and how good it is. <a href=\"http://wordpress.org/extend/plugins/subscribe-to-comments-reloaded/\">Rate it</a> on its Plugin Directory page."
-msgstr "Расскажите другим, подходит ли вам плагин <b>Subscribe to Comments Reloaded</b>, и насколько он хорош. <a href=\"http://wordpress.org/extend/plugins/subscribe-to-comments-reloaded/\">Оцените</a> его в разделе плагинов на сайте Wordpress."
+msgstr "Если вам нравится вам плагин <b>Subscribe to Comments Reloaded</b>, расскажите другим людям о нем и о том, насколько он хорош. <a href=\"http://wordpress.org/extend/plugins/subscribe-to-comments-reloaded/\">Оцените</a> его в разделе плагинов на сайте Wordpress."
 
 #: options/panel6.php:24
 msgid "Sponsor's Corner"
-msgstr ""
+msgstr "Уголок спонсора"
 
 #: options/panel6.php:25
 msgid "If you want to sponsor this plugin, don't hesitate to <a href='http://www.duechiacchiere.it/contatto'>contact me</a>."
-msgstr ""
+msgstr "Если вы хотите проспонсировать этот плагин, не стесняйтесь, <a href='http://www.duechiacchiere.it/contatto'>обратитесь ко мне</a>."
 
 #: templates/author.php:55
 msgid "Title"
 msgstr "Заголовок"
 
 #: templates/author.php:66
-#: templates/user.php:60
 msgid "Select all"
 msgstr "Выбрать все"
 
 #: templates/author.php:67
-#: templates/user.php:61
 msgid "Invert selection"
 msgstr "Выбрать обратное"
 
 #: templates/author.php:71
 msgid "Set to Y"
-msgstr ""
+msgstr "Установлено на Y"
 
 #: templates/author.php:77
-#: templates/user.php:71
 msgid "No subscriptions match your search criteria."
-msgstr ""
+msgstr "Ни одна подписка не соответствует поисковому запросу."
 
 #: templates/request-management-link.php:68
-#: templates/subscribe.php:89
 msgid "Send"
 msgstr "Отправить"
 
@@ -1034,6 +961,18 @@ msgstr "Новая подписка на"
 #: templates/subscribe.php:43
 msgid "User:"
 msgstr "Пользователь:"
+
+#~ msgid "Subscribed"
+#~ msgstr "Подписано"
+
+#~ msgid "Replies"
+#~ msgstr "Ответы"
+
+#~ msgid "Digest"
+#~ msgstr "Дайджест"
+
+#~ msgid "Pending"
+#~ msgstr "В ожидании"
 
 #~ msgid "Management Page ID"
 #~ msgstr "ID страницы управления"
