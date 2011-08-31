@@ -66,8 +66,8 @@ Yes! Just disable the corresponding option under Settings > Comment Form and the
 = 2.0.2 =
 * Added: option to automatically subscribe authors to their posts (improves Wordpress' default alert system, thank you [Julius](http://wordpress.org/support/topic/plugin-subscribe-to-comments-reloaded-does-the-post-author-automatically-get-subscribed-to-comments))
 * Added: number of subscriptions per post in the Posts page
-* Added: Serbian and Indonesian localization (thank you [Anna](http://www.sneg.iz.rs/) and [The Masked Cat](http://themaskedcat.tk))
-* Fixed: bug in daily purge SQL command
+* Added: Serbian and Indonesian localizations (thank you [Anna](http://www.sneg.iz.rs/) and [The Masked Cat](http://themaskedcat.tk))
+* Fixed: bug in daily purge (SQL command)
 * Fixed: bug with international characters (thank you Pascal)
 * Updated: you can now edit a single subscription's status without having to change the email address
 * Updated: more localizations are now up-to-date, thank you!
