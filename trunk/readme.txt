@@ -115,7 +115,7 @@ localization is ready. Currently, we support the following languages:
 * Polish - [Robert Koeseling](http://www.katalogpodkastow.pl), [Filip Cierpich](http://keepmind.eu/)
 * Portuguese, Brazil - [Ronaldo Richieri](http://richieri.com), [ClassiNoiva](http://www.classinoiva.com.br), [Luciano](http://litemind.com/)
 * Portuguese, Portugal
-* Russian - [Marika Bukvonka](http://violetnotes.com)
+* Russian - [Marika Bukvonka](http://violetnotes.com), Igor Potapov
 * Serbian - [Anna Swedziol](http://www.sneg.iz.rs/)
 * Spanish - [TodoWordPress team](http://www.todowp.org/), [Juan Luis Perez](http://www.juanluperez.com/)
 * Turkish - [MaD, Kali](http://www.dusunsel.com/)
