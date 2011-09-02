@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Subscribe to Comments Reloaded\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-25 16:00-0500\n"
-"PO-Revision-Date: 2011-07-25 16:00-0500\n"
+"POT-Creation-Date: 2011-09-02 07:16-0500\n"
+"PO-Revision-Date: 2011-09-02 07:16-0500\n"
 "Last-Translator: due chiacchiere <info@duechiacchiere.it>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -20,31 +20,31 @@ msgstr ""
 
 # @ subscribe-reloaded
 #: subscribe-to-comments-reloaded.php:41
-#: subscribe-to-comments-reloaded.php:248
+#: subscribe-to-comments-reloaded.php:230
 msgid "Your subscription to this post needs to be confirmed. <a href='[manager_link]'>Manage your subscriptions</a>."
 msgstr "Dein Benachrichtigungswunsch muss bestätigt werden. <a href='[manager_link]'>Verwalte Deine Abonnements</a>."
 
 # @ subscribe-reloaded
 #: subscribe-to-comments-reloaded.php:46
-#: subscribe-to-comments-reloaded.php:247
+#: subscribe-to-comments-reloaded.php:229
 msgid "You are subscribed to this post. <a href='[manager_link]'>Manage</a> your subscriptions."
 msgstr "Du erhältst Benachrichtigungen zu diesem Thema. <a href='[manager_link]'>Verwalte Deine Abonnements</a>."
 
 # @ subscribe-reloaded
 #: subscribe-to-comments-reloaded.php:53
-#: subscribe-to-comments-reloaded.php:249
+#: subscribe-to-comments-reloaded.php:231
 msgid "You can <a href='[manager_link]'>manage the subscriptions</a> of this post."
 msgstr "Deine <a href='[manager_link]'>Benachrichtigungs-Einstellungen</a> zu diesem Beitrag anpassen."
 
 # @ subscribe-reloaded
 #: subscribe-to-comments-reloaded.php:58
-#: subscribe-to-comments-reloaded.php:244
+#: subscribe-to-comments-reloaded.php:228
 msgid "Notify me of followup comments via e-mail. You can also <a href='[subscribe_link]'>subscribe</a> without commenting."
 msgstr "E-Mail-Benachrichtigung bei weiteren Kommentaren.<br>Auch möglich: <a href='[subscribe_link]'>Abo ohne Kommentar</a>."
 
 #: subscribe-to-comments-reloaded.php:67
 msgid "Don't subscribe"
-msgstr ""
+msgstr "Nicht abonnieren"
 
 #: subscribe-to-comments-reloaded.php:68
 msgid "All"
@@ -54,60 +54,60 @@ msgstr "Alle"
 #: subscribe-to-comments-reloaded.php:69
 #: templates/user.php:65
 msgid "Replies to my comments"
-msgstr "Abo ohne Kommentar"
+msgstr "Antworten auf meine Kommentare"
 
 #: subscribe-to-comments-reloaded.php:70
 msgid "Daily digest"
 msgstr "Tägliche Übersicht"
 
 # @ subscribe-reloaded
-#: subscribe-to-comments-reloaded.php:221
-#: options/index.php:41
+#: subscribe-to-comments-reloaded.php:234
+#: options/index.php:46
 msgid "Manage subscriptions"
 msgstr "Verwalte Deine Abonnements"
 
 # @ subscribe-reloaded
-#: subscribe-to-comments-reloaded.php:222
+#: subscribe-to-comments-reloaded.php:236
 msgid "To manage your subscriptions, please enter your email address here below. We will send you a message containing the link to access your personal management page."
 msgstr "Um Deine Abonnements zu verwalten, musst Du hier Deine E-Mail-Adresse eingeben. Du bekommst dann eine E-Mail mit einem weiterführenden Link."
 
 # @ subscribe-reloaded
-#: subscribe-to-comments-reloaded.php:223
+#: subscribe-to-comments-reloaded.php:237
 msgid "Thank you for using our subscription service. Your request has been completed, and you should receive an email with the management link in a few minutes."
 msgstr "Danke für das Nutzen des Benachrichtigungsdienstes. Deine Anfrage wird bearbeitet und eine E-Mail an Dich verschickt."
 
 # @ subscribe-reloaded
-#: subscribe-to-comments-reloaded.php:224
+#: subscribe-to-comments-reloaded.php:238
 msgid "You can follow the discussion on <strong>[post_title]</strong> without having to leave a comment. Cool, huh? Just enter your email address in the form here below and you're all set."
 msgstr "Du kannst der Diskussion zum Thema <strong>[post_title]</strong> auch folgen, ohne bisher selbst etwas geschrieben zu haben. Krass, was? Hierzu einfach Deine E-Mail-Adresse in das dafür vorgesehene Feld eintragen."
 
 # @ subscribe-reloaded
-#: subscribe-to-comments-reloaded.php:225
+#: subscribe-to-comments-reloaded.php:239
 msgid "Thank you for using our subscription service. Your request has been completed. You will receive a notification email every time a new comment to this article is approved and posted by the administrator."
 msgstr "Danke für das Nutzen des Benachrichtigungsdienstes. Du wirst nun bei jedem neuen Kommentar per E-Mail informiert."
 
 # @ subscribe-reloaded
-#: subscribe-to-comments-reloaded.php:226
+#: subscribe-to-comments-reloaded.php:240
 msgid "Thank you for using our subscription service. In order to confirm your request, please check your email for the verification message and follow the instructions."
 msgstr "Danke für das Nutzen des Benachrichtigungsdienstes. Bitte bestätige Deine Anfrage durch den Link in der E-Mail, die Dir gerade zugestellt wird."
 
 # @ subscribe-reloaded
-#: subscribe-to-comments-reloaded.php:227
+#: subscribe-to-comments-reloaded.php:241
 msgid "In order to cancel or suspend one or more notifications, select the corresponding checkbox(es) and click on the button at the end of the list."
 msgstr "Um eine Benachrichtigung zu löschen oder zu deaktivieren, nutze die entsprechende Auswahlboxen."
 
 # @ subscribe-reloaded
-#: subscribe-to-comments-reloaded.php:228
+#: subscribe-to-comments-reloaded.php:242
 msgid "In order to cancel or suspend one or more notifications, select the corresponding checkbox(es) and click on the button at the end of the list. You are currently subscribed to:"
 msgstr "Um eine Benachrichtigung zu löschen oder zu deaktivieren, nutze die entsprechende Auswahlboxen."
 
 # @ subscribe-reloaded
-#: subscribe-to-comments-reloaded.php:242
+#: subscribe-to-comments-reloaded.php:246
 msgid "There is a new comment to [post_title]"
 msgstr "Es gibt Neuigkeiten zum Thema [post_title]"
 
 # @ subscribe-reloaded
-#: subscribe-to-comments-reloaded.php:243
+#: subscribe-to-comments-reloaded.php:247
 msgid ""
 "There is a new comment to [post_title].\n"
 "Comment Link: [comment_permalink]\n"
@@ -126,12 +126,12 @@ msgstr ""
 "Verwalte Deine Benachrichtigungen: [manager_link]"
 
 # @ subscribe-reloaded
-#: subscribe-to-comments-reloaded.php:250
+#: subscribe-to-comments-reloaded.php:248
 msgid "Please confirm your subscription to [post_title]"
 msgstr "Bitte bestätige Deinen Benachrichtigungswunsch zum Thema [post_title]"
 
 # @ subscribe-reloaded
-#: subscribe-to-comments-reloaded.php:251
+#: subscribe-to-comments-reloaded.php:249
 msgid ""
 "You have requested to be notified every time a new comment is added to:\n"
 "[post_permalink]\n"
@@ -146,12 +146,12 @@ msgstr ""
 "[confirm_link]"
 
 # @ subscribe-reloaded
-#: subscribe-to-comments-reloaded.php:252
+#: subscribe-to-comments-reloaded.php:250
 msgid "Manage your subscriptions on [blog_name]"
 msgstr "Benachrichtigungs-Einstellungen von [blog_name]"
 
 # @ subscribe-reloaded
-#: subscribe-to-comments-reloaded.php:253
+#: subscribe-to-comments-reloaded.php:251
 msgid ""
 "You have requested to manage your subscriptions to the articles on [blog_name]. Follow this link to access your personal page:\n"
 "[manager_link]"
@@ -159,39 +159,8 @@ msgstr ""
 "Du möchtest Deine Benachrichtigungs-Einstellungen von [blog_name] anpassen. Nutze bitte diesen Link:\n"
 "[manager_link]"
 
-# @ default
-#: subscribe-to-comments-reloaded.php:986
-msgid "Subscribed"
-msgstr "Abonniert"
-
 # @ subscribe-reloaded
-#: subscribe-to-comments-reloaded.php:1000
-#: options/panel2.php:41
-#: options/panel2.php:48
-#: options/panel2.php:55
-#: options/panel5.php:42
-#: options/panel5.php:49
-#: options/panel5.php:56
-#: options/panel5.php:63
-#: options/panel5.php:70
-#: options/panel5.php:77
-msgid "Yes"
-msgstr "Ja"
-
-#: subscribe-to-comments-reloaded.php:1002
-msgid "Replies"
-msgstr "Nur Antworten"
-
-#: subscribe-to-comments-reloaded.php:1004
-msgid "Digest"
-msgstr "Tägliche Übersicht"
-
-#: subscribe-to-comments-reloaded.php:1006
-msgid "Pending"
-msgstr "Warteschlange"
-
-# @ subscribe-reloaded
-#: subscribe-to-comments-reloaded.php:1007
+#: subscribe-to-comments-reloaded.php:1018
 #: options/panel2.php:42
 #: options/panel2.php:49
 #: options/panel2.php:56
@@ -205,54 +174,49 @@ msgid "No"
 msgstr "Nein"
 
 # @ subscribe-reloaded
-#: subscribe-to-comments-reloaded.php:1016
-msgid "Subscriptions"
-msgstr ""
-
-# @ subscribe-reloaded
-#: subscribe-to-comments-reloaded.php:1039
+#: subscribe-to-comments-reloaded.php:1042
 msgid "Need help on how to use Subscribe to Comments Reloaded? Visit the official"
 msgstr "Benötigst Du Hilfe zum Plugin Subscribe to Comments Reloaded? Besuche das offizielle"
 
 # @ subscribe-reloaded
-#: subscribe-to-comments-reloaded.php:1039
+#: subscribe-to-comments-reloaded.php:1042
 msgid "support forum"
 msgstr "Support-Forum"
 
 # @ subscribe-reloaded
-#: subscribe-to-comments-reloaded.php:1040
+#: subscribe-to-comments-reloaded.php:1043
 msgid "Feeling generous?"
 msgstr "Fühlst Du Dich großzügig?"
 
 # @ subscribe-reloaded
-#: subscribe-to-comments-reloaded.php:1040
+#: subscribe-to-comments-reloaded.php:1043
 msgid "Donate a few bucks!"
 msgstr "Spende ein paar Mäuse!"
 
 # @ subscribe-reloaded
-#: options/index.php:42
+#: options/index.php:47
 msgid "Comment Form"
 msgstr "Kommentarformular"
 
 # @ subscribe-reloaded
-#: options/index.php:43
+#: options/index.php:48
 msgid "Management Page"
 msgstr "Verwaltungsseite"
 
 # @ subscribe-reloaded
-#: options/index.php:44
+#: options/index.php:49
 msgid "Notifications"
 msgstr "Benachrichtigungen"
 
 # @ subscribe-reloaded
-#: options/index.php:45
+#: options/index.php:50
 #: options/panel2.php:35
 #: options/panel3.php:39
-#: options/panel4.php:34
+#: options/panel4.php:36
 msgid "Options"
 msgstr "Optionen"
 
-#: options/index.php:46
+#: options/index.php:51
 msgid "You can help"
 msgstr "Du kannst helfen"
 
@@ -316,9 +280,20 @@ msgstr "Aktualisiere Abo"
 
 # @ subscribe-reloaded
 #: options/panel1-edit-subscription.php:10
+#: options/panel1-edit-subscription.php:14
+#: options/panel1-edit-subscription.php:15
+#: options/panel1-edit-subscription.php:16
+#: options/panel1.php:23
+#: options/panel1.php:24
+#: options/panel1.php:25
+msgid "optional"
+msgstr "optional"
+
+# @ subscribe-reloaded
+#: options/panel1-edit-subscription.php:10
 #: options/panel1.php:19
 #: options/panel1.php:81
-#: options/panel1.php:113
+#: options/panel1.php:117
 #: templates/author.php:50
 #: templates/user.php:46
 msgid "Please remember: this operation cannot be undone. Are you sure you want to proceed?"
@@ -341,39 +316,39 @@ msgid "To"
 msgstr "ersetze durch"
 
 # @ subscribe-reloaded
-#: options/panel1-edit-subscription.php:15
+#: options/panel1-edit-subscription.php:17
 #: options/panel1.php:26
 #: options/panel1.php:45
 #: options/panel1.php:103
 msgid "Status"
 msgstr "Status"
 
-#: options/panel1-edit-subscription.php:17
+#: options/panel1-edit-subscription.php:19
 #: options/panel1.php:28
 msgid "Keep unchanged"
 msgstr "Unverändert belassen"
 
 # @ subscribe-reloaded
-#: options/panel1-edit-subscription.php:18
+#: options/panel1-edit-subscription.php:20
 #: options/panel1.php:29
 #: options/panel1.php:47
 msgid "Active"
 msgstr "Aktiv"
 
-#: options/panel1-edit-subscription.php:19
+#: options/panel1-edit-subscription.php:21
 #: options/panel1.php:30
 #: options/panel1.php:48
 msgid "Replies only"
 msgstr "Nur Antworten"
 
 # @ subscribe-reloaded
-#: options/panel1-edit-subscription.php:20
+#: options/panel1-edit-subscription.php:22
 #: options/panel1.php:31
 msgid "Suspended"
 msgstr "Aufgehoben"
 
 # @ subscribe-reloaded
-#: options/panel1-edit-subscription.php:21
+#: options/panel1-edit-subscription.php:23
 #: options/panel1.php:32
 msgid "Update"
 msgstr "Aktualisieren"
@@ -382,13 +357,6 @@ msgstr "Aktualisieren"
 #: options/panel1.php:17
 msgid "Mass Update Subscriptions"
 msgstr "Mehrere Abos aktualisieren"
-
-# @ subscribe-reloaded
-#: options/panel1.php:23
-#: options/panel1.php:24
-#: options/panel1.php:25
-msgid "optional"
-msgstr "optional"
 
 # @ subscribe-reloaded
 #: options/panel1.php:39
@@ -403,7 +371,7 @@ msgstr "Beitrag (ID)"
 #: options/panel1.php:44
 #: options/panel1.php:90
 #: templates/request-management-link.php:65
-#: templates/subscribe.php:87
+#: templates/subscribe.php:86
 #: templates/user.php:51
 msgid "Email"
 msgstr "E-Mail"
@@ -509,59 +477,64 @@ msgstr "Legende: Y = Alle Kommentare, R = Nur Antworten, C = Inaktiv"
 msgid "Date and Time"
 msgstr "Datum und Uhrzeit"
 
-#: options/panel1.php:112
+# @ subscribe-reloaded
+#: options/panel1.php:114
+msgid "Subscription"
+msgstr "Abonnement"
+
+#: options/panel1.php:116
 msgid "Edit"
 msgstr "Bearbeiten"
 
 # @ subscribe-reloaded
-#: options/panel1.php:113
+#: options/panel1.php:117
 #: templates/author.php:69
 #: templates/user.php:63
 msgid "Delete"
 msgstr "Endgültig löschen"
 
 # @ subscribe-reloaded
-#: options/panel1.php:121
+#: options/panel1.php:125
 #: templates/author.php:68
 #: templates/user.php:62
 msgid "Action:"
 msgstr "Aktion:"
 
 # @ subscribe-reloaded
-#: options/panel1.php:122
+#: options/panel1.php:126
 msgid "Delete forever"
 msgstr "Endgültig löschen"
 
 # @ subscribe-reloaded
-#: options/panel1.php:123
+#: options/panel1.php:127
 #: templates/author.php:70
 #: templates/user.php:64
 msgid "Suspend"
 msgstr "Aufheben"
 
-#: options/panel1.php:124
+#: options/panel1.php:128
 msgid "Activate and set to Y"
 msgstr "Aktivieren und auf Y setzen"
 
-#: options/panel1.php:125
+#: options/panel1.php:129
 msgid "Activate and set to R"
 msgstr "Aktivieren und auf R setzen"
 
-#: options/panel1.php:126
+#: options/panel1.php:130
 #: templates/author.php:72
 #: templates/user.php:66
 msgid "Activate"
 msgstr "Aktivieren"
 
 # @ subscribe-reloaded
-#: options/panel1.php:127
+#: options/panel1.php:131
 #: templates/author.php:73
 #: templates/user.php:67
 msgid "Update subscriptions"
 msgstr "Abos aktualisieren"
 
 # @ subscribe-reloaded
-#: options/panel1.php:131
+#: options/panel1.php:135
 msgid "Sorry, no subscriptions match your search criteria."
 msgstr "Ups, keine passenden Abonnements gefunden: "
 
@@ -569,7 +542,7 @@ msgstr "Ups, keine passenden Abonnements gefunden: "
 #: options/panel2.php:11
 #: options/panel2.php:39
 msgid "Enable default checkbox"
-msgstr "Auswahlbox standardmäßig auswählen"
+msgstr "Auswahlbox automatisch platzieren"
 
 # @ subscribe-reloaded
 #: options/panel2.php:12
@@ -620,7 +593,7 @@ msgstr "Autor"
 # @ subscribe-reloaded
 #: options/panel2.php:25
 #: options/panel3.php:26
-#: options/panel4.php:23
+#: options/panel4.php:25
 #: options/panel5.php:22
 msgid "Your settings have been successfully updated."
 msgstr "Deine Einstellungen wurden erfolgreich gespeichert."
@@ -628,14 +601,27 @@ msgstr "Deine Einstellungen wurden erfolgreich gespeichert."
 # @ subscribe-reloaded
 #: options/panel2.php:28
 #: options/panel3.php:29
-#: options/panel4.php:26
+#: options/panel4.php:28
 #: options/panel5.php:25
 msgid "There was an error updating the following fields:"
 msgstr "Bei der Aktualisierung der folgenden Felder ist ein Fehler aufgetreten:"
 
+# @ subscribe-reloaded
+#: options/panel2.php:41
+#: options/panel2.php:48
+#: options/panel2.php:55
+#: options/panel5.php:42
+#: options/panel5.php:49
+#: options/panel5.php:56
+#: options/panel5.php:63
+#: options/panel5.php:70
+#: options/panel5.php:77
+msgid "Yes"
+msgstr "Ja"
+
 #: options/panel2.php:43
 msgid "Disable this option if you want to move the subscription checkbox to a different place on your page."
-msgstr "Deaktiviere diese Option, wenn Du die Auswahlbox für die Abonnements an anderer Stelle auf Deiner Seite platzieren möchtest."
+msgstr "Deaktiviere diese Option, wenn Du die Auswahlbox für die Abonnements manuell an anderer Stelle auf Deiner Seite platzieren möchtest. <br />Nähere Informationen zur manuellen Platzierung findest Du in den <a href=\"http://wordpress.org/extend/plugins/subscribe-to-comments-reloaded/installation/\">Installationshinweisen</a> des Plugins unter Punkt 5."
 
 # @ subscribe-reloaded
 #: options/panel2.php:50
@@ -693,7 +679,7 @@ msgstr "Text, der Autoren und Administratoren angezeigt wird. Erlaubte Tags: [ma
 # @ default
 #: options/panel2.php:97
 #: options/panel3.php:145
-#: options/panel4.php:103
+#: options/panel4.php:105
 #: options/panel5.php:83
 msgid "Save Changes"
 msgstr "Alle Änderungen speichern"
@@ -701,9 +687,8 @@ msgstr "Alle Änderungen speichern"
 # @ subscribe-reloaded
 #: options/panel3.php:10
 #: options/panel3.php:43
-#, fuzzy
 msgid "Virtual Management Page"
-msgstr "Verwaltungsseite"
+msgstr "Automatisch erstellte Verwaltungsseite"
 
 # @ subscribe-reloaded
 #: options/panel3.php:11
@@ -766,15 +751,15 @@ msgstr "Besucher"
 
 #: options/panel3.php:45
 msgid "Enabled"
-msgstr ""
+msgstr "Aktiviert"
 
 #: options/panel3.php:46
 msgid "Disabled"
-msgstr ""
+msgstr "Deaktiviert"
 
 #: options/panel3.php:47
 msgid "Disable the virtual management page if you need to create a <a href=\"http://lab.duechiacchiere.it/index.php?topic=71.0\">real page</a> to make your theme happy."
-msgstr ""
+msgstr "Hier kannst Du die automatisch erstellte Verwaltungsseite deaktivieren, wenn Du Probleme mit Deinem Wordpress-Theme hast und eine <a href=\"http://lab.duechiacchiere.it/index.php?topic=71.0\">benutzerdefinierte Verwaltungsseite</a> erstellen willst."
 
 # @ subscribe-reloaded
 #: options/panel3.php:53
@@ -796,7 +781,7 @@ msgstr "Gib hier einen benutzerdefinierten HTML Code ein, der in Deinem HEAD-Ber
 
 # @ subscribe-reloaded
 #: options/panel3.php:70
-#: options/panel4.php:50
+#: options/panel4.php:52
 msgid "Messages"
 msgstr "Nachrichten"
 
@@ -807,9 +792,9 @@ msgstr "Nachrichten"
 #: options/panel3.php:115
 #: options/panel3.php:125
 #: options/panel3.php:135
-#: options/panel4.php:61
-#: options/panel4.php:77
-#: options/panel4.php:93
+#: options/panel4.php:63
+#: options/panel4.php:79
+#: options/panel4.php:95
 msgid "Bold"
 msgstr "Fett"
 
@@ -820,9 +805,9 @@ msgstr "Fett"
 #: options/panel3.php:116
 #: options/panel3.php:126
 #: options/panel3.php:136
-#: options/panel4.php:62
-#: options/panel4.php:78
-#: options/panel4.php:94
+#: options/panel4.php:64
+#: options/panel4.php:80
+#: options/panel4.php:96
 msgid "Italic"
 msgstr "Kursiv"
 
@@ -833,9 +818,9 @@ msgstr "Kursiv"
 #: options/panel3.php:117
 #: options/panel3.php:127
 #: options/panel3.php:137
-#: options/panel4.php:63
-#: options/panel4.php:79
-#: options/panel4.php:95
+#: options/panel4.php:65
+#: options/panel4.php:81
+#: options/panel4.php:97
 msgid "Link"
 msgstr "Link"
 
@@ -846,9 +831,9 @@ msgstr "Link"
 #: options/panel3.php:118
 #: options/panel3.php:128
 #: options/panel3.php:138
-#: options/panel4.php:64
-#: options/panel4.php:80
-#: options/panel4.php:96
+#: options/panel4.php:66
+#: options/panel4.php:82
+#: options/panel4.php:98
 msgid "Image"
 msgstr "Bild"
 
@@ -888,90 +873,90 @@ msgid "Introductory text for the users' management page."
 msgstr "Einführungstext der Verwaltungs-Seite der Besucher."
 
 # @ subscribe-reloaded
-#: options/panel4.php:11
-#: options/panel4.php:38
+#: options/panel4.php:13
+#: options/panel4.php:40
 msgid "Sender name"
 msgstr "Absender"
 
 # @ subscribe-reloaded
-#: options/panel4.php:12
-#: options/panel4.php:43
+#: options/panel4.php:14
+#: options/panel4.php:45
 msgid "Sender email address"
 msgstr "E-Mail-Adresse des Absenders"
 
 # @ subscribe-reloaded
-#: options/panel4.php:13
-#: options/panel4.php:54
+#: options/panel4.php:15
+#: options/panel4.php:56
 msgid "Notification subject"
 msgstr "Benachrichtigung - Betreff"
 
 # @ subscribe-reloaded
-#: options/panel4.php:14
-#: options/panel4.php:59
+#: options/panel4.php:16
+#: options/panel4.php:61
 msgid "Notification message"
 msgstr "Benachrichtigung - Text"
 
 # @ subscribe-reloaded
-#: options/panel4.php:15
-#: options/panel4.php:70
+#: options/panel4.php:17
+#: options/panel4.php:72
 msgid "Double check subject"
 msgstr "Double check - Betreff"
 
 # @ subscribe-reloaded
-#: options/panel4.php:16
-#: options/panel4.php:75
+#: options/panel4.php:18
+#: options/panel4.php:77
 msgid "Double check message"
 msgstr "Double check - Text"
 
 # @ subscribe-reloaded
-#: options/panel4.php:17
-#: options/panel4.php:86
+#: options/panel4.php:19
+#: options/panel4.php:88
 msgid "Management subject"
 msgstr "Verwaltung - Betreff"
 
 # @ subscribe-reloaded
-#: options/panel4.php:18
-#: options/panel4.php:91
+#: options/panel4.php:20
+#: options/panel4.php:93
 msgid "Management message"
 msgstr "Verwaltung - Text"
 
 # @ subscribe-reloaded
-#: options/panel4.php:40
+#: options/panel4.php:42
 msgid "Name to use for the \"from\" field when sending a new notification to the user."
 msgstr "Absender: Name"
 
 # @ subscribe-reloaded
-#: options/panel4.php:45
+#: options/panel4.php:47
 msgid "Email address to use for the \"from\" field when sending a new notification to the user."
 msgstr "Absender: E-Mail-Adresse"
 
 # @ subscribe-reloaded
-#: options/panel4.php:56
+#: options/panel4.php:58
 msgid "Subject of the notification email. Allowed tag: [post_title]"
 msgstr "Betreff-Zeile einer Benachrichtigung. Erlaubte Tags: [post_title]"
 
 # @ subscribe-reloaded
-#: options/panel4.php:67
+#: options/panel4.php:69
 msgid "Content of the notification email. Allowed tags: [post_title], [comment_permalink], [comment_author], [comment_content], [post_permalink], [manager_link]"
 msgstr "E-Mail-Text einer Benachrichtigung.<br/>Erlaubte Tags: [post_title], [comment_permalink], [comment_author], [comment_content], [post_permalink], [manager_link]"
 
 # @ subscribe-reloaded
-#: options/panel4.php:72
+#: options/panel4.php:74
 msgid "Subject of the confirmation email. Allowed tag: [post_title]"
 msgstr "Betreff-Zeile einer Bestätigungs-Aufforderung. Erlaubte Tags: [post_title]"
 
 # @ subscribe-reloaded
-#: options/panel4.php:83
+#: options/panel4.php:85
 msgid "Content of the confirmation email. Allowed tags: [post_permalink], [confirm_link], [post_title], [manager_link]"
 msgstr "E-Mail-Text einer Bestätigungs-Aufforderung. Erlaubte Tags: [post_permalink], [confirm_link], [post_title], [manager_link]"
 
 # @ subscribe-reloaded
-#: options/panel4.php:88
+#: options/panel4.php:90
 msgid "Subject of the mail sent to those who request to access their management page. Allowed tag: [blog_name]"
 msgstr "Betreff-Zeile der E-Mail, die den Link zur Verwaltungsseite enthält. Erlaubte Tags: [blog_name]"
 
 # @ subscribe-reloaded
-#: options/panel4.php:99
+#: options/panel4.php:101
 msgid "Content of the management email. Allowed tags: [blog_name], [manager_link]"
 msgstr "Text der E-Mail, die den Link zur Verwaltungsseite enthält. Erlaubte Tags: [blog_name], [manager_link]"
 
@@ -987,10 +972,11 @@ msgstr "Anfragen automatisch löschen"
 msgid "Enable double check"
 msgstr "Bestätigung erforderlich (double check)"
 
-# @ subscribe-reloaded
+# @ default
 #: options/panel5.php:13
-msgid "Notify authors"
-msgstr "Autoren informieren"
+#: options/panel5.php:47
+msgid "Subscribe authors"
+msgstr "Autoren-Abonnements"
 
 #: options/panel5.php:14
 #: options/panel5.php:54
@@ -1004,7 +990,6 @@ msgstr "Trackbacks senden"
 
 # @ subscribe-reloaded
 #: options/panel5.php:16
-#: options/panel5.php:47
 msgid "Notify admin"
 msgstr "Administrator informieren"
 
@@ -1028,10 +1013,9 @@ msgstr "Lösche schwebende, nicht bestätigte Anfragen nach x Tagen. Verwende di
 msgid "Send a notification email to confirm the subscription (to avoid addresses misuse)."
 msgstr "Sende eine Bestätigungsnachricht, um die Gültigkeit der E-Mail-Adresse zu verifizieren."
 
-# @ subscribe-reloaded
 #: options/panel5.php:51
-msgid "Notify the administrator when a new comment is posted."
-msgstr "Benachrichtigung an den Administrator, wenn ein neues Abonnement erstellt wurde."
+msgid "Automatically subscribe authors to their own articles (not retroactive)."
+msgstr "Füge den Autor automatisch zur Abonnementliste der eigenen Artikel hinzu (geht nicht rückwirkend)."
 
 #: options/panel5.php:58
 msgid "If enabled, will send email messages with content-type = text/html instead of text/plain"
@@ -1060,7 +1044,7 @@ msgstr "Benachrichtigung an den Administrator, wenn ohne Kommentar ein Abo einge
 # @ subscribe-reloaded
 #: options/panel5.php:79
 msgid "Let the administrator subscribe to comments when logged in."
-msgstr "Benachrichtigung an den Administrator, wenn ohne Kommentar ein Abo eingerichtet wurde."
+msgstr "Erlaube dem eingeloggten Administrator, Artikel zu abonnieren. <br />Wenn Du diese Option deaktivierst, wird die Auswahlbox für Administratoren im Kommentarfeld der Artikel ausgeblendet."
 
 #: options/panel6.php:8
 msgid "Support the author"
@@ -1123,22 +1107,39 @@ msgid "No subscriptions match your search criteria."
 msgstr "Keine passenden Abos gefunden."
 
 # @ subscribe-reloaded
-#: templates/request-management-link.php:68
-#: templates/subscribe.php:89
+#: templates/request-management-link.php:67
+#: templates/subscribe.php:87
 msgid "Send"
 msgstr "Abschicken"
 
 # @ subscribe-reloaded
+#: templates/subscribe.php:41
 #: templates/subscribe.php:42
-#: templates/subscribe.php:43
 msgid "New subscription to"
 msgstr "Neue Benachrichtigung"
 
 # @ subscribe-reloaded
-#: templates/subscribe.php:43
+#: templates/subscribe.php:42
 msgid "User:"
 msgstr "Besucher:"
 
+#~ msgid "Replies"
+#~ msgstr "Nur Antworten"
+
+#~ msgid "Digest"
+#~ msgstr "Tägliche Übersicht"
+
+#~ msgid "Pending"
+#~ msgstr "Warteschlange"
+
+# @ subscribe-reloaded
+#~ msgid "Notify authors"
+#~ msgstr "Autoren informieren"
+# @ subscribe-reloaded
+#~ msgid "Notify the administrator when a new comment is posted."
+#~ msgstr ""
+#~ "Benachrichtigung an den Administrator, wenn ein neues Abonnement erstellt "
+#~ "wurde."
 # @ subscribe-reloaded
 #~ msgid "Management Page ID"
 #~ msgstr "ID der Verwaltungs-Seite"
