@@ -66,7 +66,7 @@ Yes! Just disable the corresponding option under Settings > Comment Form and the
 = 2.0.2 =
 * Added: option to automatically subscribe authors to their posts (improves Wordpress' default alert system, thank you [Julius](http://wordpress.org/support/topic/plugin-subscribe-to-comments-reloaded-does-the-post-author-automatically-get-subscribed-to-comments))
 * Added: number of subscriptions per post in the Posts page
-* Added: Serbian and Indonesian localizations (thank you [Anna](http://www.sneg.iz.rs/) and [The Masked Cat](http://themaskedcat.tk))
+* Added: Serbian, Indonesian and Swedish localizations (thank you [Anna](http://www.sneg.iz.rs/), [The Masked Cat](http://themaskedcat.tk) and [Terese](http://www.tiarin.se/))
 * Fixed: bug in daily purge (SQL command)
 * Fixed: bug with international characters (thank you Pascal)
 * Updated: you can now edit a single subscription's status without having to change the email address
@@ -118,6 +118,7 @@ localization is ready. Currently, we support the following languages:
 * Russian - [Marika Bukvonka](http://violetnotes.com), Igor Potapov
 * Serbian - [Anna Swedziol](http://www.sneg.iz.rs/)
 * Spanish - [TodoWordPress team](http://www.todowp.org/), [Juan Luis Perez](http://www.juanluperez.com/)
+* Swedish - [Terese Mortvik](http://www.tiarin.se/)
 * Turkish - [MaD, Kali](http://www.dusunsel.com/)
 
 == List of donors ==
