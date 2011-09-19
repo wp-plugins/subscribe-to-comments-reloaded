@@ -756,6 +756,7 @@ class wp_subscribe_reloaded{
 				FROM $wpdb->postmeta pm INNER JOIN $wpdb->comments c ON pm.post_id = c.comment_post_ID
 				WHERE pm.meta_key LIKE '\_stcr@\_%%'
 					AND pm.meta_value LIKE '%%R'
+					AND c.comment_author_email = REPLACE(pm.meta_key, '_stcr@_', '')
 					AND c.comment_ID = %d", $search_values[0]), OBJECT);
 		}
 		else{
