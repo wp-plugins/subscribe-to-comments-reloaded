@@ -13,7 +13,6 @@ if (!function_exists('add_action')){
 	header('Location: /');
 	exit;
 }
-
 /**
  * Displays the checkbox to allow visitors to subscribe
  */
