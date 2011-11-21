@@ -49,7 +49,7 @@ Add a custom field called `stcr_disable_subscriptions` to it, with value 'yes'
 
 = How do I add the management page URL to my posts? =
 Use the shortcode `[subscribe-url]`, or use the following code in your theme: 
-`if(function_exists('subscribe_reloaded_show')) echo '<a href="'.do_shortcode('[subscribe-url]').'">Subscribe</a>";`
+`if(function_exists('subscribe_reloaded_show')) echo '<a href="'.do_shortcode('[subscribe-url]').'">Subscribe</a>';`
 
 = Can I move the subscription checkbox to another position? =
 Yes! Just disable the corresponding option under Settings > Comment Form and then add the following code where you want to display the checkbox:
