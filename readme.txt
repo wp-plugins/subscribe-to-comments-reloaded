@@ -106,6 +106,7 @@ and [contact me](http://www.duechiacchiere.it/contatto) once your
 localization is ready. Currently, we support the following languages:
 
 * Belarusian - [Web Geek Sciense](http://webhostinggeeks.com/science/)
+* Chinese - [Andrew Strauss](http://www.shanzhuoboshi.com)
 * Danish - [Torben Bendixen](http://www.freelancekonsulenten.dk/)
 * Dutch - [Muratje](http://www.muromedia.nl/)
 * French - [Anthony](http://imnotgeek.com/), Goormand, Maxime
