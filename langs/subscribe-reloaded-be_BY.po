@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Subscribe to Comments Reloaded\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-08-03 12:57-0500\n"
-"PO-Revision-Date: 2011-11-03 20:42+0200\n"
-"Last-Translator: \n"
+"POT-Creation-Date: 2011-11-22 08:12-0500\n"
+"PO-Revision-Date: 2011-11-22 08:12-0500\n"
+"Last-Translator: due chiacchiere <info@duechiacchiere.it>\n"
 "Language-Team: Web Geeks\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -16,80 +16,81 @@ msgstr ""
 "Plural-Forms: s\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: subscribe-to-comments-reloaded.php:41
-#: subscribe-to-comments-reloaded.php:248
+#: subscribe-to-comments-reloaded.php:40
+#: subscribe-to-comments-reloaded.php:229
 msgid "Your subscription to this post needs to be confirmed. <a href='[manager_link]'>Manage your subscriptions</a>."
 msgstr "Ваша падпіска на гэты артыкул мае патрэбу ў пацверджанні. <a href='[manager_link]'>Рэдагаваць</a> свае падпіскі."
 
-#: subscribe-to-comments-reloaded.php:46
-#: subscribe-to-comments-reloaded.php:247
+#: subscribe-to-comments-reloaded.php:45
+#: subscribe-to-comments-reloaded.php:228
 msgid "You are subscribed to this post. <a href='[manager_link]'>Manage</a> your subscriptions."
 msgstr "Вы падпісаны на гэты артыкул. <a href='[manager_link]'>Рэдагаваць</a> свае падпіскі."
 
-#: subscribe-to-comments-reloaded.php:53
-#: subscribe-to-comments-reloaded.php:249
+#: subscribe-to-comments-reloaded.php:52
+#: subscribe-to-comments-reloaded.php:230
 msgid "You can <a href='[manager_link]'>manage the subscriptions</a> of this post."
 msgstr "Вы можаце <a href='[manager_link]'>кіраваць падпіскамі</a> на гэты запіс."
 
-#: subscribe-to-comments-reloaded.php:58
-#: subscribe-to-comments-reloaded.php:244
+#: subscribe-to-comments-reloaded.php:57
+#: subscribe-to-comments-reloaded.php:227
 msgid "Notify me of followup comments via e-mail. You can also <a href='[subscribe_link]'>subscribe</a> without commenting."
 msgstr "Атрымліваць новыя каментары па электроннай пошце. Вы можаце <a href='[subscribe_link]'>падпісацца</a> без каментавання."
 
-#: subscribe-to-comments-reloaded.php:67
+#: subscribe-to-comments-reloaded.php:66
 msgid "Don't subscribe"
 msgstr "Не падпісвацца"
 
-#: subscribe-to-comments-reloaded.php:68
+#: subscribe-to-comments-reloaded.php:67
 msgid "All"
 msgstr "Усё"
 
-#: subscribe-to-comments-reloaded.php:69
+#: subscribe-to-comments-reloaded.php:68
+#: templates/user.php:65
 msgid "Replies to my comments"
 msgstr "Адказы на мае каментары"
 
-#: subscribe-to-comments-reloaded.php:70
+#: subscribe-to-comments-reloaded.php:69
 msgid "Daily digest"
 msgstr "Штодзённы дайджэст"
 
-#: subscribe-to-comments-reloaded.php:221
-#: options/index.php:41
+#: subscribe-to-comments-reloaded.php:233
+#: options/index.php:46
 msgid "Manage subscriptions"
 msgstr "Рэдагаваць падпіскі"
 
-#: subscribe-to-comments-reloaded.php:222
+#: subscribe-to-comments-reloaded.php:235
 msgid "To manage your subscriptions, please enter your email address here below. We will send you a message containing the link to access your personal management page."
 msgstr "Для кіравання сваімі падпіскамі, калі ласка, увядзіце свой электронны адрас у форму ніжэй. Мы адправім вам паведамленне са спасылкай на вашу персанальную старонку кіравання."
 
-#: subscribe-to-comments-reloaded.php:223
+#: subscribe-to-comments-reloaded.php:236
 msgid "Thank you for using our subscription service. Your request has been completed, and you should receive an email with the management link in a few minutes."
 msgstr "Дзякуй, што карыстаецеся нашым сэрвісам падпісак. Ваш запыт выкананы. На працягу некалькіх хвілін вы павінны атрымаць ліст са спасылкай на старонку кіравання падпіскамі."
 
-#: subscribe-to-comments-reloaded.php:224
+#: subscribe-to-comments-reloaded.php:237
 msgid "You can follow the discussion on <strong>[post_title]</strong> without having to leave a comment. Cool, huh? Just enter your email address in the form here below and you're all set."
 msgstr "Вы можаце сачыць за абмеркаваннем артыкула <strong>[post_title]</strong>, не пакідаючы свайго каментара. Выдатна, ці не праўда? Проста ўвядзіце свой электронны адрас у форму ніжэй, і гатова!"
 
-#: subscribe-to-comments-reloaded.php:225
+#: subscribe-to-comments-reloaded.php:238
 msgid "Thank you for using our subscription service. Your request has been completed. You will receive a notification email every time a new comment to this article is approved and posted by the administrator."
 msgstr "Дзякуй, што карыстаецеся нашым сэрвісам падпісак. Ваш запыт выкананы. Вы будзеце атрымліваць апавяшчэнні кожных разоў, як новы каментар да гэты артыкулу будзе ўхвалены і апублікаваны адміністратарам сайта."
 
-#: subscribe-to-comments-reloaded.php:226
+#: subscribe-to-comments-reloaded.php:239
 msgid "Thank you for using our subscription service. In order to confirm your request, please check your email for the verification message and follow the instructions."
 msgstr "Дзякуй, што карыстаецеся нашым сэрвісам падпісак. Каб пацвердзіць свой запыт, калі ласка, праверце сваю пошту і вынікайце інструкцыям у лісце пра пацверджанне."
 
-#: subscribe-to-comments-reloaded.php:227
+#: subscribe-to-comments-reloaded.php:240
 msgid "In order to cancel or suspend one or more notifications, select the corresponding checkbox(es) and click on the button at the end of the list."
 msgstr "Каб адмяніць ці прыпыніць адно ці больш апавяшчэнняў, пстрыкніце ў адпаведным акенцы выбару і націсніце на кнопку ў канцы спісу."
 
-#: subscribe-to-comments-reloaded.php:228
+#: subscribe-to-comments-reloaded.php:241
 msgid "In order to cancel or suspend one or more notifications, select the corresponding checkbox(es) and click on the button at the end of the list. You are currently subscribed to:"
 msgstr "Каб адмяніць ці прыпыніць адно ці больш апавяшчэнняў, пстрыкніце ў адпаведным акенцы выбару і націсніце на кнопку ў канцы спісу. На дадзены момант вы падпісаны на:"
 
-#: subscribe-to-comments-reloaded.php:242
+#: subscribe-to-comments-reloaded.php:245
 msgid "There is a new comment to [post_title]"
 msgstr "З'явіўся новы каментар да артыкула [post_title]"
 
-#: subscribe-to-comments-reloaded.php:243
+#: subscribe-to-comments-reloaded.php:246
 msgid ""
 "There is a new comment to [post_title].\n"
 "Comment Link: [comment_permalink]\n"
@@ -108,11 +109,11 @@ msgstr ""
 "Спасылка на артыкул: [post_permalink]\n"
 "Кіраванне падпіскамі: [manager_link]"
 
-#: subscribe-to-comments-reloaded.php:250
+#: subscribe-to-comments-reloaded.php:247
 msgid "Please confirm your subscription to [post_title]"
 msgstr "Калі ласка, пацвердзіце сваю падпіску на артыкул [post_title]"
 
-#: subscribe-to-comments-reloaded.php:251
+#: subscribe-to-comments-reloaded.php:248
 msgid ""
 "You have requested to be notified every time a new comment is added to:\n"
 "[post_permalink]\n"
@@ -126,11 +127,11 @@ msgstr ""
 "Калі ласка, перайдзіце па наступнай спасылцы, каб пацвердзіць падпіску:\n"
 "[confirm_link]"
 
-#: subscribe-to-comments-reloaded.php:252
+#: subscribe-to-comments-reloaded.php:249
 msgid "Manage your subscriptions on [blog_name]"
 msgstr "Рэдагаваць свае падпіскі на сайце [blog_name]"
 
-#: subscribe-to-comments-reloaded.php:253
+#: subscribe-to-comments-reloaded.php:250
 msgid ""
 "You have requested to manage your subscriptions to the articles on [blog_name]. Follow this link to access your personal page:\n"
 "[manager_link]"
@@ -138,7 +139,7 @@ msgstr ""
 "Вы зрабілі запыт на рэдагаванне сваіх падпісак на каментары да артыкулаў на сайце [blog_name]. Вось спасылка на вашу асабістую старонку кіравання падпіскамі:\n"
 "[manager_link]"
 
-#: subscribe-to-comments-reloaded.php:1000
+#: subscribe-to-comments-reloaded.php:1018
 #: options/panel2.php:42
 #: options/panel2.php:49
 #: options/panel2.php:56
@@ -151,42 +152,42 @@ msgstr ""
 msgid "No"
 msgstr "Не"
 
-#: subscribe-to-comments-reloaded.php:1024
+#: subscribe-to-comments-reloaded.php:1042
 msgid "Need help on how to use Subscribe to Comments Reloaded? Visit the official"
 msgstr "Патрэбна дапамога ў использовани убудовы Subscribe to Comments Reloaded? Наведаеце наш афіцыйны"
 
-#: subscribe-to-comments-reloaded.php:1024
+#: subscribe-to-comments-reloaded.php:1042
 msgid "support forum"
 msgstr "форум падтрымкі"
 
-#: subscribe-to-comments-reloaded.php:1025
+#: subscribe-to-comments-reloaded.php:1043
 msgid "Feeling generous?"
 msgstr "Жадаеце выявіць шчодрасць?"
 
-#: subscribe-to-comments-reloaded.php:1025
+#: subscribe-to-comments-reloaded.php:1043
 msgid "Donate a few bucks!"
 msgstr "Ахвяруйце пару баксаў!"
 
-#: options/index.php:42
+#: options/index.php:47
 msgid "Comment Form"
 msgstr "Форма каментара"
 
-#: options/index.php:43
+#: options/index.php:48
 msgid "Management Page"
 msgstr "Старонка кіравання"
 
-#: options/index.php:44
+#: options/index.php:49
 msgid "Notifications"
 msgstr "Апавяшчэнні"
 
-#: options/index.php:45
+#: options/index.php:50
 #: options/panel2.php:35
 #: options/panel3.php:39
 #: options/panel4.php:36
 msgid "Options"
 msgstr "Параметры"
 
-#: options/index.php:46
+#: options/index.php:51
 msgid "You can help"
 msgstr "Вы можаце дапамагчы"
 
@@ -204,16 +205,19 @@ msgstr "Падпіска выдалена."
 
 #: options/panel1-business-logic.php:54
 #: templates/author.php:22
+#: templates/user.php:22
 msgid "Subscriptions deleted:"
 msgstr "Падпіскі выдалены:"
 
 #: options/panel1-business-logic.php:58
 #: templates/author.php:26
+#: templates/user.php:26
 msgid "Subscriptions suspended:"
 msgstr "Падпіскі прыпынены:"
 
 #: options/panel1-business-logic.php:62
 #: templates/author.php:30
+#: templates/user.php:30
 msgid "Subscriptions activated:"
 msgstr "Падпіскі актываваны:"
 
@@ -221,6 +225,7 @@ msgstr "Падпіскі актываваны:"
 #: options/panel1-business-logic.php:70
 #: templates/author.php:34
 #: templates/author.php:38
+#: templates/user.php:34
 msgid "Subscriptions updated:"
 msgstr "Падпіскі абноўлены:"
 
@@ -251,6 +256,7 @@ msgstr "па выбары"
 #: options/panel1.php:81
 #: options/panel1.php:117
 #: templates/author.php:50
+#: templates/user.php:46
 msgid "Please remember: this operation cannot be undone. Are you sure you want to proceed?"
 msgstr "Увага: гэту аперацыю нельга адмяніць. Вы ўпэўнены, што жадаеце працягнуць?"
 
@@ -317,6 +323,8 @@ msgstr "ID-нумар запісу"
 #: options/panel1.php:44
 #: options/panel1.php:90
 #: templates/request-management-link.php:65
+#: templates/subscribe.php:86
+#: templates/user.php:51
 msgid "Email"
 msgstr "Эл. адрас"
 
@@ -404,6 +412,7 @@ msgstr " "
 
 #: options/panel1.php:93
 #: templates/author.php:56
+#: templates/user.php:52
 msgid "Legend: Y = all comments, R = replies only, C = inactive"
 msgstr "Расшыфроўка: Y = усе каментары, R = толькі адказы, C = неактыўныя"
 
@@ -421,11 +430,13 @@ msgstr "Рэдагаваць"
 
 #: options/panel1.php:117
 #: templates/author.php:69
+#: templates/user.php:63
 msgid "Delete"
 msgstr "Выдаліць"
 
 #: options/panel1.php:125
 #: templates/author.php:68
+#: templates/user.php:62
 msgid "Action:"
 msgstr "Дзеянне:"
 
@@ -435,6 +446,7 @@ msgstr "Выдаліць назаўжды"
 
 #: options/panel1.php:127
 #: templates/author.php:70
+#: templates/user.php:64
 msgid "Suspend"
 msgstr "Прыпыніць"
 
@@ -448,11 +460,13 @@ msgstr "Уключыць і ўсталяваць на R"
 
 #: options/panel1.php:130
 #: templates/author.php:72
+#: templates/user.php:66
 msgid "Activate"
 msgstr "Уключыць"
 
 #: options/panel1.php:131
 #: templates/author.php:73
+#: templates/user.php:67
 msgid "Update subscriptions"
 msgstr "Абнавіць падпіскі"
 
@@ -835,8 +849,9 @@ msgid "Enable double check"
 msgstr "Уключыць падвойнае пацверджанне"
 
 #: options/panel5.php:13
-msgid "Notify authors"
-msgstr "Апавяшчаць аўтараў"
+#: options/panel5.php:47
+msgid "Subscribe authors"
+msgstr ""
 
 #: options/panel5.php:14
 #: options/panel5.php:54
@@ -848,7 +863,6 @@ msgid "Send trackbacks"
 msgstr "Адпраўляць трэкбеки"
 
 #: options/panel5.php:16
-#: options/panel5.php:47
 msgid "Notify admin"
 msgstr "Апавясціць адміна"
 
@@ -870,8 +884,8 @@ msgid "Send a notification email to confirm the subscription (to avoid addresses
 msgstr "Адпраўляць ліст з просьбай пацвердзіць падпіску (каб пазбегнуць выкарыстанні эл. адрасы без вядзёная ўладальніка)"
 
 #: options/panel5.php:51
-msgid "Notify the administrator when a new comment is posted."
-msgstr "Апавяшчаць адміністратара пра новы каментар."
+msgid "Automatically subscribe authors to their own articles (not retroactive)."
+msgstr ""
 
 #: options/panel5.php:58
 msgid "If enabled, will send email messages with content-type = text/html instead of text/plain"
@@ -934,10 +948,12 @@ msgid "Title"
 msgstr "Загаловак"
 
 #: templates/author.php:66
+#: templates/user.php:60
 msgid "Select all"
 msgstr "Абраць усё"
 
 #: templates/author.php:67
+#: templates/user.php:61
 msgid "Invert selection"
 msgstr "Абраць зваротнае"
 
@@ -946,21 +962,29 @@ msgid "Set to Y"
 msgstr "Усталявана на Y"
 
 #: templates/author.php:77
+#: templates/user.php:71
 msgid "No subscriptions match your search criteria."
 msgstr "Ніводная падпіска не адпавядае пошукаваму запыту."
 
-#: templates/request-management-link.php:68
+#: templates/request-management-link.php:67
+#: templates/subscribe.php:87
 msgid "Send"
 msgstr "Адправіць"
 
+#: templates/subscribe.php:41
 #: templates/subscribe.php:42
-#: templates/subscribe.php:43
 msgid "New subscription to"
 msgstr "Новая падпіска на"
 
-#: templates/subscribe.php:43
+#: templates/subscribe.php:42
 msgid "User:"
 msgstr "Карыстач:"
+
+#~ msgid "Notify authors"
+#~ msgstr "Апавяшчаць аўтараў"
+
+#~ msgid "Notify the administrator when a new comment is posted."
+#~ msgstr "Апавяшчаць адміністратара пра новы каментар."
 
 #~ msgid "Subscribed"
 #~ msgstr "Падпісана"
@@ -1010,8 +1034,7 @@ msgstr "Карыстач:"
 #~ "Change the status of an email address or permanently delete all its "
 #~ "subscriptions."
 #~ msgstr ""
-#~ "Змяніць статут электроннага адрасу ці цалкам выдаліць усё яго "
-#~ "падпіскі."
+#~ "Змяніць статут электроннага адрасу ці цалкам выдаліць усё яго падпіскі."
 
 #~ msgid "Resume"
 #~ msgstr "Аднавіць"
@@ -1023,15 +1046,14 @@ msgstr "Карыстач:"
 #~ "You can \"mass update\" all the occurrences of a given email address "
 #~ "(exact matches only)."
 #~ msgstr ""
-#~ "Вы можаце змяніць усе выкарыстанні вызначанага электроннага адрасу ў "
-#~ "базе дадзеных на новы (толькі для дакладных супадзенняў)."
+#~ "Вы можаце змяніць усе выкарыстанні вызначанага электроннага адрасу ў базе "
+#~ "дадзеных на новы (толькі для дакладных супадзенняў)."
 
 #~ msgid "Search email address"
 #~ msgstr "Шукаць электронны адрас"
 
 #~ msgid "Legend: Y: subscribed, N: suspended, C: awaiting confirmation"
-#~ msgstr ""
-#~ "(Расшыфроўка: Y: падпісана, N: прыпынена, C: чакае пацверджання)"
+#~ msgstr "(Расшыфроўка: Y: падпісана, N: прыпынена, C: чакае пацверджання)"
 
 #~ msgid "StCR table has been successfully optimized."
 #~ msgstr "Табліца StCR паспяхова абноўлена."

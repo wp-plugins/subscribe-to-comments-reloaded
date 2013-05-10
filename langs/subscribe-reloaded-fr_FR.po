@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: Subscribe to Comments Reloaded v1.2.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-08-01 08:27-0500\n"
-"PO-Revision-Date: 2011-10-30 15:29+0100\n"
-"Last-Translator: Geoffrey <rikuasakura@hotmail.fr>\n"
+"PO-Revision-Date: 2011-08-01 08:27-0500\n"
+"Last-Translator: due chiacchiere <info@duechiacchiere.it>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -40,7 +40,7 @@ msgstr "Vous pouvez <a href='[manager_link]'>gérer les abonnements</a> aux comm
 #: subscribe-to-comments-reloaded.php:58
 #: subscribe-to-comments-reloaded.php:244
 msgid "Notify me of followup comments via e-mail. You can also <a href='[subscribe_link]'>subscribe</a> without commenting."
-msgstr "Notifiez-moi des commentaires à venir via e-mail. Vous pouvez aussi <a href='[subscribe_link]'>vous abonner</a> sans commenter."
+msgstr "Notifiez-moi des commentaires à venir via émail. Vous pouvez aussi <a href='[subscribe_link]'>vous abonner</a> sans commenter."
 
 # @ subscribe-reloaded
 #: subscribe-to-comments-reloaded.php:67
@@ -68,27 +68,27 @@ msgstr "Gérer les abonnements"
 # @ subscribe-reloaded
 #: subscribe-to-comments-reloaded.php:222
 msgid "To manage your subscriptions, please enter your email address here below. We will send you a message containing the link to access your personal management page."
-msgstr "Pour gérer vos abonnements, veuillez entrer votre adresse e-mail ci-dessous. Nous vous enverrons un message contenant le lien pour accéder à votre page personnelle de gestion."
+msgstr "Pour gérer vos abonnements, veuillez entrer votre adresse émail ci-dessous. Nous vous enverrons un message contenant le lien pour accéder à votre page personnelle de gestion."
 
 # @ subscribe-reloaded
 #: subscribe-to-comments-reloaded.php:223
 msgid "Thank you for using our subscription service. Your request has been completed, and you should receive an email with the management link in a few minutes."
-msgstr "Merci d'utiliser notre service d'abonnement. Votre requête a été complétée et vous devriez recevoir un e-mail avec un lien de gestion dans quelques minutes."
+msgstr "Merci d'utiliser notre service d'abonnement. Votre requête a été complétée et vous devriez recevoir un émail avec un lien de gestion dans quelques minutes."
 
 # @ subscribe-reloaded
 #: subscribe-to-comments-reloaded.php:224
 msgid "You can follow the discussion on <strong>[post_title]</strong> without having to leave a comment. Cool, huh? Just enter your email address in the form here below and you're all set."
-msgstr "Vous pouvez suivre la discussion sur <strong>[post_title]</strong> sans avoir à laisser un commentaire. Chouette, pas vrai ? Entrez simplement votre adresse e-mail dans le champ ci-dessous."
+msgstr "Vous pouvez suivre la discussion sur <strong>[post_title]</strong> sans avoir à laisser un commentaire. Chouette, pas vrai ? Entrez simplement votre adresse émail dans le champ ci-dessous."
 
 # @ subscribe-reloaded
 #: subscribe-to-comments-reloaded.php:225
 msgid "Thank you for using our subscription service. Your request has been completed. You will receive a notification email every time a new comment to this article is approved and posted by the administrator."
-msgstr "Merci d'utiliser notre service d'abonnement. Votre requête a abouti. Vous recevrez une notification par e-mail à chaque fois qu'un nouveau commentaire sur cet article sera posté et approuvé par l'administrateur."
+msgstr "Merci d'utiliser notre service d'abonnement. Votre requête a abouti. Vous recevrez une notification par émail à chaque fois qu'un nouveau commentaire sur cet article sera posté et approuvé par l'administrateur."
 
 # @ subscribe-reloaded
 #: subscribe-to-comments-reloaded.php:226
 msgid "Thank you for using our subscription service. In order to confirm your request, please check your email for the verification message and follow the instructions."
-msgstr "Merci d'utiliser notre service d'abonnement. Afin de confirmer votre requête, veuillez vérifier votre courrier e-mail pour le message de vérification et suivre les instructions."
+msgstr "Merci d'utiliser notre service d'abonnement. Afin de confirmer votre requête, veuillez vérifier votre courrier émail pour le message de vérification et suivre les instructions."
 
 # @ subscribe-reloaded
 #: subscribe-to-comments-reloaded.php:227
@@ -403,7 +403,7 @@ msgstr "Billet (ID)"
 #: templates/request-management-link.php:65
 #: templates/subscribe.php:87
 msgid "Email"
-msgstr "E-mail"
+msgstr "Émail"
 
 #: options/panel1.php:49
 msgid "Ask user to confirm"
@@ -427,7 +427,7 @@ msgstr "Vous pouvez soit <a href=\"%s\">lister tous les abonnements</a> soit tro
 # @ subscribe-reloaded
 #: options/panel1.php:64
 msgid "email"
-msgstr "E-mail"
+msgstr "Émail"
 
 # @ subscribe-reloaded
 #: options/panel1.php:65
@@ -894,7 +894,7 @@ msgstr "Nom de l'expéditeur"
 #: options/panel4.php:14
 #: options/panel4.php:45
 msgid "Sender email address"
-msgstr "Adresse e-mail de l'expéditeur"
+msgstr "Adresse émail de l'expéditeur"
 
 # @ subscribe-reloaded
 #: options/panel4.php:15
@@ -940,37 +940,37 @@ msgstr "Nom à utiliser pour le champ \"de\" lors de l'envoi d'une nouvelle noti
 # @ subscribe-reloaded
 #: options/panel4.php:47
 msgid "Email address to use for the \"from\" field when sending a new notification to the user."
-msgstr "Adresse e-mail à utiliser pour le champ \"de\" lors de l'envoi d'une nouvelle notification à l'utilisateur."
+msgstr "Adresse émail à utiliser pour le champ \"de\" lors de l'envoi d'une nouvelle notification à l'utilisateur."
 
 # @ subscribe-reloaded
 #: options/panel4.php:58
 msgid "Subject of the notification email. Allowed tag: [post_title]"
-msgstr "Sujet de l'e-mail de notification. Tag autorisé : [post_title]"
+msgstr "Sujet de l'émail de notification. Tag autorisé : [post_title]"
 
 # @ subscribe-reloaded
 #: options/panel4.php:69
 msgid "Content of the notification email. Allowed tags: [post_title], [comment_permalink], [comment_author], [comment_content], [post_permalink], [manager_link]"
-msgstr "Contenu de l'e-mail de notification. Tags autorisés : [post_title], [comment_permalink], [comment_author], [comment_content], [post_permalink], [manager_link]"
+msgstr "Contenu de l'émail de notification. Tags autorisés : [post_title], [comment_permalink], [comment_author], [comment_content], [post_permalink], [manager_link]"
 
 # @ subscribe-reloaded
 #: options/panel4.php:74
 msgid "Subject of the confirmation email. Allowed tag: [post_title]"
-msgstr "Sujet de l'email de confirmation. Tag autorisé : [post_title]"
+msgstr "Sujet de l'émail de confirmation. Tag autorisé : [post_title]"
 
 # @ subscribe-reloaded
 #: options/panel4.php:85
 msgid "Content of the confirmation email. Allowed tags: [post_permalink], [confirm_link], [post_title], [manager_link]"
-msgstr "Contenu de l'e-mail de confirmation. Tags autorisés : [post_permalink], [confirm_link], [post_title], [manager_link]"
+msgstr "Contenu de l'émail de confirmation. Tags autorisés : [post_permalink], [confirm_link], [post_title], [manager_link]"
 
 # @ subscribe-reloaded
 #: options/panel4.php:90
 msgid "Subject of the mail sent to those who request to access their management page. Allowed tag: [blog_name]"
-msgstr "Sujet de l'e-mail envoyé à ceux qui demandent à accéder à leur page de gestion. Tag autorisé : [blog_name]"
+msgstr "Sujet de l'émail envoyé à ceux qui demandent à accéder à leur page de gestion. Tag autorisé : [blog_name]"
 
 # @ subscribe-reloaded
 #: options/panel4.php:101
 msgid "Content of the management email. Allowed tags: [blog_name], [manager_link]"
-msgstr "Contenu de l'e-mail de gestion. Tags autorisés : [blog_name], [manager_link]"
+msgstr "Contenu de l'émail de gestion. Tags autorisés : [blog_name], [manager_link]"
 
 # @ subscribe-reloaded
 #: options/panel5.php:11
@@ -992,7 +992,7 @@ msgstr "Notifier les auteurs"
 #: options/panel5.php:14
 #: options/panel5.php:54
 msgid "Enable HTML emails"
-msgstr "Activer les e-mails en HTML"
+msgstr "Activer les émails en HTML"
 
 # @ subscribe-reloaded
 #: options/panel5.php:15
@@ -1024,7 +1024,7 @@ msgstr "Effacer les abonnements en attente (non confirmés) après X jours. Zér
 # @ subscribe-reloaded
 #: options/panel5.php:44
 msgid "Send a notification email to confirm the subscription (to avoid addresses misuse)."
-msgstr "Envoyer une notification par e-mail pour confirmer l'abonnement (afin d'éviter les fausses adresses)."
+msgstr "Envoyer une notification par émail pour confirmer l'abonnement (afin d'éviter les fausses adresses)."
 
 # @ subscribe-reloaded
 #: options/panel5.php:51

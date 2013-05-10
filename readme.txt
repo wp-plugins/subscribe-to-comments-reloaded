@@ -3,8 +3,8 @@ Contributors: coolmann
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=Z732JS7KQ6RRL&lc=US&item_name=Subscribe%20To%20Comments%20Reloaded&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHosted
 Tags: subscribe, comments, notification, subscription, manage, double check-in, follow, commenting
 Requires at least: 2.9.2
-Tested up to: 3.3
-Stable tag: 2.0.2
+Tested up to: 3.5
+Stable tag: 2.0.3
 
 Subscribe to Comments Reloaded allows commenters to sign up for e-mail notifications of subsequent replies.
 
@@ -49,7 +49,7 @@ Add a custom field called `stcr_disable_subscriptions` to it, with value 'yes'
 
 = How do I add the management page URL to my posts? =
 Use the shortcode `[subscribe-url]`, or use the following code in your theme: 
-`if(function_exists('subscribe_reloaded_show')) echo '<a href="'.do_shortcode('[subscribe-url]').'">Subscribe</a>';`
+`if(function_exists('subscribe_reloaded_show')) echo '<a href="'.do_shortcode('[subscribe-url]').'">Subscribe</a>";`
 
 = Can I move the subscription checkbox to another position? =
 Yes! Just disable the corresponding option under Settings > Comment Form and then add the following code where you want to display the checkbox:
@@ -63,11 +63,14 @@ Yes! Just disable the corresponding option under Settings > Comment Form and the
 
 == Changelog ==
 
+= 2.0.3 =
+* I would like to thank Andreas for contributing to the project and fixing some issues with the plugin
+
 = 2.0.2 =
 * Added: option to automatically subscribe authors to their posts (improves Wordpress' default alert system, thank you [Julius](http://wordpress.org/support/topic/plugin-subscribe-to-comments-reloaded-does-the-post-author-automatically-get-subscribed-to-comments))
 * Added: number of subscriptions per post in the Posts page
-* Added: Serbian, Indonesian and Swedish localizations (thank you [Anna](http://www.sneg.iz.rs/), [The Masked Cat](http://themaskedcat.tk) and [Terese](http://www.tiarin.se/))
-* Fixed: bug in daily purge (SQL command)
+* Added: Serbian and Indonesian localization (thank you [Anna](http://www.sneg.iz.rs/) and [The Masked Cat](http://themaskedcat.tk))
+* Fixed: bug in daily purge SQL command
 * Fixed: bug with international characters (thank you Pascal)
 * Updated: you can now edit a single subscription's status without having to change the email address
 * Updated: more localizations are now up-to-date, thank you!
@@ -105,8 +108,6 @@ language, use the template files (.pot) you'll find inside the `langs` folder,
 and [contact me](http://www.duechiacchiere.it/contatto) once your
 localization is ready. Currently, we support the following languages:
 
-* Belarusian - [Web Geek Sciense](http://webhostinggeeks.com/science/)
-* Chinese - [Andrew Strauss](http://www.shanzhuoboshi.com)
 * Danish - [Torben Bendixen](http://www.freelancekonsulenten.dk/)
 * Dutch - [Muratje](http://www.muromedia.nl/)
 * French - [Anthony](http://imnotgeek.com/), Goormand, Maxime
@@ -117,17 +118,7 @@ localization is ready. Currently, we support the following languages:
 * Polish - [Robert Koeseling](http://www.katalogpodkastow.pl), [Filip Cierpich](http://keepmind.eu/)
 * Portuguese, Brazil - [Ronaldo Richieri](http://richieri.com), [ClassiNoiva](http://www.classinoiva.com.br), [Luciano](http://litemind.com/)
 * Portuguese, Portugal
-* Russian - [Marika Bukvonka](http://violetnotes.com), Igor Potapov
+* Russian - [Marika Bukvonka](http://violetnotes.com)
 * Serbian - [Anna Swedziol](http://www.sneg.iz.rs/)
 * Spanish - [TodoWordPress team](http://www.todowp.org/), [Juan Luis Perez](http://www.juanluperez.com/)
-* Swedish - [Terese Mortvik](http://www.tiarin.se/)
 * Turkish - [MaD, Kali](http://www.dusunsel.com/)
-
-== List of donors ==
-
-Please send a donation of at least $5 in order to be included in this list. Thank you.
-
-[R. Eberle](http://www.gopusa.com), [T. Cerulli](http://www.tovarcerulli.com/), F. Fratellini, [T. Jordan](http://www.teresajordan.com), [T. de Haan](http://www.tomdehaan.nl),
-[Life as a Human, Inc](http://lifeasahuman.com/), H. Lisle, [Olivier](http://www.stocker-partager.fr), [Passione Maglie](http://www.passionemaglie.it/),
-L. Passuello, [Pausaxn](http://pausaxn.it), J. Pelletier, [R. Schilt](http://www.trupela.com), M. Temporale, [Vendiva](http://www.vendiva.com),
-[S. Watson](http://www.swearingdad.com/), Welcome Changes

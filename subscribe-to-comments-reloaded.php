@@ -1,10 +1,10 @@
 <?php
 /*
 Plugin Name: Subscribe to Comments Reloaded
-Version: 2.0.2
+Version: 2.0.3
 Plugin URI: http://wordpress.org/extend/plugins/subscribe-to-comments-reloaded/
 Description: Subscribe to Comments Reloaded is a robust plugin that enables commenters to sign up for e-mail notifications. It includes a full-featured subscription manager that your commenters can use to unsubscribe to certain posts or suspend all notifications.
-Author: camu
+Author: camu, andreas
 Author URI: http://www.duechiacchiere.it/
 */
 
@@ -13,6 +13,7 @@ if (!function_exists('add_action')){
 	header('Location: /');
 	exit;
 }
+
 /**
  * Displays the checkbox to allow visitors to subscribe
  */
@@ -309,7 +310,6 @@ class wp_subscribe_reloaded{
 
 		// Did this visitor request to be subscribed to the discussion? (and s/he is not subscribed)
 		if (!empty($_POST['subscribe-reloaded']) && !empty($info->comment_author_email)){
-
 			if (!in_array($_POST['subscribe-reloaded'], array('replies', 'digest', 'yes')))
 				return $_comment_ID;
 
@@ -326,20 +326,17 @@ class wp_subscribe_reloaded{
 			}
 
 			if (!$this->is_user_subscribed($info->comment_post_ID, $info->comment_author_email)){
-
-				// Comment has been held in the moderation queue
-				if ($info->comment_approved == 0){
-					$this->add_subscription($info->comment_post_ID, $info->comment_author_email, "{$status}C");
-					return $_comment_ID;
-				}
-
-				// Are we using double check-in?
-				$approved_subscriptions = $this->get_subscriptions(array('status', 'email'), array('equals', 'equals'), array('Y', $info->comment_author_email));
-				if ((get_option('subscribe_reloaded_enable_double_check', 'no') == 'yes') && !is_user_logged_in() && empty($approved_subscriptions)){
+				if($this->isDoubleCheckinEnabled($info)) {
+					$this->sendConfirmationEMail($info);
 					$status = "{$status}C";
-					$this->confirmation_email($info->comment_post_ID, $info->comment_author_email);
 				}
 				$this->add_subscription($info->comment_post_ID, $info->comment_author_email, $status);
+				
+				// If comment is in the moderation queue
+				if ($info->comment_approved == 0){
+					//don't send notification-emails to all subscribed users
+					return $_comment_ID;
+				}
 			}
 		}
 
@@ -363,7 +360,22 @@ class wp_subscribe_reloaded{
 		return $_comment_ID;
 	}
 	// end new_comment_posted
-
+	
+	public function isDoubleCheckinEnabled($info) {
+		$approved_subscriptions = $this->get_subscriptions(array('status', 'email'), array('equals', 'equals'), array('Y', $info->comment_author_email));
+		if ((get_option('subscribe_reloaded_enable_double_check', 'no') == 'yes') && !is_user_logged_in() && empty($approved_subscriptions)){
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+	
+	public function sendConfirmationEMail($info) {
+		// Retrieve the information about the new comment
+		$this->confirmation_email($info->comment_post_ID, $info->comment_author_email);
+	}
+	
 	/**
 	 * Performs the appropriate action when the status of a given comment changes
 	 */
@@ -755,7 +767,6 @@ class wp_subscribe_reloaded{
 				FROM $wpdb->postmeta pm INNER JOIN $wpdb->comments c ON pm.post_id = c.comment_post_ID
 				WHERE pm.meta_key LIKE '\_stcr@\_%%'
 					AND pm.meta_value LIKE '%%R'
-					AND c.comment_author_email = REPLACE(pm.meta_key, '_stcr@_', '')
 					AND c.comment_ID = %d", $search_values[0]), OBJECT);
 		}
 		else{
