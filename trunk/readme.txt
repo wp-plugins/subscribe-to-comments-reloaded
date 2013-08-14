@@ -1,5 +1,5 @@
 === Subscribe To Comments Reloaded ===
-Contributors: coolmann, reedyseth.
+Contributors: coolmann, Reedyseth.
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=Z732JS7KQ6RRL&lc=US&item_name=Subscribe%20To%20Comments%20Reloaded&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHosted
 Tags: subscribe, comments, notification, subscription, manage, double check-in, follow, commenting
 Requires at least: 2.9.2
@@ -63,6 +63,10 @@ Yes! Just disable the corresponding option under Settings > Comment Form and the
 
 == Changelog ==
 
+= 2.0.4 =
+* Added: Dutch translation fixes provided by [Martijn Chel](http://www.martijnchel.com)
+* Fixed: There was vulnerability in the form where the URI was added.
+
 = 2.0.3 =
 * I would like to thank Andreas for contributing to the project and fixing some issues with the plugin
 
@@ -105,7 +109,7 @@ Yes! Just disable the corresponding option under Settings > Comment Form and the
 
 Subscribe to Comments Reloaded can speak your language! If you want to provide a localized file in your
 language, use the template files (.pot) you'll find inside the `langs` folder,
-and [contact me](http://www.duechiacchiere.it/contatto) once your
+and [contact me](http://behstant.com/negocio/contact.php) once your
 localization is ready. Currently, we support the following languages:
 
 * Danish - [Torben Bendixen](http://www.freelancekonsulenten.dk/)
