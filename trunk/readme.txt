@@ -5,7 +5,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=XF86X
 Tags: subscribe, comments, notification, subscription, manage, double check-in, follow, commenting
 Requires at least: 2.9.2
 Tested up to: 3.5
-Stable tag: 2.0.4
+Stable tag: 2.0.5
 
 Subscribe to Comments Reloaded allows commenters to sign up for e-mail notifications of subsequent replies.
 
@@ -63,6 +63,9 @@ Yes! Just disable the corresponding option under Settings > Comment Form and the
 3. Customize the plugin's behavior
 
 == Changelog ==
+
+= 2.0.5 =
+* Added: Since the authorship of the plugin has changed I added the correct information of the contact in order to have a faster response to the issues.
 
 = 2.0.4 =
 * Added: Dutch translation fixes provided by [Martijn Chel](http://www.martijnchel.com)
