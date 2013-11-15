@@ -1,0 +1,74 @@
+/* View Panel */
+#subscribe-to-comments-icon{
+ background:transparent url(images/subscribe-to-comments.png) no-repeat scroll 4px 4px;
+ float:left;
+ height:30px;
+ margin:16px 2px 0 4px;
+ width:40px;
+}
+#subscribe-to-comments-icon.rtl{
+ float:right;
+}
+.wrap form p,.wrap form ul{
+ margin:6px;
+}
+.wrap form p span{
+ float:left;
+}
+.wrap form p span.rtl{
+ float:right;
+}
+.wrap form a.small-text{
+ font-size:.8em;
+}
+.wrap h2.medium{
+ border-bottom:1px solid #CCCCCC;
+ font-size:12px;
+ padding-bottom:0;
+}
+.wrap .menu-tabs{
+ -moz-border-radius:5px 5px 0 0;
+ background-color:transparent;
+ border-color:#CCCCCC;
+ border-style:solid;
+ border-width:1px 1px 0;
+ color:#464646;
+ font-weight:bold;
+ margin-right:6px;
+ padding:6px 12px 10px;
+ text-decoration:none;
+}
+.wrap .menu-tabs.menu-tab-inactive{
+ border-style:dashed;
+ font-weight:400;
+ padding:6px 10px;
+ position:relative;
+ top:5px;
+}
+.form-table th{
+ padding:3px 10px;
+ white-space:nowrap;
+ width:15%;
+}
+.form-table td{
+ padding:3px 10px;
+}
+.form-table td.description{
+ white-space:normal;
+}
+.form-table td.narrowcolumn{
+ width:100px;
+}
+.form-table td.shortrow{
+ padding:0 10px 20px;
+ white-space:normal;
+}
+.form-table input{
+ margin:0 8px 0 0;
+}
+.form-table.rtl input{
+ margin:0 0 0 8px;
+}
+.form-table input.longtext{
+ width:400px;
+}
