@@ -4,7 +4,7 @@ Plugin Name: Subscribe to Comments Reloaded
 Version: 2.0.6
 Plugin URI: http://wordpress.org/extend/plugins/subscribe-to-comments-reloaded/
 Description: Subscribe to Comments Reloaded is a robust plugin that enables commenters to sign up for e-mail notifications. It includes a full-featured subscription manager that your commenters can use to unsubscribe to certain posts or suspend all notifications.
-Author: camu, Reedyseth and andreasbo
+Author: camu, Reedyseth, andreasbo, raamdev
 */
 
 // Avoid direct access to this piece of code
@@ -610,7 +610,6 @@ class wp_subscribe_reloaded{
 	 */
 	public function add_subscription($_post_id = 0, $_email = '', $_status = 'Y'){
 		global $wpdb;
-
 		// Does the post exist?
 		$target_post = get_post($post_id);
 		if (($post_id > 0) && !is_object($target_post))
@@ -822,7 +821,6 @@ class wp_subscribe_reloaded{
 
 			// This is the 'official' way to have an offset without a limit
 			$row_count = ($_limit_results <= 0)?'18446744073709551610':$_limit_results;
-
 			return $wpdb->get_results($wpdb->prepare("
 				SELECT meta_id, REPLACE(meta_key, '_stcr@_', '') AS email, post_id, SUBSTRING(meta_value, 1, 19) AS dt, SUBSTRING(meta_value, 21) AS status
 				FROM $wpdb->postmeta
@@ -1116,11 +1114,12 @@ class wp_subscribe_reloaded{
 
 // Bootstrap the whole thing
 $wp_subscribe_reloaded = new wp_subscribe_reloaded();
-
 // Set a cookie if the user just subscribed without commenting
 $subscribe_to_comments_action = !empty($_POST['sra'])?$_POST['sra']:(!empty($_GET['sra'])?$_GET['sra']:0);
 $subscribe_to_comments_post_ID = !empty($_POST['srp'])?intval($_POST['srp']):(!empty($_GET['srp'])?intval($_GET['srp']):0);
-if (!empty($subscribe_to_comments_action) && !empty($_POST['subscribe_reloaded_email']) && ($subscribe_to_comments_action == 's') && ($subscribe_to_comments_post_ID > 0)){
+
+if (!empty($subscribe_to_comments_action) && !empty($_POST['subscribe_reloaded_email']) &&
+	 ($subscribe_to_comments_action == 's') && ($subscribe_to_comments_post_ID > 0)) {
 	$subscribe_to_comments_clean_email = $wp_subscribe_reloaded->clean_email($_POST['subscribe_reloaded_email']);
 	setcookie('comment_author_email'.COOKIEHASH, $subscribe_to_comments_clean_email, time()+1209600, '/');
 }
