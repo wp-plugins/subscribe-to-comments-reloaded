@@ -6,8 +6,8 @@ if (!function_exists('add_action')){
 }
 
 global $wp_subscribe_reloaded;
-include (WP_PLUGIN_DIR.'/subscribe-to-comments-reloaded/classes/helper.class.php');
-$helper = new Helper();
+require_once (WP_PLUGIN_DIR.'/subscribe-to-comments-reloaded/classes/helper.class.php');
+$helper = new subscripeToCommentsHelper();
 ob_start();
 $post_permalink = get_permalink($post_ID);
 if (!empty($email)){
