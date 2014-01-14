@@ -5,12 +5,12 @@ if (!function_exists('add_action')){
 	exit;
 }
 
-include (WP_PLUGIN_DIR.'/subscribe-to-comments-reloaded/classes/helper.class.php');
-$helper = new Helper();
+require_once(WP_PLUGIN_DIR.'/subscribe-to-comments-reloaded/classes/helper.class.php');
+
+$helper = new subscripeToCommentsHelper();
 ob_start();
 if (!empty($email)){
 	global $wp_subscribe_reloaded;
-
 
 	// Send management link
 	$from_name = stripslashes(get_option('subscribe_reloaded_from_name', 'admin'));
