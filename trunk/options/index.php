@@ -9,6 +9,10 @@ function subscribe_reloaded_update_option( $_option = '', $_value = '', $_type =
 	if ( ! isset( $_value ) ) {
 		return true;
 	}
+
+	// Prevent XSS/CSRF attacks
+	$_value = esc_attr( $_value );
+
 	switch ( $_type ) {
 	case 'yesno':
 		if ( $_value == 'yes' || $_value == 'no' ) {
@@ -47,7 +51,7 @@ function subscribe_reloaded_get_option( $_option = '', $_default = '' ) {
 }
 
 // Load localization files
-load_plugin_textdomain( 'subscribe-reloaded', WP_PLUGIN_DIR . '/subscribe-to-comments-reloaded/langs', '/subscribe-to-comments-reloaded/langs' );
+load_plugin_textdomain( 'subscribe-reloaded', false, dirname( plugin_basename( __FILE__ ) ) . '/langs/' );
 
 // Define the panels
 $array_panels = array(
