@@ -5,7 +5,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=XF86X
 Tags: subscribe, comments, notification, subscription, manage, double check-in, follow, commenting
 Requires at least: 2.9.2
 Tested up to: 4.1.3
-Stable tag: 150422
+Stable tag: 150428
 
 Subscribe to Comments Reloaded allows commenters to sign up for e-mail notifications of subsequent replies.
 
@@ -74,6 +74,10 @@ Just go to the Options Panel and click the generate button. By generating a new 
 
 == Upgrade Notice ==
 
+== v150428 ==
+
+**Bug Fix; PLEASE UPGRADE IMMEDIATELY** This Update will fix a critical issue on the creation of the new subscribers table in case that is not created.
+
 == v150422 ==
 
 **Security Fix; PLEASE UPGRADE IMMEDIATELY** Google PII issue with AdWords. Protect user email Address and uses an encrypted key instead on URL. Several issues are fix, see the change log.
@@ -95,6 +99,11 @@ v1410124 Fixed several issues reported on the support forum like broken links, r
 **Security Fix; PLEASE UPGRADE IMMEDIATELY**. v140219 fixes an XSS/CSRF vulnerability that was discovered by Tom Adams and reported by a WordPress Plugin Repository moderator.
 
 == Changelog ==
+
+= v150428 =
+
+* **Fix** Upgrade routine since the activation hooks was not triggering on the upgrade process.
+* **Add** Fixed French translation(thanks to Jean-Michel Meyer)
 
 = v150422 =
 
@@ -235,7 +244,7 @@ localization is ready. Currently, we support the following languages:
 
 * Danish - [Torben Bendixen](http://www.freelancekonsulenten.dk/)
 * Dutch - [Martijn Chel](http://mcpnetwork.nl/),[Muratje](http://www.muromedia.nl/)
-* French - [Anthony](http://imnotgeek.com/), Goormand, Maxime
+* French - [Anthony](http://imnotgeek.com/), Goormand, Maxime, [Jean-Michel Meyer]
 * German - [derhenry](http://www.derhenry.net/2010/subscribe-to-comments-reloaded/), [Stefan](http://www.beedy.de/)
 * Indonesian - [The Masked Cat](http://themaskedcat.tk)
 * Italian - myself
